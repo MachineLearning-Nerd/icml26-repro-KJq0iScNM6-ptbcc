@@ -1,6 +1,11 @@
 # STATUS — PTBCC (KJq0iScNM6)
 
-**Session:** autoloop · **State:** publish gate · **Updated:** 2026-07-16
+**Session:** autoloop · **State:** under verdict · **Updated:** 2026-07-16
+
+**Space:** https://huggingface.co/spaces/DineshAI/KJq0iScNM6  
+**Space commit:** `e57f7e6e348fea6c5a0467ca33f94375b5bf2623`  
+**GitHub:** https://github.com/MachineLearning-Nerd/icml26-repro-KJq0iScNM6-ptbcc  
+**Git commit:** `3a0f176`
 
 ## Claims
 
@@ -16,5 +21,5 @@ recovery wins 40/40 trials with prototype MAE 0.04175.
 
 ## Next
 
-Secret-scan, publish the HF Space and public GitHub repository, then await the
-official verdict.
+Poll the official verdict. If any claim is inconclusive, revise only with new
+evidence and republish.
