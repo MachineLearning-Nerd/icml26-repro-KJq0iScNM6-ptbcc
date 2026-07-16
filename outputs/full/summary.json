@@ -1,0 +1,82 @@
+{
+  "paper": {
+    "openreview_id": "KJq0iScNM6",
+    "arxiv_id": "2508.02123",
+    "title_in_arxiv_v1": "Understanding the Essence: Delving into Annotator Prototype Learning for Multi-Class Annotation Aggregation",
+    "title_in_challenge_index": "Let the Prototype Guide You: Robust Aggregation of Sparse Multi-Class Annotations via Annotator Prototype Learning"
+  },
+  "runtime": {
+    "python": "3.12.13",
+    "platform": "Linux-7.0.9-arch2-1-x86_64-with-glibc2.43",
+    "processor": "x86_64",
+    "compute": "local CPU only; no GPU and no cloud job"
+  },
+  "scope": {
+    "public_datasets_reproduced": [
+      "CF",
+      "MS",
+      "Dog",
+      "Face",
+      "Adult",
+      "Web"
+    ],
+    "paper_dataset_count": 11,
+    "unavailable_in_this_reproduction": [
+      "Val7",
+      "Aircr",
+      "Fact",
+      "Senti",
+      "Val5"
+    ],
+    "reason": "authors provide no code/data link; six exact public releases cited by the paper were recoverable"
+  },
+  "public_dataset_macro_accuracy": {
+    "mv": 0.7657033449083962,
+    "ds": 0.7732996365754999,
+    "ptbcc": 0.7931170116404941
+  },
+  "public_dataset_ptbcc_minus_mv_pp": 2.7413666732097886,
+  "synthetic": {
+    "trials": 40,
+    "ptbcc_wins_vs_mv": 40,
+    "mean_mv_accuracy": 0.9389687500000001,
+    "mean_ptbcc_accuracy": 0.9813124999999999,
+    "mean_prototype_mae": 0.04175231402229045
+  },
+  "claim_audit": {
+    "source_sha256_note": "arXiv:2508.02123v1 source downloaded 2026-07-15",
+    "text_probes": {
+      "paper_method_name_ptbcc": true,
+      "paper_says_11_datasets": true,
+      "paper_says_15_percent": true,
+      "paper_contains_26_percent": false,
+      "paper_contains_68_73": false,
+      "paper_contains_74_11": false
+    },
+    "reported_table4": {
+      "MV": 0.6986,
+      "BWA": 0.7132,
+      "FGBCC": 0.7175,
+      "PTBCC": 0.7472
+    },
+    "reported_table4_checks": {
+      "ptbcc_minus_mv_percentage_points": 4.859999999999998,
+      "ptbcc_minus_best_baseline_percentage_points": 2.969999999999995,
+      "ptbcc_relative_gain_over_mv_percent": 6.956770684225599
+    },
+    "reported_table5_prototype_ablation": {
+      "2": 0.7472,
+      "3": 0.73,
+      "4": 0.7271,
+      "5": 0.7259,
+      "6": 0.7229,
+      "7": 0.7205
+    },
+    "reported_table5_peak_S": 2,
+    "current_catalog_verdicts": {
+      "CPBCC yields up to 26% accuracy improvement": "falsified by the paper source: method is PTBCC and best-case improvement is 15 percentage points",
+      "average 68.73% to 74.11% across 10 datasets": "falsified by Table 4 and setup: MV 69.86%, PTBCC 74.72%, 11 datasets",
+      "class-specific prototypes and annotator-specific weights": "verified by the generative process and equations 8, 9, 11, 13"
+    }
+  }
+}

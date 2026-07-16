@@ -1,0 +1,36 @@
+{
+  "source_sha256_note": "arXiv:2508.02123v1 source downloaded 2026-07-15",
+  "text_probes": {
+    "paper_method_name_ptbcc": true,
+    "paper_says_11_datasets": true,
+    "paper_says_15_percent": true,
+    "paper_contains_26_percent": false,
+    "paper_contains_68_73": false,
+    "paper_contains_74_11": false
+  },
+  "reported_table4": {
+    "MV": 0.6986,
+    "BWA": 0.7132,
+    "FGBCC": 0.7175,
+    "PTBCC": 0.7472
+  },
+  "reported_table4_checks": {
+    "ptbcc_minus_mv_percentage_points": 4.859999999999998,
+    "ptbcc_minus_best_baseline_percentage_points": 2.969999999999995,
+    "ptbcc_relative_gain_over_mv_percent": 6.956770684225599
+  },
+  "reported_table5_prototype_ablation": {
+    "2": 0.7472,
+    "3": 0.73,
+    "4": 0.7271,
+    "5": 0.7259,
+    "6": 0.7229,
+    "7": 0.7205
+  },
+  "reported_table5_peak_S": 2,
+  "current_catalog_verdicts": {
+    "CPBCC yields up to 26% accuracy improvement": "falsified by the paper source: method is PTBCC and best-case improvement is 15 percentage points",
+    "average 68.73% to 74.11% across 10 datasets": "falsified by Table 4 and setup: MV 69.86%, PTBCC 74.72%, 11 datasets",
+    "class-specific prototypes and annotator-specific weights": "verified by the generative process and equations 8, 9, 11, 13"
+  }
+}

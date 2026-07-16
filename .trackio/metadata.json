@@ -1,0 +1,62 @@
+{
+  "space_id": "DineshAI/KJq0iScNM6",
+  "emoji": "🎯",
+  "created_at": "2026-07-16T15:07:04+00:00",
+  "title": "Repro - Let the Prototype Guide You: PTBCC",
+  "paper": {
+    "arxiv_id": "2508.02123",
+    "openreview_id": "KJq0iScNM6"
+  },
+  "tags": [
+    "icml2026-repro",
+    "paper-KJq0iScNM6"
+  ],
+  "private": false,
+  "last_page": "claim-3-prototype-model",
+  "local_path_artifacts": [
+    {
+      "path": "outputs/full/ground_truth_predictions.csv",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-KJq0iScNM6-ptbcc/outputs/full/ground_truth_predictions.csv",
+      "size": 215758,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "outputs/full/annotator_weights.csv",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-KJq0iScNM6-ptbcc/outputs/full/annotator_weights.csv",
+      "size": 121107,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "outputs/full/learned_prototypes.csv",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-KJq0iScNM6-ptbcc/outputs/full/learned_prototypes.csv",
+      "size": 12246,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "outputs/full/synthetic_recovery_trials.csv",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-KJq0iScNM6-ptbcc/outputs/full/synthetic_recovery_trials.csv",
+      "size": 2727,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "outputs/full/prototype_count_ablation.csv",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-KJq0iScNM6-ptbcc/outputs/full/prototype_count_ablation.csv",
+      "size": 2411,
+      "artifact_type": "dataset"
+    },
+    {
+      "path": "outputs/full/public_dataset_results.csv",
+      "abs_path": "/home/dineshai/Drives/Code/AllCode/ReproduceICML/papers/icml26-repro-KJq0iScNM6-ptbcc/outputs/full/public_dataset_results.csv",
+      "size": 1402,
+      "artifact_type": "dataset"
+    }
+  ],
+  "local_dashboards": {
+    "ptbcc-repro": null
+  },
+  "local_artifacts": [
+    "ptbcc-repro/repro-bundle:v0"
+  ],
+  "autosync": true,
+  "artifacts_bucket": "DineshAI/KJq0iScNM6-artifacts"
+}

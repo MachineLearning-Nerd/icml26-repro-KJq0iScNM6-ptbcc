@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "title": "Repro - Let the Prototype Guide You: PTBCC",
+  "emoji": "🎯",
+  "space_id": "DineshAI/KJq0iScNM6",
+  "paper": {
+    "arxiv_id": "2508.02123",
+    "openreview_id": "KJq0iScNM6"
+  },
+  "tags": [
+    "icml2026-repro",
+    "paper-KJq0iScNM6"
+  ],
+  "updated_at": "2026-07-16T15:11:45+00:00",
+  "root": {
+    "slug": "index",
+    "title": "Repro - Let the Prototype Guide You: PTBCC",
+    "file": "pages/index.md",
+    "children": [
+      {
+        "slug": "full-reproduction",
+        "title": "Full reproduction",
+        "file": "pages/full-reproduction/page.md",
+        "children": []
+      },
+      {
+        "slug": "negative-controls",
+        "title": "Negative controls",
+        "file": "pages/negative-controls/page.md",
+        "children": []
+      },
+      {
+        "slug": "artifact-bundle",
+        "title": "Artifact bundle",
+        "file": "pages/artifact-bundle/page.md",
+        "children": []
+      },
+      {
+        "slug": "ptbcc-repro",
+        "title": "ptbcc-repro",
+        "file": "pages/ptbcc-repro/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-1-stale-26-percent-number",
+        "title": "Claim 1 - stale 26 percent number",
+        "file": "pages/claim-1-stale-26-percent-number/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-2-stale-average-numbers",
+        "title": "Claim 2 - stale average numbers",
+        "file": "pages/claim-2-stale-average-numbers/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-3-prototype-model",
+        "title": "Claim 3 - prototype model",
+        "file": "pages/claim-3-prototype-model/page.md",
+        "children": []
+      },
+      {
+        "slug": "methods",
+        "title": "Methods",
+        "file": "pages/methods/page.md",
+        "children": []
+      },
+      {
+        "slug": "conclusion",
+        "title": "Conclusion",
+        "file": "pages/conclusion/page.md",
+        "children": []
+      }
+    ]
+  },
+  "agent_view_tokens": 2648,
+  "revision": "1784214705600376073"
+}
