@@ -1077,6 +1077,36 @@ def main() -> None:
         raise RuntimeError(
             f"independent claim verifier exited {checker.returncode}"
         )
+    reporter = subprocess.run(
+        [sys.executable, "-m", "repro.src.build_release_artifacts"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if reporter.stdout:
+        print(reporter.stdout, end="", flush=True)
+    if reporter.stderr:
+        print(reporter.stderr, file=sys.stderr, end="", flush=True)
+    if reporter.returncode != 0:
+        raise RuntimeError(
+            f"release-artifact builder exited {reporter.returncode}"
+        )
+    space_check = subprocess.run(
+        [sys.executable, "-m", "repro.tools.validate_space_candidate"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if space_check.stdout:
+        print(space_check.stdout, end="", flush=True)
+    if space_check.stderr:
+        print(space_check.stderr, file=sys.stderr, end="", flush=True)
+    if space_check.returncode != 0:
+        raise RuntimeError(
+            f"Space candidate validator exited {space_check.returncode}"
+        )
 
 
 if __name__ == "__main__":

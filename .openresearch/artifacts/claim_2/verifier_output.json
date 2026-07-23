@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "best_baseline_is_released_ds_at_0_41": true,
+    "exact_val5_domain": true,
+    "gain_rounds_to_15_percentage_points": true,
+    "ptbcc_is_0_56": true
+  },
+  "claim_id": 2,
+  "statistics": {
+    "baselines": {
+      "bwa": 0.35,
+      "ds": 0.41,
+      "fgbcc": 0.38,
+      "mv": 0.3516666666666666
+    },
+    "best_baseline": "ds",
+    "gain_percentage_points": 15.000000000000007,
+    "ptbcc": 0.56
+  },
+  "valid_evidence": true,
+  "verdict": "VERIFIED"
+}

@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "forty_distinct_expected_seeds": true,
+    "mean_matched_prototype_mae_below_0_08": true,
+    "prototype_rows_normalized": true,
+    "ptbcc_beats_mv_all_trials": true,
+    "two_shared_prototypes_per_dataset": true,
+    "worker_count_matches_table3": true,
+    "worker_mixtures_normalized": true
+  },
+  "claim_id": 1,
+  "statistics": {
+    "annotator_tensor_semantics": "(annotator, prototype) mixture",
+    "mean_matched_prototype_mae": 0.04175231402229045,
+    "prototype_tensor_semantics": "shared (prototype, truth class, observed class)",
+    "ptbcc_wins": 40,
+    "trials": 40
+  },
+  "valid_evidence": true,
+  "verdict": "VERIFIED"
+}

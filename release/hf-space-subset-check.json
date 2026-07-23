@@ -1,0 +1,52 @@
+{
+  "judged_revision": "e57f7e6e348fea6c5a0467ca33f94375b5bf2623",
+  "space_id": "DineshAI/KJq0iScNM6",
+  "old_path_count": 22,
+  "candidate_path_count": 28,
+  "old_paths_subset_of_candidate": true,
+  "byte_identical_old_path_count": 20,
+  "changed_navigation_paths": [
+    "logbook.json",
+    "pages/index.md"
+  ],
+  "changed_old_evidence_paths": [],
+  "sidebar_slugs": [
+    "full-reproduction",
+    "negative-controls",
+    "artifact-bundle",
+    "ptbcc-repro",
+    "claim-1-stale-26-percent-number",
+    "claim-2-stale-average-numbers",
+    "claim-3-prototype-model",
+    "methods",
+    "conclusion",
+    "2026-claim-by-claim-campaign",
+    "2026-claim-2-exact-val5",
+    "2026-claim-3-exact-table4",
+    "2026-claim-4-prototype-ablation",
+    "2026-claim-5-controlled-runtime",
+    "2026-cumulative-verifier"
+  ],
+  "referenced_page_count": 16,
+  "text_only_upload_allowlist": [
+    "logbook.json",
+    "pages/index.md",
+    "pages/2026-claim-by-claim-campaign/page.md",
+    "pages/2026-claim-2-exact-val5/page.md",
+    "pages/2026-claim-3-exact-table4/page.md",
+    "pages/2026-claim-4-prototype-ablation/page.md",
+    "pages/2026-claim-5-controlled-runtime/page.md",
+    "pages/2026-cumulative-verifier/page.md"
+  ],
+  "allowlist_sha256": {
+    "logbook.json": "b38b41454d9898220e670804744c2ad3f8c84ac1ef3bfefcf0d9202c202a532d",
+    "pages/index.md": "0094fa83e7d506557a14a6ecdfa1114d1e2314d411259cff949f4008117c112e",
+    "pages/2026-claim-by-claim-campaign/page.md": "fd503c828247d745efd0009da8c1be6925dc9682080d2ab095e5958f908c1f27",
+    "pages/2026-claim-2-exact-val5/page.md": "840a9dada4260a311e4ece74a0645a4cd0d43a333a2ef9548a65e7a93c1bbf97",
+    "pages/2026-claim-3-exact-table4/page.md": "a1cb6874de067a7ed8990184a5fd4883ed153eab9b6d442e8a29e9ad94d3bb81",
+    "pages/2026-claim-4-prototype-ablation/page.md": "98459b92d469801987f62955638202a74ea8c612f3f86097c5e8983daf79b976",
+    "pages/2026-claim-5-controlled-runtime/page.md": "c5cae4d8f989717bda58c2c2ddcbbe378e0ab68ba15f2505f7afc6acb091a479",
+    "pages/2026-cumulative-verifier/page.md": "bbf2a5d53c81755fc3465e22ed94529785a1eac92c2d234bf7420fc19caa1ddf"
+  },
+  "secret_pattern_scan": "PASS"
+}

@@ -1,0 +1,34 @@
+{
+  "blocker": "The paper omits the random seed. S=2 peaks in every tested seed, but no tested single seed reproduces both printed S=3 and S=4 numbers, so the exact stochastic table cannot be attributed.",
+  "checks": {
+    "complete_11_dataset_seed_grid": true,
+    "one_disclosed_seed_reproduces_all_exact_numbers": false,
+    "s2_peaks_for_every_tested_seed": true,
+    "three_ran_kept_distinct_from_dirichlet_draw": true
+  },
+  "claim_id": 4,
+  "statistics": {
+    "S2": 0.7471525426567854,
+    "exact_seed_matches": {
+      "20260715": false,
+      "20260716": false,
+      "20260717": false
+    },
+    "paper": {
+      "S2": 0.7472,
+      "S3": 0.73,
+      "S4": 0.7271
+    },
+    "stochastic": {
+      "S3_seed20260715": 0.7420771316288406,
+      "S3_seed20260716": 0.7304916653258178,
+      "S3_seed20260717": 0.7283875736530993,
+      "S4_seed20260715": 0.7362274153885622,
+      "S4_seed20260716": 0.7138656936011231,
+      "S4_seed20260717": 0.7179507310310863
+    },
+    "three_ran_uniform": 0.7287995246546186
+  },
+  "valid_evidence": true,
+  "verdict": "BLOCKED"
+}

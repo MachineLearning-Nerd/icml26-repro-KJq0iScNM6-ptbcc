@@ -1,0 +1,6 @@
+{
+  "mutated_valid_evidence": false,
+  "mutated_verdict": "BLOCKED",
+  "mutation": "mislabel the 3-Ran uniform matrix as a Dirichlet draw",
+  "rejected": true
+}

@@ -1,0 +1,10 @@
+# Exact text-only upload allowlist for DineshAI/KJq0iScNM6.
+# Do not upload before explicit user approval.
+logbook.json
+pages/index.md
+pages/2026-claim-by-claim-campaign/page.md
+pages/2026-claim-2-exact-val5/page.md
+pages/2026-claim-3-exact-table4/page.md
+pages/2026-claim-4-prototype-ablation/page.md
+pages/2026-claim-5-controlled-runtime/page.md
+pages/2026-cumulative-verifier/page.md

@@ -9,2429 +9,2429 @@
       {
         "all_below_0_10": false,
         "bootstrap_95_percent": [
-          0.13775727579000688,
-          0.2607284238507911
+          0.1778011022184802,
+          0.283962717771161
         ],
         "clock": "wall_seconds",
         "comparator": "fgbcc",
-        "median": 0.2039138232227852,
+        "median": 0.2238723850952635,
         "samples": [
-          0.14200407206285318,
-          0.2607284238507911,
-          0.2039138232227852,
-          0.20430723262177947,
-          0.13775727579000688
+          0.2238723850952635,
+          0.22576499051525672,
+          0.283962717771161,
+          0.21321476176932475,
+          0.1778011022184802
         ]
       },
       {
         "all_below_0_10": false,
         "bootstrap_95_percent": [
-          3.0732549941865277,
-          5.450039007276635
+          2.450115049917202,
+          6.703042583306837
         ],
         "clock": "wall_seconds",
         "comparator": "ds",
-        "median": 3.6244969150490665,
+        "median": 4.24643474698918,
         "samples": [
-          3.338108049170066,
-          5.450039007276635,
-          3.6244969150490665,
-          4.829251061644083,
-          3.0732549941865277
+          4.24643474698918,
+          2.450115049917202,
+          6.436941623979843,
+          6.703042583306837,
+          2.9214003870094625
         ]
       },
       {
         "all_below_0_10": false,
         "bootstrap_95_percent": [
-          6.347892232833311,
-          9.6110354825458
+          4.109917969741982,
+          8.228632340445618
         ],
         "clock": "wall_seconds",
         "comparator": "bwa",
-        "median": 6.566211448399157,
+        "median": 5.1327010532797726,
         "samples": [
-          6.347892232833311,
-          9.6110354825458,
-          6.566211448399157,
-          7.769069400949233,
-          6.383628372408573
+          6.245895135762087,
+          5.007044187539792,
+          8.228632340445618,
+          4.109917969741982,
+          5.1327010532797726
         ]
       },
       {
         "all_below_0_10": false,
         "bootstrap_95_percent": [
-          0.2100787080432869,
-          0.23131973652904783
+          0.20070747515053944,
+          0.22940634393510348
         ],
         "clock": "cpu_seconds",
         "comparator": "fgbcc",
-        "median": 0.22121977456023417,
+        "median": 0.22583830995526283,
         "samples": [
-          0.21504934225504452,
-          0.22353267822973333,
-          0.22121977456023417,
-          0.23131973652904783,
-          0.2100787080432869
+          0.2232108890890066,
+          0.22922496748327234,
+          0.22940634393510348,
+          0.22583830995526283,
+          0.20070747515053944
         ]
       },
       {
         "all_below_0_10": false,
         "bootstrap_95_percent": [
-          4.076938193390659,
-          4.517312057656774
+          3.5986849507472276,
+          4.938673985356313
         ],
         "clock": "cpu_seconds",
         "comparator": "ds",
-        "median": 4.380573178472267,
+        "median": 4.331058492999884,
         "samples": [
-          4.380573178472267,
-          4.517312057656774,
-          4.180906012381453,
-          4.474756035428749,
-          4.076938193390659
+          4.331058492999884,
+          4.196898339615336,
+          4.363227016739478,
+          4.938673985356313,
+          3.5986849507472276
         ]
       },
       {
         "all_below_0_10": false,
         "bootstrap_95_percent": [
-          7.083195374303277,
-          7.7478345263225235
+          6.2887954262857715,
+          7.567888856503043
         ],
         "clock": "cpu_seconds",
         "comparator": "bwa",
-        "median": 7.4317015027377975,
+        "median": 7.40046887975209,
         "samples": [
-          7.605477620514961,
-          7.7478345263225235,
-          7.213116580716052,
-          7.4317015027377975,
-          7.083195374303277
+          7.071173064998613,
+          7.567888856503043,
+          7.506574369435828,
+          7.40046887975209,
+          6.2887954262857715
         ]
       }
     ],
     "raw": [
       {
         "accuracy": 0.31,
-        "cpu_seconds": 0.08377500000000015,
+        "cpu_seconds": 0.08607099999999956,
         "dataset": "Val7",
         "iterations": 69,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 0,
-        "wall_seconds": 0.08434983302140608
+        "wall_seconds": 0.0956152500002645
       },
       {
         "accuracy": 0.8229342327150084,
-        "cpu_seconds": 0.11720500000000023,
+        "cpu_seconds": 0.1443070000000004,
         "dataset": "Aircr",
         "iterations": 83,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 0,
-        "wall_seconds": 0.1177626249846071
+        "wall_seconds": 0.1539243750157766
       },
       {
         "accuracy": 0.8933333333333333,
-        "cpu_seconds": 0.10421000000000058,
+        "cpu_seconds": 0.1295219999999997,
         "dataset": "CF",
         "iterations": 74,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 0,
-        "wall_seconds": 0.10510020900983363
+        "wall_seconds": 0.2943930830224417
       },
       {
         "accuracy": 0.9010416666666666,
-        "cpu_seconds": 3.7282529999999996,
+        "cpu_seconds": 3.5227580000000005,
         "dataset": "Fact",
         "iterations": 31,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 0,
-        "wall_seconds": 4.004481499956455
+        "wall_seconds": 5.66382141597569
       },
       {
         "accuracy": 0.7942857142857143,
-        "cpu_seconds": 0.09694700000000012,
+        "cpu_seconds": 0.11255900000000008,
         "dataset": "MS",
         "iterations": 33,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 0,
-        "wall_seconds": 0.10461799998302013
+        "wall_seconds": 0.4060101670329459
       },
       {
         "accuracy": 0.8240396530359355,
-        "cpu_seconds": 0.28330900000000003,
+        "cpu_seconds": 0.29876200000000086,
         "dataset": "Dog",
         "iterations": 59,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 0,
-        "wall_seconds": 0.29673558298964053
+        "wall_seconds": 0.5044791669934057
       },
       {
         "accuracy": 0.6558219178082192,
-        "cpu_seconds": 0.13806899999999978,
+        "cpu_seconds": 0.13124600000000086,
         "dataset": "Face",
         "iterations": 38,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 0,
-        "wall_seconds": 0.14962020894745365
+        "wall_seconds": 0.19116074999328703
       },
       {
         "accuracy": 0.7717717717717718,
-        "cpu_seconds": 1.8201839999999994,
+        "cpu_seconds": 1.9727050000000013,
         "dataset": "Adult",
         "iterations": 38,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 0,
-        "wall_seconds": 1.8548182909726165
+        "wall_seconds": 2.5105176669894718
       },
       {
         "accuracy": 0.866,
-        "cpu_seconds": 14.826688,
+        "cpu_seconds": 14.773076,
         "dataset": "Senti",
         "iterations": 43,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 0,
-        "wall_seconds": 15.301248874980956
+        "wall_seconds": 18.074903874949086
       },
       {
         "accuracy": 0.56,
-        "cpu_seconds": 0.06525999999999854,
+        "cpu_seconds": 0.061097999999997654,
         "dataset": "Val5",
         "iterations": 57,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 0,
-        "wall_seconds": 0.07267691602464765
+        "wall_seconds": 0.07469941698946059
       },
       {
         "accuracy": 0.819449679607991,
-        "cpu_seconds": 0.5794119999999978,
+        "cpu_seconds": 0.571943000000001,
         "dataset": "Web",
         "iterations": 53,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 0,
-        "wall_seconds": 0.6396386250271462
+        "wall_seconds": 0.7902103750384413
       },
       {
         "accuracy": 0.18,
-        "cpu_seconds": 2.116942,
+        "cpu_seconds": 2.283009,
         "dataset": "Val7",
         "iterations": 1000,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 0,
-        "wall_seconds": 2.20352974999696
+        "wall_seconds": 2.392296875012107
       },
       {
         "accuracy": 0.8448566610455311,
-        "cpu_seconds": 1.4018920000000001,
+        "cpu_seconds": 1.3795039999999998,
         "dataset": "Aircr",
         "iterations": 538,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 0,
-        "wall_seconds": 1.5290117090335116
+        "wall_seconds": 1.9072285419679247
       },
       {
         "accuracy": 0.8866666666666667,
-        "cpu_seconds": 4.696383000000001,
+        "cpu_seconds": 3.7429449999999997,
         "dataset": "CF",
         "iterations": 689,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 0,
-        "wall_seconds": 5.7393748330068775
+        "wall_seconds": 4.116701874998398
       },
       {
         "accuracy": 0.8819444444444444,
-        "cpu_seconds": 5.1188590000000005,
+        "cpu_seconds": 5.059027,
         "dataset": "Fact",
         "iterations": 359,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 0,
-        "wall_seconds": 10.239851291989908
+        "wall_seconds": 8.670127291989047
       },
       {
         "accuracy": 0.7842857142857143,
-        "cpu_seconds": 3.024571999999999,
+        "cpu_seconds": 2.961039999999999,
         "dataset": "MS",
         "iterations": 513,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 0,
-        "wall_seconds": 4.710449542035349
+        "wall_seconds": 5.27127995796036
       },
       {
         "accuracy": 0.8401486988847584,
-        "cpu_seconds": 1.1804670000000002,
+        "cpu_seconds": 1.2657869999999996,
         "dataset": "Dog",
         "iterations": 465,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 0,
-        "wall_seconds": 1.9265395830152556
+        "wall_seconds": 2.72336520900717
       },
       {
         "accuracy": 0.6455479452054794,
-        "cpu_seconds": 0.5492200000000018,
+        "cpu_seconds": 0.6137450000000015,
         "dataset": "Face",
         "iterations": 308,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 0,
-        "wall_seconds": 0.9332767919986509
+        "wall_seconds": 1.611633291002363
       },
       {
         "accuracy": 0.7447447447447447,
-        "cpu_seconds": 11.079443999999999,
+        "cpu_seconds": 10.526319999999998,
         "dataset": "Adult",
         "iterations": 880,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 0,
-        "wall_seconds": 15.54660345800221
+        "wall_seconds": 14.351155125012156
       },
       {
         "accuracy": 0.885,
-        "cpu_seconds": 68.68094500000001,
+        "cpu_seconds": 66.028106,
         "dataset": "Senti",
         "iterations": 783,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 0,
-        "wall_seconds": 112.5702278749668
+        "wall_seconds": 82.33447679202072
       },
       {
         "accuracy": 0.38,
-        "cpu_seconds": 1.8098779999999977,
+        "cpu_seconds": 1.781367000000003,
         "dataset": "Val5",
         "iterations": 1000,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 0,
-        "wall_seconds": 2.345948582980782
+        "wall_seconds": 2.4438663750188425
       },
       {
         "accuracy": 0.8202035431586883,
-        "cpu_seconds": 1.9148869999999931,
+        "cpu_seconds": 2.042766999999998,
         "dataset": "Web",
         "iterations": 353,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 0,
-        "wall_seconds": 2.328417833952699
+        "wall_seconds": 2.6427328329882585
       },
       {
         "accuracy": 0.22,
-        "cpu_seconds": 0.018469999999999764,
+        "cpu_seconds": 0.014709000000000305,
         "dataset": "Val7",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 0,
-        "wall_seconds": 0.01885812502587214
+        "wall_seconds": 0.017151374951936305
       },
       {
         "accuracy": 0.8414839797639123,
-        "cpu_seconds": 0.0227409999999999,
+        "cpu_seconds": 0.0201699999999998,
         "dataset": "Aircr",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 0,
-        "wall_seconds": 0.023001666995696723
+        "wall_seconds": 0.021869749994948506
       },
       {
         "accuracy": 0.7966666666666666,
-        "cpu_seconds": 0.025324000000000346,
+        "cpu_seconds": 0.021220000000000017,
         "dataset": "CF",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 0,
-        "wall_seconds": 0.0953691250178963
+        "wall_seconds": 0.022981917019933462
       },
       {
         "accuracy": 0.8506944444444444,
-        "cpu_seconds": 0.8313239999999995,
+        "cpu_seconds": 0.7859669999999999,
         "dataset": "Fact",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 0,
-        "wall_seconds": 1.024333709036
+        "wall_seconds": 0.814314250019379
       },
       {
         "accuracy": 0.7642857142857142,
-        "cpu_seconds": 0.04861199999999943,
+        "cpu_seconds": 0.054543999999999926,
         "dataset": "MS",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 0,
-        "wall_seconds": 0.05902004201197997
+        "wall_seconds": 0.05781387502793223
       },
       {
         "accuracy": 0.8426270136307311,
-        "cpu_seconds": 0.04174999999999951,
+        "cpu_seconds": 0.0470480000000002,
         "dataset": "Dog",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 0,
-        "wall_seconds": 0.051567459013313055
+        "wall_seconds": 0.04784712503897026
       },
       {
         "accuracy": 0.6404109589041096,
-        "cpu_seconds": 0.029816000000000287,
+        "cpu_seconds": 0.03202000000000016,
         "dataset": "Face",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 0,
-        "wall_seconds": 0.03105116600636393
+        "wall_seconds": 0.03218558296794072
       },
       {
         "accuracy": 0.7387387387387387,
-        "cpu_seconds": 0.4221820000000003,
+        "cpu_seconds": 0.43699900000000014,
         "dataset": "Adult",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 0,
-        "wall_seconds": 0.6189560829661787
+        "wall_seconds": 0.4608181249932386
       },
       {
         "accuracy": 0.824,
-        "cpu_seconds": 3.423976999999999,
+        "cpu_seconds": 3.4914880000000004,
         "dataset": "Senti",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 0,
-        "wall_seconds": 4.733698499971069
+        "wall_seconds": 5.1544018749846146
       },
       {
         "accuracy": 0.41,
-        "cpu_seconds": 0.01360099999999953,
+        "cpu_seconds": 0.014414000000000371,
         "dataset": "Val5",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 0,
-        "wall_seconds": 0.018490082991775125
+        "wall_seconds": 0.014962291053961962
       },
       {
         "accuracy": 0.8254805880135695,
-        "cpu_seconds": 0.10860800000000026,
+        "cpu_seconds": 0.11576699999999995,
         "dataset": "Web",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 0,
-        "wall_seconds": 0.13521512498846278
+        "wall_seconds": 0.1283319169888273
       },
       {
         "accuracy": 0.2,
-        "cpu_seconds": 0.020811000000000135,
+        "cpu_seconds": 0.019812000000000385,
         "dataset": "Val7",
         "iterations": 7,
         "method": "bwa",
         "order_index": 3,
         "repetition": 0,
-        "wall_seconds": 0.02984024997567758
+        "wall_seconds": 0.020869333005975932
       },
       {
         "accuracy": 0.8246205733558178,
-        "cpu_seconds": 0.04330300000000076,
+        "cpu_seconds": 0.045253999999999905,
         "dataset": "Aircr",
         "iterations": 21,
         "method": "bwa",
         "order_index": 3,
         "repetition": 0,
-        "wall_seconds": 0.07235399994533509
+        "wall_seconds": 0.04693379200762138
       },
       {
         "accuracy": 0.8933333333333333,
-        "cpu_seconds": 0.012747000000000064,
+        "cpu_seconds": 0.010164999999999758,
         "dataset": "CF",
         "iterations": 6,
         "method": "bwa",
         "order_index": 3,
         "repetition": 0,
-        "wall_seconds": 0.01398979197256267
+        "wall_seconds": 0.010214916022960097
       },
       {
         "accuracy": 0.8871527777777778,
-        "cpu_seconds": 0.470847,
+        "cpu_seconds": 0.4586549999999998,
         "dataset": "Fact",
         "iterations": 22,
         "method": "bwa",
         "order_index": 3,
         "repetition": 0,
-        "wall_seconds": 0.6942666670074686
+        "wall_seconds": 0.5982448749709874
       },
       {
         "accuracy": 0.7857142857142857,
-        "cpu_seconds": 0.05513800000000035,
+        "cpu_seconds": 0.07128200000000007,
         "dataset": "MS",
         "iterations": 22,
         "method": "bwa",
         "order_index": 3,
         "repetition": 0,
-        "wall_seconds": 0.061169166991021484
+        "wall_seconds": 0.29013333399780095
       },
       {
         "accuracy": 0.8314745972738538,
-        "cpu_seconds": 0.027804999999999858,
+        "cpu_seconds": 0.029641999999999946,
         "dataset": "Dog",
         "iterations": 9,
         "method": "bwa",
         "order_index": 3,
         "repetition": 0,
-        "wall_seconds": 0.040010791970416903
+        "wall_seconds": 0.06839850003598258
       },
       {
         "accuracy": 0.6181506849315068,
-        "cpu_seconds": 0.01839099999999938,
+        "cpu_seconds": 0.020343999999999696,
         "dataset": "Face",
         "iterations": 10,
         "method": "bwa",
         "order_index": 3,
         "repetition": 0,
-        "wall_seconds": 0.02203041600296274
+        "wall_seconds": 0.02882075001252815
       },
       {
         "accuracy": 0.7417417417417418,
-        "cpu_seconds": 0.3007609999999996,
+        "cpu_seconds": 0.3085709999999997,
         "dataset": "Adult",
         "iterations": 41,
         "method": "bwa",
         "order_index": 3,
         "repetition": 0,
-        "wall_seconds": 0.3802683749818243
+        "wall_seconds": 0.4375557919847779
       },
       {
         "accuracy": 0.89,
-        "cpu_seconds": 1.8436960000000004,
+        "cpu_seconds": 2.035202,
         "dataset": "Senti",
         "iterations": 29,
         "method": "bwa",
         "order_index": 3,
         "repetition": 0,
-        "wall_seconds": 2.185073334025219
+        "wall_seconds": 3.0171351250028238
       },
       {
         "accuracy": 0.35,
-        "cpu_seconds": 0.011819000000000024,
+        "cpu_seconds": 0.01300200000000018,
         "dataset": "Val5",
         "iterations": 7,
         "method": "bwa",
         "order_index": 3,
         "repetition": 0,
-        "wall_seconds": 0.011869959009345621
+        "wall_seconds": 0.01349991699680686
       },
       {
         "accuracy": 0.8224651338107802,
-        "cpu_seconds": 0.06673200000000001,
+        "cpu_seconds": 0.0715830000000004,
         "dataset": "Web",
         "iterations": 20,
         "method": "bwa",
         "order_index": 3,
         "repetition": 0,
-        "wall_seconds": 0.07000887498725206
+        "wall_seconds": 0.07277554203756154
       },
       {
         "accuracy": 0.18,
-        "cpu_seconds": 2.641343,
+        "cpu_seconds": 2.3276019999999997,
         "dataset": "Val7",
         "iterations": 1000,
         "method": "fgbcc",
         "order_index": 0,
         "repetition": 1,
-        "wall_seconds": 2.966122917016037
+        "wall_seconds": 2.6533676250255667
       },
       {
         "accuracy": 0.8448566610455311,
-        "cpu_seconds": 1.434582999999999,
+        "cpu_seconds": 1.4205439999999996,
         "dataset": "Aircr",
         "iterations": 538,
         "method": "fgbcc",
         "order_index": 0,
         "repetition": 1,
-        "wall_seconds": 1.8299539999570698
+        "wall_seconds": 1.7739697910146788
       },
       {
         "accuracy": 0.8866666666666667,
-        "cpu_seconds": 5.042612,
+        "cpu_seconds": 4.563122,
         "dataset": "CF",
         "iterations": 689,
         "method": "fgbcc",
         "order_index": 0,
         "repetition": 1,
-        "wall_seconds": 11.922540041967295
+        "wall_seconds": 5.899378457979765
       },
       {
         "accuracy": 0.8819444444444444,
-        "cpu_seconds": 5.143344000000001,
+        "cpu_seconds": 4.903688999999998,
         "dataset": "Fact",
         "iterations": 359,
         "method": "fgbcc",
         "order_index": 0,
         "repetition": 1,
-        "wall_seconds": 14.582163874991238
+        "wall_seconds": 6.59767616703175
       },
       {
         "accuracy": 0.7842857142857143,
-        "cpu_seconds": 2.944585,
+        "cpu_seconds": 2.459937,
         "dataset": "MS",
         "iterations": 513,
         "method": "fgbcc",
         "order_index": 0,
         "repetition": 1,
-        "wall_seconds": 4.262097582977731
+        "wall_seconds": 3.046058083011303
       },
       {
         "accuracy": 0.8401486988847584,
-        "cpu_seconds": 1.1218649999999997,
+        "cpu_seconds": 1.053925000000003,
         "dataset": "Dog",
         "iterations": 465,
         "method": "fgbcc",
         "order_index": 0,
         "repetition": 1,
-        "wall_seconds": 1.2293455000035465
+        "wall_seconds": 1.1541596670285799
       },
       {
         "accuracy": 0.6455479452054794,
-        "cpu_seconds": 0.4915200000000013,
+        "cpu_seconds": 0.49525099999999966,
         "dataset": "Face",
         "iterations": 308,
         "method": "fgbcc",
         "order_index": 0,
         "repetition": 1,
-        "wall_seconds": 0.522361708979588
+        "wall_seconds": 0.6614049589843489
       },
       {
         "accuracy": 0.7447447447447447,
-        "cpu_seconds": 11.015850999999998,
+        "cpu_seconds": 9.698115999999999,
         "dataset": "Adult",
         "iterations": 880,
         "method": "fgbcc",
         "order_index": 0,
         "repetition": 1,
-        "wall_seconds": 14.526928208011668
+        "wall_seconds": 10.551267291011754
       },
       {
         "accuracy": 0.885,
-        "cpu_seconds": 67.92116999999999,
+        "cpu_seconds": 63.416652000000006,
         "dataset": "Senti",
         "iterations": 783,
         "method": "fgbcc",
         "order_index": 0,
         "repetition": 1,
-        "wall_seconds": 108.09672329196474
+        "wall_seconds": 70.30804575001821
       },
       {
         "accuracy": 0.38,
-        "cpu_seconds": 1.9268519999999967,
+        "cpu_seconds": 1.2608429999999942,
         "dataset": "Val5",
         "iterations": 1000,
         "method": "fgbcc",
         "order_index": 0,
         "repetition": 1,
-        "wall_seconds": 3.0610837080166675
+        "wall_seconds": 1.2893419170286506
       },
       {
         "accuracy": 0.8202035431586883,
-        "cpu_seconds": 2.135284999999996,
+        "cpu_seconds": 1.621569000000008,
         "dataset": "Web",
         "iterations": 353,
         "method": "fgbcc",
         "order_index": 0,
         "repetition": 1,
-        "wall_seconds": 4.134965790959541
+        "wall_seconds": 1.6536730840452947
       },
       {
         "accuracy": 0.22,
-        "cpu_seconds": 0.017299000000000397,
+        "cpu_seconds": 0.017965999999999926,
         "dataset": "Val7",
         "iterations": 20,
         "method": "ds",
         "order_index": 1,
         "repetition": 1,
-        "wall_seconds": 0.02112920902436599
+        "wall_seconds": 0.019703083962667733
       },
       {
         "accuracy": 0.8414839797639123,
-        "cpu_seconds": 0.023902000000000534,
+        "cpu_seconds": 0.02391299999999985,
         "dataset": "Aircr",
         "iterations": 20,
         "method": "ds",
         "order_index": 1,
         "repetition": 1,
-        "wall_seconds": 0.02989087498281151
+        "wall_seconds": 0.055014624958857894
       },
       {
         "accuracy": 0.7966666666666666,
-        "cpu_seconds": 0.025165999999999578,
+        "cpu_seconds": 0.028887000000000107,
         "dataset": "CF",
         "iterations": 20,
         "method": "ds",
         "order_index": 1,
         "repetition": 1,
-        "wall_seconds": 0.02826541702961549
+        "wall_seconds": 0.10451950004789978
       },
       {
         "accuracy": 0.8506944444444444,
-        "cpu_seconds": 0.8711820000000001,
+        "cpu_seconds": 0.8649200000000001,
         "dataset": "Fact",
         "iterations": 20,
         "method": "ds",
         "order_index": 1,
         "repetition": 1,
-        "wall_seconds": 1.4650357909849845
+        "wall_seconds": 1.7804111249861307
       },
       {
         "accuracy": 0.7642857142857142,
-        "cpu_seconds": 0.049272999999999456,
+        "cpu_seconds": 0.052679000000000364,
         "dataset": "MS",
         "iterations": 20,
         "method": "ds",
         "order_index": 1,
         "repetition": 1,
-        "wall_seconds": 0.053867625014390796
+        "wall_seconds": 0.1904390830313787
       },
       {
         "accuracy": 0.8426270136307311,
-        "cpu_seconds": 0.046794000000000224,
+        "cpu_seconds": 0.048325999999999425,
         "dataset": "Dog",
         "iterations": 20,
         "method": "ds",
         "order_index": 1,
         "repetition": 1,
-        "wall_seconds": 0.05405354202957824
+        "wall_seconds": 0.16110504197422415
       },
       {
         "accuracy": 0.6404109589041096,
-        "cpu_seconds": 0.03402800000000017,
+        "cpu_seconds": 0.031216999999999828,
         "dataset": "Face",
         "iterations": 20,
         "method": "ds",
         "order_index": 1,
         "repetition": 1,
-        "wall_seconds": 0.06602820800617337
+        "wall_seconds": 0.04723429202567786
       },
       {
         "accuracy": 0.7387387387387387,
-        "cpu_seconds": 0.4418930000000003,
+        "cpu_seconds": 0.43743400000000054,
         "dataset": "Adult",
         "iterations": 20,
         "method": "ds",
         "order_index": 1,
         "repetition": 1,
-        "wall_seconds": 1.0421539999661036
+        "wall_seconds": 0.669104749977123
       },
       {
         "accuracy": 0.824,
-        "cpu_seconds": 3.4106889999999996,
+        "cpu_seconds": 3.4609799999999993,
         "dataset": "Senti",
         "iterations": 20,
         "method": "ds",
         "order_index": 1,
         "repetition": 1,
-        "wall_seconds": 5.0971744589623995
+        "wall_seconds": 6.43180233403109
       },
       {
         "accuracy": 0.41,
-        "cpu_seconds": 0.01331500000000041,
+        "cpu_seconds": 0.013712999999999198,
         "dataset": "Val5",
         "iterations": 20,
         "method": "ds",
         "order_index": 1,
         "repetition": 1,
-        "wall_seconds": 0.015164082986302674
+        "wall_seconds": 0.015000374987721443
       },
       {
         "accuracy": 0.8254805880135695,
-        "cpu_seconds": 0.10482600000000097,
+        "cpu_seconds": 0.11149599999999893,
         "dataset": "Web",
         "iterations": 20,
         "method": "ds",
         "order_index": 1,
         "repetition": 1,
-        "wall_seconds": 0.12289683398557827
+        "wall_seconds": 0.255066541954875
       },
       {
         "accuracy": 0.2,
-        "cpu_seconds": 0.02074599999999993,
+        "cpu_seconds": 0.016195999999999877,
         "dataset": "Val7",
         "iterations": 7,
         "method": "bwa",
         "order_index": 2,
         "repetition": 1,
-        "wall_seconds": 0.025025416049174964
+        "wall_seconds": 0.016550457978155464
       },
       {
         "accuracy": 0.8246205733558178,
-        "cpu_seconds": 0.04827799999999982,
+        "cpu_seconds": 0.03427699999999989,
         "dataset": "Aircr",
         "iterations": 21,
         "method": "bwa",
         "order_index": 2,
         "repetition": 1,
-        "wall_seconds": 0.09532354201655835
+        "wall_seconds": 0.03439441602677107
       },
       {
         "accuracy": 0.8933333333333333,
-        "cpu_seconds": 0.01254000000000044,
+        "cpu_seconds": 0.008913999999999866,
         "dataset": "CF",
         "iterations": 6,
         "method": "bwa",
         "order_index": 2,
         "repetition": 1,
-        "wall_seconds": 0.013959834002889693
+        "wall_seconds": 0.00891795800998807
       },
       {
         "accuracy": 0.8871527777777778,
-        "cpu_seconds": 0.44828000000000046,
+        "cpu_seconds": 0.36850700000000014,
         "dataset": "Fact",
         "iterations": 22,
         "method": "bwa",
         "order_index": 2,
         "repetition": 1,
-        "wall_seconds": 0.699718416959513
+        "wall_seconds": 0.3701184170204215
       },
       {
         "accuracy": 0.7857142857142857,
-        "cpu_seconds": 0.05636300000000016,
+        "cpu_seconds": 0.03551700000000002,
         "dataset": "MS",
         "iterations": 22,
         "method": "bwa",
         "order_index": 2,
         "repetition": 1,
-        "wall_seconds": 0.09410362504422665
+        "wall_seconds": 0.03566645900718868
       },
       {
         "accuracy": 0.8314745972738538,
-        "cpu_seconds": 0.02432700000000043,
+        "cpu_seconds": 0.019230000000000302,
         "dataset": "Dog",
         "iterations": 9,
         "method": "bwa",
         "order_index": 2,
         "repetition": 1,
-        "wall_seconds": 0.034243375004734844
+        "wall_seconds": 0.01935329200932756
       },
       {
         "accuracy": 0.6181506849315068,
-        "cpu_seconds": 0.02061000000000046,
+        "cpu_seconds": 0.014209000000000138,
         "dataset": "Face",
         "iterations": 10,
         "method": "bwa",
         "order_index": 2,
         "repetition": 1,
-        "wall_seconds": 0.028855708020273596
+        "wall_seconds": 0.014315583975985646
       },
       {
         "accuracy": 0.7417417417417418,
-        "cpu_seconds": 0.30597799999999964,
+        "cpu_seconds": 0.27826500000000065,
         "dataset": "Adult",
         "iterations": 41,
         "method": "bwa",
         "order_index": 2,
         "repetition": 1,
-        "wall_seconds": 0.38981566595612094
+        "wall_seconds": 0.2917592080193572
       },
       {
         "accuracy": 0.89,
-        "cpu_seconds": 1.9158429999999997,
+        "cpu_seconds": 1.9680369999999998,
         "dataset": "Senti",
         "iterations": 29,
         "method": "bwa",
         "order_index": 2,
         "repetition": 1,
-        "wall_seconds": 3.0592330410145223
+        "wall_seconds": 3.8640664580161683
       },
       {
         "accuracy": 0.35,
-        "cpu_seconds": 0.01299500000000009,
+        "cpu_seconds": 0.014019000000000226,
         "dataset": "Val5",
         "iterations": 7,
         "method": "bwa",
         "order_index": 2,
         "repetition": 1,
-        "wall_seconds": 0.014034833002369851
+        "wall_seconds": 0.01649137499043718
       },
       {
         "accuracy": 0.8224651338107802,
-        "cpu_seconds": 0.07161899999999921,
+        "cpu_seconds": 0.0664220000000002,
         "dataset": "Web",
         "iterations": 20,
         "method": "bwa",
         "order_index": 2,
         "repetition": 1,
-        "wall_seconds": 0.07970987498993054
+        "wall_seconds": 0.08928925002692267
       },
       {
         "accuracy": 0.31,
-        "cpu_seconds": 0.09279100000000007,
+        "cpu_seconds": 0.0830289999999998,
         "dataset": "Val7",
         "iterations": 69,
         "method": "ptbcc",
         "order_index": 3,
         "repetition": 1,
-        "wall_seconds": 0.11814495798898861
+        "wall_seconds": 0.09784779098117724
       },
       {
         "accuracy": 0.8229342327150084,
-        "cpu_seconds": 0.1461730000000001,
+        "cpu_seconds": 0.13694300000000048,
         "dataset": "Aircr",
         "iterations": 83,
         "method": "ptbcc",
         "order_index": 3,
         "repetition": 1,
-        "wall_seconds": 0.2862423750339076
+        "wall_seconds": 0.1431454160483554
       },
       {
         "accuracy": 0.8933333333333333,
-        "cpu_seconds": 0.12885799999999925,
+        "cpu_seconds": 0.11859700000000029,
         "dataset": "CF",
         "iterations": 74,
         "method": "ptbcc",
         "order_index": 3,
         "repetition": 1,
-        "wall_seconds": 0.3073878749855794
+        "wall_seconds": 0.15539845899911597
       },
       {
         "accuracy": 0.9010416666666666,
-        "cpu_seconds": 3.567824,
+        "cpu_seconds": 3.303940999999999,
         "dataset": "Fact",
         "iterations": 31,
         "method": "ptbcc",
         "order_index": 3,
         "repetition": 1,
-        "wall_seconds": 6.091666333028115
+        "wall_seconds": 3.9004128329688683
       },
       {
         "accuracy": 0.7942857142857143,
-        "cpu_seconds": 0.10664400000000107,
+        "cpu_seconds": 0.08990100000000023,
         "dataset": "MS",
         "iterations": 33,
         "method": "ptbcc",
         "order_index": 3,
         "repetition": 1,
-        "wall_seconds": 0.16695729200728238
+        "wall_seconds": 0.1008414999814704
       },
       {
         "accuracy": 0.8240396530359355,
-        "cpu_seconds": 0.3145489999999995,
+        "cpu_seconds": 0.31650500000000026,
         "dataset": "Dog",
         "iterations": 59,
         "method": "ptbcc",
         "order_index": 3,
         "repetition": 1,
-        "wall_seconds": 0.42322958400473
+        "wall_seconds": 0.48141716700047255
       },
       {
         "accuracy": 0.6558219178082192,
-        "cpu_seconds": 0.14406799999999897,
+        "cpu_seconds": 0.14157499999999956,
         "dataset": "Face",
         "iterations": 38,
         "method": "ptbcc",
         "order_index": 3,
         "repetition": 1,
-        "wall_seconds": 0.3485055409837514
+        "wall_seconds": 0.3256595419952646
       },
       {
         "accuracy": 0.7717717717717718,
-        "cpu_seconds": 2.062457,
+        "cpu_seconds": 2.042541999999999,
         "dataset": "Adult",
         "iterations": 38,
         "method": "ptbcc",
         "order_index": 3,
         "repetition": 1,
-        "wall_seconds": 5.189899999997579
+        "wall_seconds": 2.25954812503187
       },
       {
         "accuracy": 0.866,
-        "cpu_seconds": 15.579016,
+        "cpu_seconds": 14.510375000000002,
         "dataset": "Senti",
         "iterations": 43,
         "method": "ptbcc",
         "order_index": 3,
         "repetition": 1,
-        "wall_seconds": 29.591961583006196
+        "wall_seconds": 15.673775334027596
       },
       {
         "accuracy": 0.56,
-        "cpu_seconds": 0.06349599999999711,
+        "cpu_seconds": 0.06568599999999947,
         "dataset": "Val5",
         "iterations": 57,
         "method": "ptbcc",
         "order_index": 3,
         "repetition": 1,
-        "wall_seconds": 0.08718354103621095
+        "wall_seconds": 0.09291895799105987
       },
       {
         "accuracy": 0.819449679607991,
-        "cpu_seconds": 0.5539999999999985,
+        "cpu_seconds": 0.5595440000000025,
         "dataset": "Web",
         "iterations": 53,
         "method": "ptbcc",
         "order_index": 3,
         "repetition": 1,
-        "wall_seconds": 0.9654800410498865
+        "wall_seconds": 0.6071860839729197
       },
       {
         "accuracy": 0.22,
-        "cpu_seconds": 0.01765099999999986,
+        "cpu_seconds": 0.016748999999999903,
         "dataset": "Val7",
         "iterations": 20,
         "method": "ds",
         "order_index": 0,
         "repetition": 2,
-        "wall_seconds": 0.020194499986246228
+        "wall_seconds": 0.017614917014725506
       },
       {
         "accuracy": 0.8414839797639123,
-        "cpu_seconds": 0.021387999999999963,
+        "cpu_seconds": 0.022045000000000314,
         "dataset": "Aircr",
         "iterations": 20,
         "method": "ds",
         "order_index": 0,
         "repetition": 2,
-        "wall_seconds": 0.0223583749611862
+        "wall_seconds": 0.02399062499171123
       },
       {
         "accuracy": 0.7966666666666666,
-        "cpu_seconds": 0.02324000000000037,
+        "cpu_seconds": 0.021277000000000434,
         "dataset": "CF",
         "iterations": 20,
         "method": "ds",
         "order_index": 0,
         "repetition": 2,
-        "wall_seconds": 0.028573041956406087
+        "wall_seconds": 0.02173266699537635
       },
       {
         "accuracy": 0.8506944444444444,
-        "cpu_seconds": 0.866708,
+        "cpu_seconds": 0.8674580000000001,
         "dataset": "Fact",
         "iterations": 20,
         "method": "ds",
         "order_index": 0,
         "repetition": 2,
-        "wall_seconds": 1.0613847079803236
+        "wall_seconds": 1.433823666011449
       },
       {
         "accuracy": 0.7642857142857142,
-        "cpu_seconds": 0.04963599999999957,
+        "cpu_seconds": 0.050427,
         "dataset": "MS",
         "iterations": 20,
         "method": "ds",
         "order_index": 0,
         "repetition": 2,
-        "wall_seconds": 0.05189741600770503
+        "wall_seconds": 0.07459308399120346
       },
       {
         "accuracy": 0.8426270136307311,
-        "cpu_seconds": 0.04309599999999936,
+        "cpu_seconds": 0.04761099999999985,
         "dataset": "Dog",
         "iterations": 20,
         "method": "ds",
         "order_index": 0,
         "repetition": 2,
-        "wall_seconds": 0.045601457997690886
+        "wall_seconds": 0.05509166599949822
       },
       {
         "accuracy": 0.6404109589041096,
-        "cpu_seconds": 0.03064300000000042,
+        "cpu_seconds": 0.03269300000000008,
         "dataset": "Face",
         "iterations": 20,
         "method": "ds",
         "order_index": 0,
         "repetition": 2,
-        "wall_seconds": 0.03267358394805342
+        "wall_seconds": 0.04132695798762143
       },
       {
         "accuracy": 0.7387387387387387,
-        "cpu_seconds": 0.4328119999999993,
+        "cpu_seconds": 0.44153600000000015,
         "dataset": "Adult",
         "iterations": 20,
         "method": "ds",
         "order_index": 0,
         "repetition": 2,
-        "wall_seconds": 0.5167475829948671
+        "wall_seconds": 0.47915854200255126
       },
       {
         "accuracy": 0.824,
-        "cpu_seconds": 3.5363560000000005,
+        "cpu_seconds": 3.517800000000001,
         "dataset": "Senti",
         "iterations": 20,
         "method": "ds",
         "order_index": 0,
         "repetition": 2,
-        "wall_seconds": 4.765843791014049
+        "wall_seconds": 3.772032250009943
       },
       {
         "accuracy": 0.41,
-        "cpu_seconds": 0.012850999999999502,
+        "cpu_seconds": 0.013847999999999416,
         "dataset": "Val5",
         "iterations": 20,
         "method": "ds",
         "order_index": 0,
         "repetition": 2,
-        "wall_seconds": 0.013020584010519087
+        "wall_seconds": 0.015431208012159914
       },
       {
         "accuracy": 0.8254805880135695,
-        "cpu_seconds": 0.10621100000000006,
+        "cpu_seconds": 0.10623000000000005,
         "dataset": "Web",
         "iterations": 20,
         "method": "ds",
         "order_index": 0,
         "repetition": 2,
-        "wall_seconds": 0.12049229198601097
+        "wall_seconds": 0.10774062504060566
       },
       {
         "accuracy": 0.2,
-        "cpu_seconds": 0.027936999999999657,
+        "cpu_seconds": 0.024846999999999397,
         "dataset": "Val7",
         "iterations": 7,
         "method": "bwa",
         "order_index": 1,
         "repetition": 2,
-        "wall_seconds": 0.033645750023424625
+        "wall_seconds": 0.09039020899217576
       },
       {
         "accuracy": 0.8246205733558178,
-        "cpu_seconds": 0.04935799999999979,
+        "cpu_seconds": 0.05254099999999973,
         "dataset": "Aircr",
         "iterations": 21,
         "method": "bwa",
         "order_index": 1,
         "repetition": 2,
-        "wall_seconds": 0.06701262498972937
+        "wall_seconds": 0.06302854197565466
       },
       {
         "accuracy": 0.8933333333333333,
-        "cpu_seconds": 0.013232999999999606,
+        "cpu_seconds": 0.012410000000000032,
         "dataset": "CF",
         "iterations": 6,
         "method": "bwa",
         "order_index": 1,
         "repetition": 2,
-        "wall_seconds": 0.06430595804704353
+        "wall_seconds": 0.013067499967291951
       },
       {
         "accuracy": 0.8871527777777778,
-        "cpu_seconds": 0.4417920000000004,
+        "cpu_seconds": 0.44680500000000034,
         "dataset": "Fact",
         "iterations": 22,
         "method": "bwa",
         "order_index": 1,
         "repetition": 2,
-        "wall_seconds": 0.7661330419941805
+        "wall_seconds": 0.6458346659783274
       },
       {
         "accuracy": 0.7857142857142857,
-        "cpu_seconds": 0.052351999999999954,
+        "cpu_seconds": 0.05183699999999991,
         "dataset": "MS",
         "iterations": 22,
         "method": "bwa",
         "order_index": 1,
         "repetition": 2,
-        "wall_seconds": 0.054389583005104214
+        "wall_seconds": 0.08555720804724842
       },
       {
         "accuracy": 0.8314745972738538,
-        "cpu_seconds": 0.02474099999999968,
+        "cpu_seconds": 0.02507199999999976,
         "dataset": "Dog",
         "iterations": 9,
         "method": "bwa",
         "order_index": 1,
         "repetition": 2,
-        "wall_seconds": 0.029858666006475687
+        "wall_seconds": 0.03402616601670161
       },
       {
         "accuracy": 0.6181506849315068,
-        "cpu_seconds": 0.016666999999999987,
+        "cpu_seconds": 0.018010000000000304,
         "dataset": "Face",
         "iterations": 10,
         "method": "bwa",
         "order_index": 1,
         "repetition": 2,
-        "wall_seconds": 0.022415250015910715
+        "wall_seconds": 0.01949741702992469
       },
       {
         "accuracy": 0.7417417417417418,
-        "cpu_seconds": 0.28079700000000063,
+        "cpu_seconds": 0.313987,
         "dataset": "Adult",
         "iterations": 41,
         "method": "bwa",
         "order_index": 1,
         "repetition": 2,
-        "wall_seconds": 0.37478150002425537
+        "wall_seconds": 0.543547666980885
       },
       {
         "accuracy": 0.89,
-        "cpu_seconds": 2.0024869999999995,
+        "cpu_seconds": 1.955597,
         "dataset": "Senti",
         "iterations": 29,
         "method": "bwa",
         "order_index": 1,
         "repetition": 2,
-        "wall_seconds": 2.194832957990002
+        "wall_seconds": 3.136824707966298
       },
       {
         "accuracy": 0.35,
-        "cpu_seconds": 0.009160000000000501,
+        "cpu_seconds": 0.01374699999999951,
         "dataset": "Val5",
         "iterations": 7,
         "method": "bwa",
         "order_index": 1,
         "repetition": 2,
-        "wall_seconds": 0.009180375025607646
+        "wall_seconds": 0.015832125034648925
       },
       {
         "accuracy": 0.8224651338107802,
-        "cpu_seconds": 0.06109399999999976,
+        "cpu_seconds": 0.07144100000000009,
         "dataset": "Web",
         "iterations": 20,
         "method": "bwa",
         "order_index": 1,
         "repetition": 2,
-        "wall_seconds": 0.07008220796706155
+        "wall_seconds": 0.07923674996709451
       },
       {
         "accuracy": 0.31,
-        "cpu_seconds": 0.0851569999999997,
+        "cpu_seconds": 0.09749400000000019,
         "dataset": "Val7",
         "iterations": 69,
         "method": "ptbcc",
         "order_index": 2,
         "repetition": 2,
-        "wall_seconds": 0.10170558403478935
+        "wall_seconds": 0.278479749977123
       },
       {
         "accuracy": 0.8229342327150084,
-        "cpu_seconds": 0.13564000000000043,
+        "cpu_seconds": 0.15156800000000015,
         "dataset": "Aircr",
         "iterations": 83,
         "method": "ptbcc",
         "order_index": 2,
         "repetition": 2,
-        "wall_seconds": 0.13818624999839813
+        "wall_seconds": 0.2279282080125995
       },
       {
         "accuracy": 0.8933333333333333,
-        "cpu_seconds": 0.12341399999999947,
+        "cpu_seconds": 0.12989599999999957,
         "dataset": "CF",
         "iterations": 74,
         "method": "ptbcc",
         "order_index": 2,
         "repetition": 2,
-        "wall_seconds": 0.13135287503246218
+        "wall_seconds": 0.21667479199822992
       },
       {
         "accuracy": 0.9010416666666666,
-        "cpu_seconds": 3.529567,
+        "cpu_seconds": 3.743550999999999,
         "dataset": "Fact",
         "iterations": 31,
         "method": "ptbcc",
         "order_index": 2,
         "repetition": 2,
-        "wall_seconds": 3.5792038749787025
+        "wall_seconds": 10.584566666046157
       },
       {
         "accuracy": 0.7942857142857143,
-        "cpu_seconds": 0.07805399999999985,
+        "cpu_seconds": 0.09816199999999853,
         "dataset": "MS",
         "iterations": 33,
         "method": "ptbcc",
         "order_index": 2,
         "repetition": 2,
-        "wall_seconds": 0.07836200000019744
+        "wall_seconds": 0.09937404101947322
       },
       {
         "accuracy": 0.8240396530359355,
-        "cpu_seconds": 0.26337099999999936,
+        "cpu_seconds": 0.31597099999999934,
         "dataset": "Dog",
         "iterations": 59,
         "method": "ptbcc",
         "order_index": 2,
         "repetition": 2,
-        "wall_seconds": 0.2649447080329992
+        "wall_seconds": 0.3440567500074394
       },
       {
         "accuracy": 0.6558219178082192,
-        "cpu_seconds": 0.11795199999999895,
+        "cpu_seconds": 0.14195599999999864,
         "dataset": "Face",
         "iterations": 38,
         "method": "ptbcc",
         "order_index": 2,
         "repetition": 2,
-        "wall_seconds": 0.11955079203471541
+        "wall_seconds": 0.14351104199886322
       },
       {
         "accuracy": 0.7717717717717718,
-        "cpu_seconds": 1.7074869999999986,
+        "cpu_seconds": 1.987069,
         "dataset": "Adult",
         "iterations": 38,
         "method": "ptbcc",
         "order_index": 2,
         "repetition": 2,
-        "wall_seconds": 1.7184127080254257
+        "wall_seconds": 3.6744770410005003
       },
       {
         "accuracy": 0.866,
-        "cpu_seconds": 14.868987999999998,
+        "cpu_seconds": 15.114087999999999,
         "dataset": "Senti",
         "iterations": 43,
         "method": "ptbcc",
         "order_index": 2,
         "repetition": 2,
-        "wall_seconds": 17.485906375048216
+        "wall_seconds": 22.594707416952588
       },
       {
         "accuracy": 0.56,
-        "cpu_seconds": 0.052572000000001395,
+        "cpu_seconds": 0.06283399999999872,
         "dataset": "Val5",
         "iterations": 57,
         "method": "ptbcc",
         "order_index": 2,
         "repetition": 2,
-        "wall_seconds": 0.05277379200560972
+        "wall_seconds": 0.06435916700866073
       },
       {
         "accuracy": 0.819449679607991,
-        "cpu_seconds": 0.5301299999999998,
+        "cpu_seconds": 0.5742489999999982,
         "dataset": "Web",
         "iterations": 53,
         "method": "ptbcc",
         "order_index": 2,
         "repetition": 2,
-        "wall_seconds": 0.5368451249669306
+        "wall_seconds": 0.6673179580247961
       },
       {
         "accuracy": 0.18,
-        "cpu_seconds": 2.8134479999999997,
+        "cpu_seconds": 2.6783020000000004,
         "dataset": "Val7",
         "iterations": 1000,
         "method": "fgbcc",
         "order_index": 3,
         "repetition": 2,
-        "wall_seconds": 5.84525566699449
+        "wall_seconds": 3.606715209025424
       },
       {
         "accuracy": 0.8448566610455311,
-        "cpu_seconds": 1.4183959999999995,
+        "cpu_seconds": 1.3794059999999995,
         "dataset": "Aircr",
         "iterations": 538,
         "method": "fgbcc",
         "order_index": 3,
         "repetition": 2,
-        "wall_seconds": 1.605370709032286
+        "wall_seconds": 1.4972615839797072
       },
       {
         "accuracy": 0.8866666666666667,
-        "cpu_seconds": 4.546514,
+        "cpu_seconds": 4.523511000000001,
         "dataset": "CF",
         "iterations": 689,
         "method": "fgbcc",
         "order_index": 3,
         "repetition": 2,
-        "wall_seconds": 7.926421249983832
+        "wall_seconds": 5.815384667017497
       },
       {
         "accuracy": 0.8819444444444444,
-        "cpu_seconds": 4.828799,
+        "cpu_seconds": 4.717333,
         "dataset": "Fact",
         "iterations": 359,
         "method": "fgbcc",
         "order_index": 3,
         "repetition": 2,
-        "wall_seconds": 6.319458417012356
+        "wall_seconds": 5.303639042016584
       },
       {
         "accuracy": 0.7842857142857143,
-        "cpu_seconds": 2.419898,
+        "cpu_seconds": 2.994977000000002,
         "dataset": "MS",
         "iterations": 513,
         "method": "fgbcc",
         "order_index": 3,
         "repetition": 2,
-        "wall_seconds": 2.5435740830143914
+        "wall_seconds": 4.862986207997892
       },
       {
         "accuracy": 0.8401486988847584,
-        "cpu_seconds": 0.9681849999999983,
+        "cpu_seconds": 0.9882819999999981,
         "dataset": "Dog",
         "iterations": 465,
         "method": "fgbcc",
         "order_index": 3,
         "repetition": 2,
-        "wall_seconds": 1.0368167919805273
+        "wall_seconds": 1.0911536670173518
       },
       {
         "accuracy": 0.6455479452054794,
-        "cpu_seconds": 0.47369700000000137,
+        "cpu_seconds": 0.4095449999999978,
         "dataset": "Face",
         "iterations": 308,
         "method": "fgbcc",
         "order_index": 3,
         "repetition": 2,
-        "wall_seconds": 0.523081874998752
+        "wall_seconds": 0.4193485419964418
       },
       {
         "accuracy": 0.7447447447447447,
-        "cpu_seconds": 10.652467999999999,
+        "cpu_seconds": 10.196048000000001,
         "dataset": "Adult",
         "iterations": 880,
         "method": "fgbcc",
         "order_index": 3,
         "repetition": 2,
-        "wall_seconds": 11.8107140409993
+        "wall_seconds": 13.494880084006581
       },
       {
         "accuracy": 0.885,
-        "cpu_seconds": 65.531791,
+        "cpu_seconds": 66.32341500000001,
         "dataset": "Senti",
         "iterations": 783,
         "method": "fgbcc",
         "order_index": 3,
         "repetition": 2,
-        "wall_seconds": 77.27242041600402
+        "wall_seconds": 97.03127791697625
       },
       {
         "accuracy": 0.38,
-        "cpu_seconds": 1.53155000000001,
+        "cpu_seconds": 1.6599839999999944,
         "dataset": "Val5",
         "iterations": 1000,
         "method": "fgbcc",
         "order_index": 3,
         "repetition": 2,
-        "wall_seconds": 1.5561341250431724
+        "wall_seconds": 1.8405778339947574
       },
       {
         "accuracy": 0.8202035431586883,
-        "cpu_seconds": 1.9690099999999973,
+        "cpu_seconds": 1.8459280000000007,
         "dataset": "Web",
         "iterations": 353,
         "method": "fgbcc",
         "order_index": 3,
         "repetition": 2,
-        "wall_seconds": 2.273862415982876
+        "wall_seconds": 2.0105763750034384
       },
       {
         "accuracy": 0.2,
-        "cpu_seconds": 0.02221599999999979,
+        "cpu_seconds": 0.0204869999999997,
         "dataset": "Val7",
         "iterations": 7,
         "method": "bwa",
         "order_index": 0,
         "repetition": 3,
-        "wall_seconds": 0.022932790976483375
+        "wall_seconds": 0.020910083956550807
       },
       {
         "accuracy": 0.8246205733558178,
-        "cpu_seconds": 0.04257599999999995,
+        "cpu_seconds": 0.04134700000000002,
         "dataset": "Aircr",
         "iterations": 21,
         "method": "bwa",
         "order_index": 0,
         "repetition": 3,
-        "wall_seconds": 0.04500774998450652
+        "wall_seconds": 0.04189024999504909
       },
       {
         "accuracy": 0.8933333333333333,
-        "cpu_seconds": 0.010760000000000325,
+        "cpu_seconds": 0.011487999999999943,
         "dataset": "CF",
         "iterations": 6,
         "method": "bwa",
         "order_index": 0,
         "repetition": 3,
-        "wall_seconds": 0.010832875035703182
+        "wall_seconds": 0.011607791995629668
       },
       {
         "accuracy": 0.8871527777777778,
-        "cpu_seconds": 0.44603199999999976,
+        "cpu_seconds": 0.4851690000000004,
         "dataset": "Fact",
         "iterations": 22,
         "method": "bwa",
         "order_index": 0,
         "repetition": 3,
-        "wall_seconds": 0.5176175000378862
+        "wall_seconds": 0.7115134580526501
       },
       {
         "accuracy": 0.7857142857142857,
-        "cpu_seconds": 0.0486089999999999,
+        "cpu_seconds": 0.050657999999999426,
         "dataset": "MS",
         "iterations": 22,
         "method": "bwa",
         "order_index": 0,
         "repetition": 3,
-        "wall_seconds": 0.04903125000419095
+        "wall_seconds": 0.051828541967552155
       },
       {
         "accuracy": 0.8314745972738538,
-        "cpu_seconds": 0.021444999999999936,
+        "cpu_seconds": 0.021535000000000082,
         "dataset": "Dog",
         "iterations": 9,
         "method": "bwa",
         "order_index": 0,
         "repetition": 3,
-        "wall_seconds": 0.021641124971210957
+        "wall_seconds": 0.021843249967787415
       },
       {
         "accuracy": 0.6181506849315068,
-        "cpu_seconds": 0.01657200000000003,
+        "cpu_seconds": 0.013487999999999722,
         "dataset": "Face",
         "iterations": 10,
         "method": "bwa",
         "order_index": 0,
         "repetition": 3,
-        "wall_seconds": 0.016758291982114315
+        "wall_seconds": 0.013525292044505477
       },
       {
         "accuracy": 0.7417417417417418,
-        "cpu_seconds": 0.2966609999999994,
+        "cpu_seconds": 0.30539199999999944,
         "dataset": "Adult",
         "iterations": 41,
         "method": "bwa",
         "order_index": 0,
         "repetition": 3,
-        "wall_seconds": 0.3116062500048429
+        "wall_seconds": 0.6618049159878865
       },
       {
         "accuracy": 0.89,
-        "cpu_seconds": 1.9702169999999999,
+        "cpu_seconds": 1.9201030000000001,
         "dataset": "Senti",
         "iterations": 29,
         "method": "bwa",
         "order_index": 0,
         "repetition": 3,
-        "wall_seconds": 2.0084662919980474
+        "wall_seconds": 5.671066000009887
       },
       {
         "accuracy": 0.35,
-        "cpu_seconds": 0.009714999999999918,
+        "cpu_seconds": 0.01470900000000075,
         "dataset": "Val5",
         "iterations": 7,
         "method": "bwa",
         "order_index": 0,
         "repetition": 3,
-        "wall_seconds": 0.009744792012497783
+        "wall_seconds": 0.01610441697994247
       },
       {
         "accuracy": 0.8224651338107802,
-        "cpu_seconds": 0.06501300000000043,
+        "cpu_seconds": 0.07800399999999996,
         "dataset": "Web",
         "iterations": 20,
         "method": "bwa",
         "order_index": 0,
         "repetition": 3,
-        "wall_seconds": 0.07135504198959097
+        "wall_seconds": 0.10675008298130706
       },
       {
         "accuracy": 0.31,
-        "cpu_seconds": 0.08342500000000008,
+        "cpu_seconds": 0.08139200000000013,
         "dataset": "Val7",
         "iterations": 69,
         "method": "ptbcc",
         "order_index": 1,
         "repetition": 3,
-        "wall_seconds": 0.0837518330081366
+        "wall_seconds": 0.08418841700768098
       },
       {
         "accuracy": 0.8229342327150084,
-        "cpu_seconds": 0.11416399999999971,
+        "cpu_seconds": 0.130884,
         "dataset": "Aircr",
         "iterations": 83,
         "method": "ptbcc",
         "order_index": 1,
         "repetition": 3,
-        "wall_seconds": 0.11445650004316121
+        "wall_seconds": 0.1339603330125101
       },
       {
         "accuracy": 0.8933333333333333,
-        "cpu_seconds": 0.09990699999999997,
+        "cpu_seconds": 0.11123200000000022,
         "dataset": "CF",
         "iterations": 74,
         "method": "ptbcc",
         "order_index": 1,
         "repetition": 3,
-        "wall_seconds": 0.10031987499678507
+        "wall_seconds": 0.1375723750097677
       },
       {
         "accuracy": 0.9010416666666666,
-        "cpu_seconds": 3.4883870000000003,
+        "cpu_seconds": 3.471297,
         "dataset": "Fact",
         "iterations": 31,
         "method": "ptbcc",
         "order_index": 1,
         "repetition": 3,
-        "wall_seconds": 3.549457791959867
+        "wall_seconds": 4.668745291011874
       },
       {
         "accuracy": 0.7942857142857143,
-        "cpu_seconds": 0.0829620000000002,
+        "cpu_seconds": 0.08170599999999961,
         "dataset": "MS",
         "iterations": 33,
         "method": "ptbcc",
         "order_index": 1,
         "repetition": 3,
-        "wall_seconds": 0.08318399998825043
+        "wall_seconds": 0.08318333298666403
       },
       {
         "accuracy": 0.8240396530359355,
-        "cpu_seconds": 0.27742999999999896,
+        "cpu_seconds": 0.2772099999999984,
         "dataset": "Dog",
         "iterations": 59,
         "method": "ptbcc",
         "order_index": 1,
         "repetition": 3,
-        "wall_seconds": 0.3005763340042904
+        "wall_seconds": 0.33048429095651954
       },
       {
         "accuracy": 0.6558219178082192,
-        "cpu_seconds": 0.1317749999999993,
+        "cpu_seconds": 0.11923299999999948,
         "dataset": "Face",
         "iterations": 38,
         "method": "ptbcc",
         "order_index": 1,
         "repetition": 3,
-        "wall_seconds": 0.1328815839951858
+        "wall_seconds": 0.1217325420002453
       },
       {
         "accuracy": 0.7717717717717718,
-        "cpu_seconds": 1.997159,
+        "cpu_seconds": 1.9115559999999991,
         "dataset": "Adult",
         "iterations": 38,
         "method": "ptbcc",
         "order_index": 1,
         "repetition": 3,
-        "wall_seconds": 2.0743129170150496
+        "wall_seconds": 2.428094500035513
       },
       {
         "accuracy": 0.866,
-        "cpu_seconds": 15.074336999999998,
+        "cpu_seconds": 15.091698999999998,
         "dataset": "Senti",
         "iterations": 43,
         "method": "ptbcc",
         "order_index": 1,
         "repetition": 3,
-        "wall_seconds": 16.95292441698257
+        "wall_seconds": 21.339778832974844
       },
       {
         "accuracy": 0.56,
-        "cpu_seconds": 0.0605659999999979,
+        "cpu_seconds": 0.06636999999999915,
         "dataset": "Val5",
         "iterations": 57,
         "method": "ptbcc",
         "order_index": 1,
         "repetition": 3,
-        "wall_seconds": 0.06112454197136685
+        "wall_seconds": 0.07413508300669491
       },
       {
         "accuracy": 0.819449679607991,
-        "cpu_seconds": 0.5120399999999989,
+        "cpu_seconds": 0.5804219999999987,
         "dataset": "Web",
         "iterations": 53,
         "method": "ptbcc",
         "order_index": 1,
         "repetition": 3,
-        "wall_seconds": 0.5145423749927431
+        "wall_seconds": 0.7190730000147596
       },
       {
         "accuracy": 0.18,
-        "cpu_seconds": 2.5068200000000003,
+        "cpu_seconds": 2.410458,
         "dataset": "Val7",
         "iterations": 1000,
         "method": "fgbcc",
         "order_index": 2,
         "repetition": 3,
-        "wall_seconds": 3.6269367910572328
+        "wall_seconds": 2.5126691249897704
       },
       {
         "accuracy": 0.8448566610455311,
-        "cpu_seconds": 1.3086129999999994,
+        "cpu_seconds": 1.1593030000000004,
         "dataset": "Aircr",
         "iterations": 538,
         "method": "fgbcc",
         "order_index": 2,
         "repetition": 3,
-        "wall_seconds": 1.4254402079968713
+        "wall_seconds": 1.1840355830499902
       },
       {
         "accuracy": 0.8866666666666667,
-        "cpu_seconds": 4.176461,
+        "cpu_seconds": 4.500500999999999,
         "dataset": "CF",
         "iterations": 689,
         "method": "fgbcc",
         "order_index": 2,
         "repetition": 3,
-        "wall_seconds": 4.329579291050322
+        "wall_seconds": 8.841117166972253
       },
       {
         "accuracy": 0.8819444444444444,
-        "cpu_seconds": 4.744484999999999,
+        "cpu_seconds": 4.9045939999999995,
         "dataset": "Fact",
         "iterations": 359,
         "method": "fgbcc",
         "order_index": 2,
         "repetition": 3,
-        "wall_seconds": 5.21903429197846
+        "wall_seconds": 6.271324125002138
       },
       {
         "accuracy": 0.7842857142857143,
-        "cpu_seconds": 2.5340039999999995,
+        "cpu_seconds": 2.887274999999999,
         "dataset": "MS",
         "iterations": 513,
         "method": "fgbcc",
         "order_index": 2,
         "repetition": 3,
-        "wall_seconds": 2.6542795409914106
+        "wall_seconds": 5.153672875021584
       },
       {
         "accuracy": 0.8401486988847584,
-        "cpu_seconds": 0.8703780000000023,
+        "cpu_seconds": 1.0588809999999995,
         "dataset": "Dog",
         "iterations": 465,
         "method": "fgbcc",
         "order_index": 2,
         "repetition": 3,
-        "wall_seconds": 0.8787795410025865
+        "wall_seconds": 1.152243374963291
       },
       {
         "accuracy": 0.6455479452054794,
-        "cpu_seconds": 0.3862710000000007,
+        "cpu_seconds": 0.4465380000000003,
         "dataset": "Face",
         "iterations": 308,
         "method": "fgbcc",
         "order_index": 2,
         "repetition": 3,
-        "wall_seconds": 0.38786487496690825
+        "wall_seconds": 0.49200295901391655
       },
       {
         "accuracy": 0.7447447447447447,
-        "cpu_seconds": 9.55697,
+        "cpu_seconds": 10.613115000000004,
         "dataset": "Adult",
         "iterations": 880,
         "method": "fgbcc",
         "order_index": 2,
         "repetition": 3,
-        "wall_seconds": 9.673926666961052
+        "wall_seconds": 11.81418579100864
       },
       {
         "accuracy": 0.885,
-        "cpu_seconds": 65.082044,
+        "cpu_seconds": 65.673848,
         "dataset": "Senti",
         "iterations": 783,
         "method": "fgbcc",
         "order_index": 2,
         "repetition": 3,
-        "wall_seconds": 84.76916158298263
+        "wall_seconds": 98.73629708297085
       },
       {
         "accuracy": 0.38,
-        "cpu_seconds": 1.7036339999999939,
+        "cpu_seconds": 1.552892,
         "dataset": "Val5",
         "iterations": 1000,
         "method": "fgbcc",
         "order_index": 2,
         "repetition": 3,
-        "wall_seconds": 2.2399202919914387
+        "wall_seconds": 1.8963672500103712
       },
       {
         "accuracy": 0.8202035431586883,
-        "cpu_seconds": 1.9002360000000067,
+        "cpu_seconds": 1.8664750000000083,
         "dataset": "Web",
         "iterations": 353,
         "method": "fgbcc",
         "order_index": 2,
         "repetition": 3,
-        "wall_seconds": 2.106304041983094
+        "wall_seconds": 3.2165471249609254
       },
       {
         "accuracy": 0.22,
-        "cpu_seconds": 0.0165639999999998,
+        "cpu_seconds": 0.017364999999999853,
         "dataset": "Val7",
         "iterations": 20,
         "method": "ds",
         "order_index": 3,
         "repetition": 3,
-        "wall_seconds": 0.016668291005771607
+        "wall_seconds": 0.021618709026370198
       },
       {
         "accuracy": 0.8414839797639123,
-        "cpu_seconds": 0.02181699999999953,
+        "cpu_seconds": 0.022482000000000113,
         "dataset": "Aircr",
         "iterations": 20,
         "method": "ds",
         "order_index": 3,
         "repetition": 3,
-        "wall_seconds": 0.022110250021796674
+        "wall_seconds": 0.026742665970232338
       },
       {
         "accuracy": 0.7966666666666666,
-        "cpu_seconds": 0.02399300000000082,
+        "cpu_seconds": 0.02489600000000003,
         "dataset": "CF",
         "iterations": 20,
         "method": "ds",
         "order_index": 3,
         "repetition": 3,
-        "wall_seconds": 0.024091417028103024
+        "wall_seconds": 0.028110583021771163
       },
       {
         "accuracy": 0.8506944444444444,
-        "cpu_seconds": 0.8737729999999999,
+        "cpu_seconds": 0.8024590000000007,
         "dataset": "Fact",
         "iterations": 20,
         "method": "ds",
         "order_index": 3,
         "repetition": 3,
-        "wall_seconds": 0.9022981249727309
+        "wall_seconds": 0.8115922500146553
       },
       {
         "accuracy": 0.7642857142857142,
-        "cpu_seconds": 0.044298999999999644,
+        "cpu_seconds": 0.0413319999999997,
         "dataset": "MS",
         "iterations": 20,
         "method": "ds",
         "order_index": 3,
         "repetition": 3,
-        "wall_seconds": 0.044380958017427474
+        "wall_seconds": 0.041493166994769126
       },
       {
         "accuracy": 0.8426270136307311,
-        "cpu_seconds": 0.04081500000000027,
+        "cpu_seconds": 0.0387240000000002,
         "dataset": "Dog",
         "iterations": 20,
         "method": "ds",
         "order_index": 3,
         "repetition": 3,
-        "wall_seconds": 0.04093025001930073
+        "wall_seconds": 0.03886758297448978
       },
       {
         "accuracy": 0.6404109589041096,
-        "cpu_seconds": 0.028979999999999784,
+        "cpu_seconds": 0.026483999999999952,
         "dataset": "Face",
         "iterations": 20,
         "method": "ds",
         "order_index": 3,
         "repetition": 3,
-        "wall_seconds": 0.0291068340302445
+        "wall_seconds": 0.02656379103427753
       },
       {
         "accuracy": 0.7387387387387387,
-        "cpu_seconds": 0.4111009999999995,
+        "cpu_seconds": 0.3906609999999997,
         "dataset": "Adult",
         "iterations": 20,
         "method": "ds",
         "order_index": 3,
         "repetition": 3,
-        "wall_seconds": 0.417141540965531
+        "wall_seconds": 0.3959770840010606
       },
       {
         "accuracy": 0.824,
-        "cpu_seconds": 3.3206750000000005,
+        "cpu_seconds": 2.9749730000000003,
         "dataset": "Senti",
         "iterations": 20,
         "method": "ds",
         "order_index": 3,
         "repetition": 3,
-        "wall_seconds": 3.3488517500227317
+        "wall_seconds": 3.002508166944608
       },
       {
         "accuracy": 0.41,
-        "cpu_seconds": 0.012095000000000411,
+        "cpu_seconds": 0.01048499999999919,
         "dataset": "Val5",
         "iterations": 20,
         "method": "ds",
         "order_index": 3,
         "repetition": 3,
-        "wall_seconds": 0.012177083001006395
+        "wall_seconds": 0.010547749989200383
       },
       {
         "accuracy": 0.8254805880135695,
-        "cpu_seconds": 0.10496000000000016,
+        "cpu_seconds": 0.08918499999999874,
         "dataset": "Web",
         "iterations": 20,
         "method": "ds",
         "order_index": 3,
         "repetition": 3,
-        "wall_seconds": 0.10523504205048084
+        "wall_seconds": 0.08960150001803413
       },
       {
         "accuracy": 0.31,
-        "cpu_seconds": 0.07484400000000013,
+        "cpu_seconds": 0.0731569999999997,
         "dataset": "Val7",
         "iterations": 69,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 4,
-        "wall_seconds": 0.07985504099633545
+        "wall_seconds": 0.07400762499310076
       },
       {
         "accuracy": 0.8229342327150084,
-        "cpu_seconds": 0.13719100000000006,
+        "cpu_seconds": 0.12109100000000028,
         "dataset": "Aircr",
         "iterations": 83,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 4,
-        "wall_seconds": 0.17003450001357123
+        "wall_seconds": 0.12220750004053116
       },
       {
         "accuracy": 0.8933333333333333,
-        "cpu_seconds": 0.10754299999999972,
+        "cpu_seconds": 0.1095250000000001,
         "dataset": "CF",
         "iterations": 74,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 4,
-        "wall_seconds": 0.10812295804498717
+        "wall_seconds": 0.14535524998791516
       },
       {
         "accuracy": 0.9010416666666666,
-        "cpu_seconds": 3.3440689999999997,
+        "cpu_seconds": 3.0432139999999994,
         "dataset": "Fact",
         "iterations": 31,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 4,
-        "wall_seconds": 3.4406083750072867
+        "wall_seconds": 3.148246042022947
       },
       {
         "accuracy": 0.7942857142857143,
-        "cpu_seconds": 0.0949819999999999,
+        "cpu_seconds": 0.08764600000000033,
         "dataset": "MS",
         "iterations": 33,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 4,
-        "wall_seconds": 0.1013727500103414
+        "wall_seconds": 0.09258304099785164
       },
       {
         "accuracy": 0.8240396530359355,
-        "cpu_seconds": 0.2707239999999995,
+        "cpu_seconds": 0.22603299999999926,
         "dataset": "Dog",
         "iterations": 59,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 4,
-        "wall_seconds": 0.27168491698103026
+        "wall_seconds": 0.23307366599328816
       },
       {
         "accuracy": 0.6558219178082192,
-        "cpu_seconds": 0.11919600000000052,
+        "cpu_seconds": 0.10076799999999952,
         "dataset": "Face",
         "iterations": 38,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 4,
-        "wall_seconds": 0.11957729194546118
+        "wall_seconds": 0.10402420797618106
       },
       {
         "accuracy": 0.7717717717717718,
-        "cpu_seconds": 1.8501570000000003,
+        "cpu_seconds": 1.6206379999999996,
         "dataset": "Adult",
         "iterations": 38,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 4,
-        "wall_seconds": 1.9006767080281861
+        "wall_seconds": 1.7044908339739777
       },
       {
         "accuracy": 0.866,
-        "cpu_seconds": 14.981760999999999,
+        "cpu_seconds": 12.294801999999999,
         "dataset": "Senti",
         "iterations": 43,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 4,
-        "wall_seconds": 16.007124583993573
+        "wall_seconds": 15.814948540995829
       },
       {
         "accuracy": 0.56,
-        "cpu_seconds": 0.0582969999999996,
+        "cpu_seconds": 0.056502999999999304,
         "dataset": "Val5",
         "iterations": 57,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 4,
-        "wall_seconds": 0.0590043329866603
+        "wall_seconds": 0.06611116701969877
       },
       {
         "accuracy": 0.819449679607991,
-        "cpu_seconds": 0.5166320000000013,
+        "cpu_seconds": 0.5297439999999973,
         "dataset": "Web",
         "iterations": 53,
         "method": "ptbcc",
         "order_index": 0,
         "repetition": 4,
-        "wall_seconds": 0.5188009159755893
+        "wall_seconds": 0.765509957971517
       },
       {
         "accuracy": 0.18,
-        "cpu_seconds": 2.5609870000000003,
+        "cpu_seconds": 2.1805129999999995,
         "dataset": "Val7",
         "iterations": 1000,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 4,
-        "wall_seconds": 3.9729640840087086
+        "wall_seconds": 2.797170375008136
       },
       {
         "accuracy": 0.8448566610455311,
-        "cpu_seconds": 1.4016090000000005,
+        "cpu_seconds": 1.0590779999999995,
         "dataset": "Aircr",
         "iterations": 538,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 4,
-        "wall_seconds": 2.271605250018183
+        "wall_seconds": 1.1831801669904962
       },
       {
         "accuracy": 0.8866666666666667,
-        "cpu_seconds": 4.175302000000001,
+        "cpu_seconds": 3.0159309999999993,
         "dataset": "CF",
         "iterations": 689,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 4,
-        "wall_seconds": 4.98195237503387
+        "wall_seconds": 3.062176499981433
       },
       {
         "accuracy": 0.8819444444444444,
-        "cpu_seconds": 4.550133000000001,
+        "cpu_seconds": 3.418735,
         "dataset": "Fact",
         "iterations": 359,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 4,
-        "wall_seconds": 5.088300083996728
+        "wall_seconds": 3.4816710830200464
       },
       {
         "accuracy": 0.7842857142857143,
-        "cpu_seconds": 2.894195,
+        "cpu_seconds": 1.928735999999999,
         "dataset": "MS",
         "iterations": 513,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 4,
-        "wall_seconds": 4.486620625015348
+        "wall_seconds": 2.0421860839705914
       },
       {
         "accuracy": 0.8401486988847584,
-        "cpu_seconds": 1.0901250000000005,
+        "cpu_seconds": 0.7457750000000001,
         "dataset": "Dog",
         "iterations": 465,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 4,
-        "wall_seconds": 1.4423154160031117
+        "wall_seconds": 0.7563244159682654
       },
       {
         "accuracy": 0.6455479452054794,
-        "cpu_seconds": 0.5251340000000013,
+        "cpu_seconds": 0.2921439999999986,
         "dataset": "Face",
         "iterations": 308,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 4,
-        "wall_seconds": 0.8128332089981996
+        "wall_seconds": 0.2935531249968335
       },
       {
         "accuracy": 0.7447447447447447,
-        "cpu_seconds": 10.939215,
+        "cpu_seconds": 8.655945,
         "dataset": "Adult",
         "iterations": 880,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 4,
-        "wall_seconds": 15.593416082963813
+        "wall_seconds": 9.215965625015087
       },
       {
         "accuracy": 0.885,
-        "cpu_seconds": 70.292672,
+        "cpu_seconds": 66.07635,
         "dataset": "Senti",
         "iterations": 783,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 4,
-        "wall_seconds": 120.38135458400939
+        "wall_seconds": 98.57082941697445
       },
       {
         "accuracy": 0.38,
-        "cpu_seconds": 1.994757000000007,
+        "cpu_seconds": 1.6998829999999998,
         "dataset": "Val5",
         "iterations": 1000,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 4,
-        "wall_seconds": 2.97161283303285
+        "wall_seconds": 1.841279374959413
       },
       {
         "accuracy": 0.8202035431586883,
-        "cpu_seconds": 2.1821570000000037,
+        "cpu_seconds": 1.9206360000000018,
         "dataset": "Web",
         "iterations": 353,
         "method": "fgbcc",
         "order_index": 1,
         "repetition": 4,
-        "wall_seconds": 3.3375654999981634
+        "wall_seconds": 2.0111181249958463
       },
       {
         "accuracy": 0.22,
-        "cpu_seconds": 0.017197999999999602,
+        "cpu_seconds": 0.016690000000000538,
         "dataset": "Val7",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 4,
-        "wall_seconds": 0.01866558298934251
+        "wall_seconds": 0.016768041998147964
       },
       {
         "accuracy": 0.8414839797639123,
-        "cpu_seconds": 0.02290900000000029,
+        "cpu_seconds": 0.021624000000000088,
         "dataset": "Aircr",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 4,
-        "wall_seconds": 0.023629500006791204
+        "wall_seconds": 0.02281595900421962
       },
       {
         "accuracy": 0.7966666666666666,
-        "cpu_seconds": 0.024642000000000053,
+        "cpu_seconds": 0.02369500000000002,
         "dataset": "CF",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 4,
-        "wall_seconds": 0.025129583023954183
+        "wall_seconds": 0.023799708986189216
       },
       {
         "accuracy": 0.8506944444444444,
-        "cpu_seconds": 0.8875349999999997,
+        "cpu_seconds": 0.8839800000000002,
         "dataset": "Fact",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 4,
-        "wall_seconds": 1.2497273749904707
+        "wall_seconds": 1.0838824160164222
       },
       {
         "accuracy": 0.7642857142857142,
-        "cpu_seconds": 0.048208999999999946,
+        "cpu_seconds": 0.04932200000000009,
         "dataset": "MS",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 4,
-        "wall_seconds": 0.05223312496673316
+        "wall_seconds": 0.051663792051840574
       },
       {
         "accuracy": 0.8426270136307311,
-        "cpu_seconds": 0.04515399999999925,
+        "cpu_seconds": 0.046464999999999534,
         "dataset": "Dog",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 4,
-        "wall_seconds": 0.047158958041109145
+        "wall_seconds": 0.04838195804040879
       },
       {
         "accuracy": 0.6404109589041096,
-        "cpu_seconds": 0.033030999999999366,
+        "cpu_seconds": 0.030070000000000263,
         "dataset": "Face",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 4,
-        "wall_seconds": 0.03479191701626405
+        "wall_seconds": 0.03116458299336955
       },
       {
         "accuracy": 0.7387387387387387,
-        "cpu_seconds": 0.4644149999999998,
+        "cpu_seconds": 0.4317380000000002,
         "dataset": "Adult",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 4,
-        "wall_seconds": 0.6922323750331998
+        "wall_seconds": 0.693374416034203
       },
       {
         "accuracy": 0.824,
-        "cpu_seconds": 3.617534,
+        "cpu_seconds": 3.452509000000001,
         "dataset": "Senti",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 4,
-        "wall_seconds": 5.124616624962073
+        "wall_seconds": 5.5249582920223475
       },
       {
         "accuracy": 0.41,
-        "cpu_seconds": 0.013270000000000337,
+        "cpu_seconds": 0.01281799999999933,
         "dataset": "Val5",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 4,
-        "wall_seconds": 0.01563795900437981
+        "wall_seconds": 0.012842374970205128
       },
       {
         "accuracy": 0.8254805880135695,
-        "cpu_seconds": 0.1132559999999998,
+        "cpu_seconds": 0.10603200000000079,
         "dataset": "Web",
         "iterations": 20,
         "method": "ds",
         "order_index": 2,
         "repetition": 4,
-        "wall_seconds": 0.12749250000342727
+        "wall_seconds": 0.11359583301236853
       },
       {
         "accuracy": 0.2,
-        "cpu_seconds": 0.01884899999999945,
+        "cpu_seconds": 0.01951200000000064,
         "dataset": "Val7",
         "iterations": 7,
         "method": "bwa",
         "order_index": 3,
         "repetition": 4,
-        "wall_seconds": 0.019044416956603527
+        "wall_seconds": 0.02612566703464836
       },
       {
         "accuracy": 0.8246205733558178,
-        "cpu_seconds": 0.049291000000000196,
+        "cpu_seconds": 0.04422699999999935,
         "dataset": "Aircr",
         "iterations": 21,
         "method": "bwa",
         "order_index": 3,
         "repetition": 4,
-        "wall_seconds": 0.06273554201470688
+        "wall_seconds": 0.049196708016097546
       },
       {
         "accuracy": 0.8933333333333333,
-        "cpu_seconds": 0.012484999999999857,
+        "cpu_seconds": 0.01283499999999993,
         "dataset": "CF",
         "iterations": 6,
         "method": "bwa",
         "order_index": 3,
         "repetition": 4,
-        "wall_seconds": 0.0131813749903813
+        "wall_seconds": 0.013136334018781781
       },
       {
         "accuracy": 0.8871527777777778,
-        "cpu_seconds": 0.4923660000000005,
+        "cpu_seconds": 0.46320800000000073,
         "dataset": "Fact",
         "iterations": 22,
         "method": "bwa",
         "order_index": 3,
         "repetition": 4,
-        "wall_seconds": 0.5511439169640653
+        "wall_seconds": 0.6085502910427749
       },
       {
         "accuracy": 0.7857142857142857,
-        "cpu_seconds": 0.05337000000000014,
+        "cpu_seconds": 0.0524950000000004,
         "dataset": "MS",
         "iterations": 22,
         "method": "bwa",
         "order_index": 3,
         "repetition": 4,
-        "wall_seconds": 0.057027000002563
+        "wall_seconds": 0.0528477500192821
       },
       {
         "accuracy": 0.8314745972738538,
-        "cpu_seconds": 0.02473900000000029,
+        "cpu_seconds": 0.023031000000000468,
         "dataset": "Dog",
         "iterations": 9,
         "method": "bwa",
         "order_index": 3,
         "repetition": 4,
-        "wall_seconds": 0.02596545801497996
+        "wall_seconds": 0.02326091699069366
       },
       {
         "accuracy": 0.6181506849315068,
-        "cpu_seconds": 0.016176999999999886,
+        "cpu_seconds": 0.016778999999999655,
         "dataset": "Face",
         "iterations": 10,
         "method": "bwa",
         "order_index": 3,
         "repetition": 4,
-        "wall_seconds": 0.016367916949093342
+        "wall_seconds": 0.016812250018119812
       },
       {
         "accuracy": 0.7417417417417418,
-        "cpu_seconds": 0.31391100000000005,
+        "cpu_seconds": 0.31408099999999983,
         "dataset": "Adult",
         "iterations": 41,
         "method": "bwa",
         "order_index": 3,
         "repetition": 4,
-        "wall_seconds": 0.37030475004576147
+        "wall_seconds": 0.4974391660070978
       },
       {
         "accuracy": 0.89,
-        "cpu_seconds": 1.9789169999999991,
+        "cpu_seconds": 1.8737849999999998,
         "dataset": "Senti",
         "iterations": 29,
         "method": "bwa",
         "order_index": 3,
         "repetition": 4,
-        "wall_seconds": 2.3605286249658093
+        "wall_seconds": 2.883348750008736
       },
       {
         "accuracy": 0.35,
-        "cpu_seconds": 0.013027999999999373,
+        "cpu_seconds": 0.013140999999999181,
         "dataset": "Val5",
         "iterations": 7,
         "method": "bwa",
         "order_index": 3,
         "repetition": 4,
-        "wall_seconds": 0.014750125003047287
+        "wall_seconds": 0.04141266702208668
       },
       {
         "accuracy": 0.8224651338107802,
-        "cpu_seconds": 0.07004100000000069,
+        "cpu_seconds": 0.07097899999999946,
         "dataset": "Web",
         "iterations": 20,
         "method": "bwa",
         "order_index": 3,
         "repetition": 4,
-        "wall_seconds": 0.076962833001744
+        "wall_seconds": 0.12682429200503975
       }
     ],
     "repetitions": 5,
     "totals": [
       {
-        "cpu_seconds": 21.843311999999997,
+        "cpu_seconds": 21.804047,
         "method": "ptbcc",
         "repetition": 0,
-        "wall_seconds": 22.731050665897783
+        "wall_seconds": 28.75973554200027
       },
       {
-        "cpu_seconds": 101.573489,
+        "cpu_seconds": 97.683617,
         "method": "fgbcc",
         "repetition": 0,
-        "wall_seconds": 160.073231250979
+        "wall_seconds": 128.46486416697735
       },
       {
-        "cpu_seconds": 4.986404999999998,
+        "cpu_seconds": 5.034346000000001,
         "method": "ds",
         "repetition": 0,
-        "wall_seconds": 6.809561084024608
+        "wall_seconds": 6.772678083041683
       },
       {
-        "cpu_seconds": 2.8720500000000007,
+        "cpu_seconds": 3.083512,
         "method": "bwa",
         "repetition": 0,
-        "wall_seconds": 3.580881626869086
+        "wall_seconds": 4.604581876075827
       },
       {
-        "cpu_seconds": 22.759875999999995,
+        "cpu_seconds": 21.368638000000004,
         "method": "ptbcc",
         "repetition": 1,
-        "wall_seconds": 43.576659123122226
+        "wall_seconds": 23.83815120899817
       },
       {
-        "cpu_seconds": 101.81900999999998,
+        "cpu_seconds": 93.22125000000001,
         "method": "fgbcc",
         "repetition": 1,
-        "wall_seconds": 167.13428662484512
+        "wall_seconds": 105.5883427921799
       },
       {
-        "cpu_seconds": 5.038367000000002,
+        "cpu_seconds": 5.091530999999998,
         "method": "ds",
         "repetition": 1,
-        "wall_seconds": 7.995660042972304
+        "wall_seconds": 9.729400751937646
       },
       {
-        "cpu_seconds": 2.9375790000000004,
+        "cpu_seconds": 2.823593000000001,
         "method": "bwa",
         "repetition": 1,
-        "wall_seconds": 4.534023332060315
+        "wall_seconds": 4.760922875080723
       },
       {
-        "cpu_seconds": 21.492331999999998,
+        "cpu_seconds": 22.41683799999999,
         "method": "ptbcc",
         "repetition": 2,
-        "wall_seconds": 24.207244084158447
+        "wall_seconds": 38.89545283204643
       },
       {
-        "cpu_seconds": 97.153756,
+        "cpu_seconds": 97.71673100000001,
         "method": "fgbcc",
         "repetition": 2,
-        "wall_seconds": 118.71310979104601
+        "wall_seconds": 136.97380112903193
       },
       {
-        "cpu_seconds": 5.140591999999999,
+        "cpu_seconds": 5.137674000000001,
         "method": "ds",
         "repetition": 2,
-        "wall_seconds": 6.678787332843058
+        "wall_seconds": 6.042536208056845
       },
       {
-        "cpu_seconds": 2.9796179999999994,
+        "cpu_seconds": 2.986293999999999,
         "method": "bwa",
         "repetition": 2,
-        "wall_seconds": 3.686637915088795
+        "wall_seconds": 4.726842957956251
       },
       {
-        "cpu_seconds": 21.922151999999993,
+        "cpu_seconds": 21.923000999999992,
         "method": "ptbcc",
         "repetition": 3,
-        "wall_seconds": 23.967532168957405
+        "wall_seconds": 30.120947998017073
       },
       {
-        "cpu_seconds": 94.769916,
+        "cpu_seconds": 97.07388000000002,
         "method": "fgbcc",
         "repetition": 3,
-        "wall_seconds": 117.31122712296201
+        "wall_seconds": 141.27046245796373
       },
       {
-        "cpu_seconds": 4.899072,
+        "cpu_seconds": 4.4390459999999985,
         "method": "ds",
         "repetition": 3,
-        "wall_seconds": 4.962991541135125
+        "wall_seconds": 4.493623249989469
       },
       {
-        "cpu_seconds": 2.9498159999999993,
+        "cpu_seconds": 2.9623799999999996,
         "method": "bwa",
         "repetition": 3,
-        "wall_seconds": 3.0849939589970745
+        "wall_seconds": 7.328844083938748
       },
       {
-        "cpu_seconds": 21.555396,
+        "cpu_seconds": 18.263120999999995,
         "method": "ptbcc",
         "repetition": 4,
-        "wall_seconds": 22.776862373983022
+        "wall_seconds": 22.270557831972837
       },
       {
-        "cpu_seconds": 102.60628600000001,
+        "cpu_seconds": 90.993726,
         "method": "fgbcc",
         "repetition": 4,
-        "wall_seconds": 165.34054004307836
+        "wall_seconds": 125.2554542918806
       },
       {
-        "cpu_seconds": 5.287152999999998,
+        "cpu_seconds": 5.074943000000002,
         "method": "ds",
         "repetition": 4,
-        "wall_seconds": 7.411315500037745
+        "wall_seconds": 7.623247375129722
       },
       {
-        "cpu_seconds": 3.0431739999999996,
+        "cpu_seconds": 2.9040729999999995,
         "method": "bwa",
         "repetition": 4,
-        "wall_seconds": 3.5680119589087553
+        "wall_seconds": 4.338954792183358
       }
     ]
   },
@@ -2444,103 +2444,103 @@
       {
         "all_below_0_10": false,
         "bootstrap_95_percent": [
-          0.13775727579000688,
-          0.2607284238507911
+          0.1778011022184802,
+          0.283962717771161
         ],
         "clock": "wall_seconds",
         "comparator": "fgbcc",
-        "median": 0.2039138232227852,
+        "median": 0.2238723850952635,
         "samples": [
-          0.14200407206285318,
-          0.2607284238507911,
-          0.2039138232227852,
-          0.20430723262177947,
-          0.13775727579000688
+          0.2238723850952635,
+          0.22576499051525672,
+          0.283962717771161,
+          0.21321476176932475,
+          0.1778011022184802
         ]
       },
       {
         "all_below_0_10": false,
         "bootstrap_95_percent": [
-          3.0732549941865277,
-          5.450039007276635
+          2.450115049917202,
+          6.703042583306837
         ],
         "clock": "wall_seconds",
         "comparator": "ds",
-        "median": 3.6244969150490665,
+        "median": 4.24643474698918,
         "samples": [
-          3.338108049170066,
-          5.450039007276635,
-          3.6244969150490665,
-          4.829251061644083,
-          3.0732549941865277
+          4.24643474698918,
+          2.450115049917202,
+          6.436941623979843,
+          6.703042583306837,
+          2.9214003870094625
         ]
       },
       {
         "all_below_0_10": false,
         "bootstrap_95_percent": [
-          6.347892232833311,
-          9.6110354825458
+          4.109917969741982,
+          8.228632340445618
         ],
         "clock": "wall_seconds",
         "comparator": "bwa",
-        "median": 6.566211448399157,
+        "median": 5.1327010532797726,
         "samples": [
-          6.347892232833311,
-          9.6110354825458,
-          6.566211448399157,
-          7.769069400949233,
-          6.383628372408573
+          6.245895135762087,
+          5.007044187539792,
+          8.228632340445618,
+          4.109917969741982,
+          5.1327010532797726
         ]
       },
       {
         "all_below_0_10": false,
         "bootstrap_95_percent": [
-          0.2100787080432869,
-          0.23131973652904783
+          0.20070747515053944,
+          0.22940634393510348
         ],
         "clock": "cpu_seconds",
         "comparator": "fgbcc",
-        "median": 0.22121977456023417,
+        "median": 0.22583830995526283,
         "samples": [
-          0.21504934225504452,
-          0.22353267822973333,
-          0.22121977456023417,
-          0.23131973652904783,
-          0.2100787080432869
+          0.2232108890890066,
+          0.22922496748327234,
+          0.22940634393510348,
+          0.22583830995526283,
+          0.20070747515053944
         ]
       },
       {
         "all_below_0_10": false,
         "bootstrap_95_percent": [
-          4.076938193390659,
-          4.517312057656774
+          3.5986849507472276,
+          4.938673985356313
         ],
         "clock": "cpu_seconds",
         "comparator": "ds",
-        "median": 4.380573178472267,
+        "median": 4.331058492999884,
         "samples": [
-          4.380573178472267,
-          4.517312057656774,
-          4.180906012381453,
-          4.474756035428749,
-          4.076938193390659
+          4.331058492999884,
+          4.196898339615336,
+          4.363227016739478,
+          4.938673985356313,
+          3.5986849507472276
         ]
       },
       {
         "all_below_0_10": false,
         "bootstrap_95_percent": [
-          7.083195374303277,
-          7.7478345263225235
+          6.2887954262857715,
+          7.567888856503043
         ],
         "clock": "cpu_seconds",
         "comparator": "bwa",
-        "median": 7.4317015027377975,
+        "median": 7.40046887975209,
         "samples": [
-          7.605477620514961,
-          7.7478345263225235,
-          7.213116580716052,
-          7.4317015027377975,
-          7.083195374303277
+          7.071173064998613,
+          7.567888856503043,
+          7.506574369435828,
+          7.40046887975209,
+          6.2887954262857715
         ]
       }
     ]

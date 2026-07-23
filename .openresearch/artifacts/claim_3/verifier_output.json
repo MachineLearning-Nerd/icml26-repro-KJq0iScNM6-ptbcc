@@ -1,0 +1,32 @@
+{
+  "blocker": "FGBCC regenerates as 0.7175816744 (0.7176 at four decimals), while the paper prints 0.7175; PTBCC has no released author code and the paper does not release its exact numerical environment.",
+  "checks": {
+    "all_four_values_match_to_four_decimals": false,
+    "exact_11_dataset_domain": true,
+    "fgbcc_author_golden_aircr_exact": true
+  },
+  "claim_id": 3,
+  "statistics": {
+    "fgbcc_absolute_delta": 8.167440327522257e-05,
+    "four_decimal_matches": {
+      "BWA": true,
+      "FGBCC": false,
+      "MV": true,
+      "PTBCC": true
+    },
+    "observed": {
+      "BWA": 0.7131502843580998,
+      "FGBCC": 0.7175816744032752,
+      "MV": 0.6986047829354634,
+      "PTBCC": 0.7471525426567854
+    },
+    "paper": {
+      "BWA": 0.7132,
+      "FGBCC": 0.7175,
+      "MV": 0.6986,
+      "PTBCC": 0.7472
+    }
+  },
+  "valid_evidence": true,
+  "verdict": "BLOCKED"
+}

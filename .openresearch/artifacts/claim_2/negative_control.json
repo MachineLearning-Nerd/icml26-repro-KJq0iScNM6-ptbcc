@@ -1,0 +1,6 @@
+{
+  "mutated_valid_evidence": true,
+  "mutated_verdict": "BLOCKED",
+  "mutation": "change Val5 PTBCC accuracy from 0.56 to 0.55",
+  "rejected": true
+}

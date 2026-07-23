@@ -1,0 +1,6 @@
+{
+  "mutated_valid_evidence": false,
+  "mutated_verdict": "BLOCKED",
+  "mutation": "drop one required synthetic seed",
+  "rejected": true
+}

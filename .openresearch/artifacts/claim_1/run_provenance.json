@@ -1,5 +1,70 @@
 {
   "backend": "local",
+  "checker_runtime": {
+    "compute": "OpenResearch local backend, CPU only, no GPU",
+    "environment": {
+      ".python-version": "3.12",
+      "platform": "macOS-26.5.2-arm64-arm-64bit",
+      "processor": "arm",
+      "pyproject_sha256": "167cb8af474e19d484804a62d39f1bc172564e7be99b807889824e61566cd56e",
+      "python": "3.12.11",
+      "uv_lock_sha256": "efcd9120fe50fc91b3f6fa4f71ec8923f35527317db5a909560700655dbd37c6"
+    },
+    "fixed_command": "uv sync --frozen && uv run python repro/src/run_ptbcc.py --output-dir outputs/full && uv run python -m unittest -v repro.tests.test_ptbcc",
+    "git_commit": "dc8d5eba7a9cf92fe64a0e75473df740146a191f",
+    "output_dir": "outputs/full",
+    "seeds": {
+      "ablation": [
+        20260715,
+        20260716,
+        20260717
+      ],
+      "bootstrap": 20260723,
+      "ptbcc_main": 20260715,
+      "synthetic": [
+        73000,
+        73001,
+        73002,
+        73003,
+        73004,
+        73005,
+        73006,
+        73007,
+        73008,
+        73009,
+        73010,
+        73011,
+        73012,
+        73013,
+        73014,
+        73015,
+        73016,
+        73017,
+        73018,
+        73019,
+        73020,
+        73021,
+        73022,
+        73023,
+        73024,
+        73025,
+        73026,
+        73027,
+        73028,
+        73029,
+        73030,
+        73031,
+        73032,
+        73033,
+        73034,
+        73035,
+        73036,
+        73037,
+        73038,
+        73039
+      ]
+    }
+  },
   "compute": "CPU only",
   "deterministic_seeds": {
     "ablation": [
@@ -57,11 +122,11 @@
     "pyproject_sha256": "167cb8af474e19d484804a62d39f1bc172564e7be99b807889824e61566cd56e",
     "uv_lock_sha256": "efcd9120fe50fc91b3f6fa4f71ec8923f35527317db5a909560700655dbd37c6"
   },
-  "experiment_id": "783e5677-92bd-4119-bed3-0bfb34d0385e",
-  "experiment_status": "Process-isolated CPU runtime benchmark  (idle)  [local]\n  id:       783e5677-92bd-4119-bed3-0bfb34d0385e\n  branch:   orx/process-isolated-cpu-runtime-benchmark\n  parent:   bdb908a8-36dd-4f89-987c-8c4144a26530 (branch orx/legacy-exact-fgbcc-numerical-semantics)\n  command:  uv sync --frozen && uv run python repro/src/run_ptbcc.py --output-dir outputs/full && uv run python -m unittest -v repro.tests.test_ptbcc\n  last run: 9574c466-4dce-43ab-a8e3-fb6a650e263a (done, commit c0fa15c, ran 27m28s, updated 3m ago)\n  commit:   c0fa15c12bb1e16592d2993e5921cd79196c1f28",
+  "experiment_id": "83d4355c-155b-427a-a73b-680e7e36d837",
+  "experiment_status": "Cumulative claim verifier and evidence bundle  (idle)  [local]\n  id:       83d4355c-155b-427a-a73b-680e7e36d837\n  branch:   orx/cumulative-claim-verifier-and-evidence-bundle\n  parent:   783e5677-92bd-4119-bed3-0bfb34d0385e (branch orx/process-isolated-cpu-runtime-benchmark)\n  command:  uv sync --frozen && uv run python repro/src/run_ptbcc.py --output-dir outputs/full && uv run python -m unittest -v repro.tests.test_ptbcc\n  last run: 843a403f-d46c-4caa-ae7f-723fb01f4946 (done, commit dc8d5eb, ran 24m10s, updated 1m ago)\n  commit:   dc8d5eba7a9cf92fe64a0e75473df740146a191f",
   "fixed_command": "uv sync --frozen && uv run python repro/src/run_ptbcc.py --output-dir outputs/full && uv run python -m unittest -v repro.tests.test_ptbcc",
-  "git_commit": "c0fa15c12bb1e16592d2993e5921cd79196c1f28",
-  "log_response_sha256": "599b07e0c20527541fc0d594508751411fa23b104c879879252cc587ef65762d",
+  "git_commit": "dc8d5eba7a9cf92fe64a0e75473df740146a191f",
+  "log_response_sha256": "008e7ecf92a593be8bf954110521606265fe4e7c46d34d0b6cdf0c974f1835df",
   "project_id": "6c85b7b1-64e2-437d-8936-2229c4cffb13",
-  "run_id": "9574c466-4dce-43ab-a8e3-fb6a650e263a"
+  "run_id": "843a403f-d46c-4caa-ae7f-723fb01f4946"
 }

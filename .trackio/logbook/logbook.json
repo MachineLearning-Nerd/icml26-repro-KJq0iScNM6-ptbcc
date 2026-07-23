@@ -11,7 +11,7 @@
     "icml2026-repro",
     "paper-KJq0iScNM6"
   ],
-  "updated_at": "2026-07-16T15:11:45+00:00",
+  "updated_at": "2026-07-23T15:55:33+00:00",
   "root": {
     "slug": "index",
     "title": "Repro - Let the Prototype Guide You: PTBCC",
@@ -70,9 +70,45 @@
         "title": "Conclusion",
         "file": "pages/conclusion/page.md",
         "children": []
+      },
+      {
+        "slug": "2026-claim-by-claim-campaign",
+        "title": "2026 claim-by-claim campaign",
+        "file": "pages/2026-claim-by-claim-campaign/page.md",
+        "children": []
+      },
+      {
+        "slug": "2026-claim-2-exact-val5",
+        "title": "2026 Claim 2 - exact Val5",
+        "file": "pages/2026-claim-2-exact-val5/page.md",
+        "children": []
+      },
+      {
+        "slug": "2026-claim-3-exact-table4",
+        "title": "2026 Claim 3 - exact Table 4",
+        "file": "pages/2026-claim-3-exact-table4/page.md",
+        "children": []
+      },
+      {
+        "slug": "2026-claim-4-prototype-ablation",
+        "title": "2026 Claim 4 - prototype-count ablation",
+        "file": "pages/2026-claim-4-prototype-ablation/page.md",
+        "children": []
+      },
+      {
+        "slug": "2026-claim-5-controlled-runtime",
+        "title": "2026 Claim 5 - controlled runtime",
+        "file": "pages/2026-claim-5-controlled-runtime/page.md",
+        "children": []
+      },
+      {
+        "slug": "2026-cumulative-verifier",
+        "title": "2026 cumulative verifier",
+        "file": "pages/2026-cumulative-verifier/page.md",
+        "children": []
       }
     ]
   },
-  "agent_view_tokens": 2648,
-  "revision": "1784214705600376073"
+  "agent_view_tokens": 5100,
+  "revision": "1784822134011833000"
 }

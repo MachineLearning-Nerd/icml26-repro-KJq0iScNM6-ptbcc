@@ -1,8 +1,11 @@
 # VERIFIED
 
-Accepted evidence: local CPU run `5b3e193d-383c-4579-9eb2-8cb895c90945`
-at Git SHA `6c3a1b4e5cc5aa2b0d6992964d04044b78201d6c`.
+The independently checked output contains two normalized shared prototype
+confusion matrices per dataset and normalized per-annotator mixture weights.
+All 40 deterministic synthetic trials improve over majority vote, with mean
+Hungarian-matched prototype MAE `0.0417523140`.
 
-The run passed all model-invariant tests, PTBCC beat MV in 40/40 deterministic
-trials, and mean prototype MAE after Hungarian matching was `0.0417523140`.
-The present branch must reproduce this in its cumulative regression suite.
+The cumulative verifier also confirms the Table 3 worker counts and rejects a
+negative control with one required synthetic seed removed. See
+`independent_checker.json`, `negative_control.json`,
+`raw_synthetic_recovery.json`, and `run_provenance.json`.

@@ -126,6 +126,41 @@ class PTBCCReproductionTests(unittest.TestCase):
         self.assertTrue(all(result["valid_evidence"].values()))
         self.assertTrue(all(result["negative_controls_rejected"].values()))
 
+    def test_visual_report_evidence_was_regenerated(self) -> None:
+        root = Path(__file__).resolve().parents[2]
+        image_dir = (
+            root
+            / "reports"
+            / "ptbcc-claim-by-claim-2026-07-23"
+            / "images"
+        )
+        expected = {
+            "headline-val5.png",
+            "prototype-count-ablation.png",
+            "runtime-ratios.png",
+            "synthetic-recovery.png",
+            "table4-macro-accuracy.png",
+        }
+        self.assertEqual(
+            {path.name for path in image_dir.glob("*.png")},
+            expected,
+        )
+        for name in expected:
+            payload = (image_dir / name).read_bytes()
+            self.assertTrue(payload.startswith(b"\x89PNG\r\n\x1a\n"))
+            self.assertGreater(len(payload), 10_000)
+
+    def test_space_candidate_is_additive_and_text_only(self) -> None:
+        root = Path(__file__).resolve().parents[2]
+        subset_path = root / "release" / "hf-space-subset-check.json"
+        self.assertTrue(subset_path.is_file())
+        subset = json.loads(subset_path.read_text())
+        self.assertEqual(subset["space_id"], "DineshAI/KJq0iScNM6")
+        self.assertTrue(subset["old_paths_subset_of_candidate"])
+        self.assertEqual(subset["changed_old_evidence_paths"], [])
+        self.assertEqual(subset["secret_pattern_scan"], "PASS")
+        self.assertEqual(len(subset["text_only_upload_allowlist"]), 8)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

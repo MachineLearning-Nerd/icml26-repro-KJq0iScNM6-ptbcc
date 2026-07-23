@@ -1,0 +1,60 @@
+{
+  "blocker": "The local benchmark rejects <10% for every implemented comparator, but the paper omits the aggregate denominator and raw timings, used a 2-vCPU Intel Xeon 8369HC, and plotted original baseline loops. This Apple-CPU run uses an equation-equivalent vectorized FGBCC, so it is a direct setup-specific contradiction, not a faithful paper-hardware falsification.",
+  "checks": {
+    "accuracy_gain_is_about_3pp": true,
+    "complete_controlled_benchmark": true,
+    "paper_cpu_and_original_implementations_reproduced": false,
+    "paper_exact_denominator_and_raw_timings_available": false,
+    "under_10_percent_threshold_contradicted_on_local_stack": true
+  },
+  "claim_id": 5,
+  "statistics": {
+    "ptbcc_minus_fgbcc_accuracy_pp": 2.9570868253510185,
+    "ratios": {
+      "cpu_seconds_over_bwa": {
+        "bootstrap_95_percent": [
+          6.2887954262857715,
+          7.567888856503043
+        ],
+        "median": 7.40046887975209
+      },
+      "cpu_seconds_over_ds": {
+        "bootstrap_95_percent": [
+          3.5986849507472276,
+          4.938673985356313
+        ],
+        "median": 4.331058492999884
+      },
+      "cpu_seconds_over_fgbcc": {
+        "bootstrap_95_percent": [
+          0.20070747515053944,
+          0.22940634393510348
+        ],
+        "median": 0.22583830995526283
+      },
+      "wall_seconds_over_bwa": {
+        "bootstrap_95_percent": [
+          4.109917969741982,
+          8.228632340445618
+        ],
+        "median": 5.1327010532797726
+      },
+      "wall_seconds_over_ds": {
+        "bootstrap_95_percent": [
+          2.450115049917202,
+          6.703042583306837
+        ],
+        "median": 4.24643474698918
+      },
+      "wall_seconds_over_fgbcc": {
+        "bootstrap_95_percent": [
+          0.1778011022184802,
+          0.283962717771161
+        ],
+        "median": 0.2238723850952635
+      }
+    }
+  },
+  "valid_evidence": true,
+  "verdict": "BLOCKED"
+}

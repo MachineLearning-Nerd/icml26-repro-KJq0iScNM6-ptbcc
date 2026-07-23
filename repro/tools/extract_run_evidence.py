@@ -50,6 +50,7 @@ def _markers(log: str) -> dict[str, list[Any]]:
         "ABLATION_MACRO",
         "RUNTIME_BENCHMARK",
         "CLAIM_RESULTS",
+        "CLAIM_VERIFIER_DETAILS",
     }
     parsed: dict[str, list[Any]] = {marker: [] for marker in wanted}
     for line in log.splitlines():
@@ -66,8 +67,14 @@ def _markers(log: str) -> dict[str, list[Any]]:
         "RUNTIME_BENCHMARK": 1,
         "CLAIM_RESULTS": 1,
     }
-    if counts != expected:
+    required_counts = {key: counts[key] for key in expected}
+    if required_counts != expected:
         raise ValueError(f"unexpected marker counts: {counts}, expected {expected}")
+    if counts["CLAIM_VERIFIER_DETAILS"] not in (0, 1):
+        raise ValueError(
+            "expected at most one CLAIM_VERIFIER_DETAILS marker, observed "
+            f"{counts['CLAIM_VERIFIER_DETAILS']}"
+        )
     return parsed
 
 
@@ -168,6 +175,33 @@ def main() -> None:
             "claim_result": claims["claim_5_controlled"],
         },
     )
+    verifier_details = parsed["CLAIM_VERIFIER_DETAILS"]
+    if verifier_details:
+        details = verifier_details[0]
+        for claim_id in range(1, 6):
+            claim_key = str(claim_id)
+            evaluation = details["evaluations"][claim_key]
+            control = details["negative_controls"][claim_key]
+            _write_json(
+                ARTIFACTS
+                / f"claim_{claim_id}"
+                / "independent_checker.json",
+                evaluation,
+            )
+            _write_json(
+                ARTIFACTS / f"claim_{claim_id}" / "verifier_output.json",
+                evaluation,
+            )
+            _write_json(
+                ARTIFACTS / f"claim_{claim_id}" / "negative_control.json",
+                control,
+            )
+        provenance["checker_runtime"] = details["provenance"]
+        for claim_id in range(1, 6):
+            _write_json(
+                ARTIFACTS / f"claim_{claim_id}" / "run_provenance.json",
+                provenance,
+            )
     print(
         json.dumps(
             {
@@ -175,7 +209,7 @@ def main() -> None:
                 "run_id": args.run_id,
                 "commit": args.commit,
                 "log_response_sha256": provenance["log_response_sha256"],
-                "files_written": 10,
+                "files_written": 25 if verifier_details else 10,
             },
             sort_keys=True,
         )
