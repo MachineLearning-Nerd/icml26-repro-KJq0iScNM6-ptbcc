@@ -1,0 +1,28 @@
+{
+  "dataset_id": "ICML-2026-agent-repro/verdicts",
+  "dataset_revision": "27380c7340e385d209ae8c303081f452d7cc5b63",
+  "verdicts_json_sha256": "dc1d5d205155756871ece4554a69c3f65530a51c6e62417c235535016f79ee35",
+  "retrieved_at": "2026-07-23T13:39:50Z",
+  "filter": {
+    "field": "space_id",
+    "equals": "DineshAI/KJq0iScNM6"
+  },
+  "record": {
+    "space_id": "DineshAI/KJq0iScNM6",
+    "orid": "KJq0iScNM6",
+    "paper_title": "Let the Prototype Guide You: Robust Aggregation of Sparse Multi-Class Annotations via Annotator Prototype Learning",
+    "sha": "e57f7e6e348fea6c5a0467ca33f94375b5bf2623",
+    "judged_at": "2026-07-22T20:10:51+00:00",
+    "model": "zai-org/GLM-5.2",
+    "score": 2,
+    "maximum_score": 10,
+    "claim_verdicts": [
+      "verified",
+      "inconclusive",
+      "inconclusive",
+      "inconclusive",
+      "inconclusive"
+    ],
+    "quality": "medium"
+  }
+}

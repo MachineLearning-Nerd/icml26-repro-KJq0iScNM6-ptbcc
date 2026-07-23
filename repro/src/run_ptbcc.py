@@ -39,6 +39,8 @@ import numpy as np
 from scipy.optimize import linear_sum_assignment
 from scipy.special import digamma, logsumexp
 
+from repro.src.data_bootstrap import ensure_public_data
+
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -196,6 +198,7 @@ def load_web() -> CrowdDataset:
 
 
 def load_public_datasets() -> list[CrowdDataset]:
+    ensure_public_data(ROOT)
     return [
         load_active("CF", "CF.csv", (300, 461, 300, 5, 1720)),
         load_active("MS", "MS.csv", (700, 44, 700, 10, 2945)),

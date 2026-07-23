@@ -11,7 +11,7 @@ and recovering known prototypes on synthetic data generated from the model.
 Run:
 
 ```bash
+uv sync --frozen
 uv run python repro/src/run_ptbcc.py --output-dir outputs/full
 uv run python -m unittest -v repro.tests.test_ptbcc
 ```
-

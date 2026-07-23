@@ -1,0 +1,64 @@
+{
+  "retrieved_for_audit_at": "2026-07-23T13:39:50Z",
+  "user_agent": "OpenResearch-PTBCC-Reproduction/1.0",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/orchidproject/active-crowd-toolkit/2c0c194e85ca126545bd830d811ec39151bdd448/Data/CF.csv",
+      "sha256": "18bc4dc1780ce1f2b2f9ffedc493f4b8f9a4590a3fde8dce2e5d3367bcc8686e",
+      "target": "external/active-crowd-toolkit/Data/CF.csv"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/orchidproject/active-crowd-toolkit/2c0c194e85ca126545bd830d811ec39151bdd448/Data/MS.csv",
+      "sha256": "fb9e0b146723c93dac71d1ed601a736cf94fed3b444f4921d6c4e57b4505c06a",
+      "target": "external/active-crowd-toolkit/Data/MS.csv"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zhangyuc/SpectralMethodsMeetEM/6204f5fcab1766cb1b2c40fc1bff53b1613ddc6c/src/web_crowd.txt",
+      "sha256": "5b1ad44cebdcf59d42c83393a7dc3f4aa46746f5428c4caac275350247da6d6f",
+      "target": "external/SpectralMethodsMeetEM/src/web_crowd.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zhangyuc/SpectralMethodsMeetEM/6204f5fcab1766cb1b2c40fc1bff53b1613ddc6c/src/web_truth.txt",
+      "sha256": "7ff13173d6ad447e6959fa5226bcbef756ebe34d712eae908de30036824fc94f",
+      "target": "external/SpectralMethodsMeetEM/src/web_truth.txt"
+    }
+  ],
+  "archives": [
+    {
+      "url": "https://zhydhkcws.github.io/crowd_truth_inference/datasets.zip",
+      "sha256": "c68ee01613da6dd6e2405c3252b73bb1199bc263909588bf952f57fc7d84323c",
+      "members": [
+        {
+          "member": "datasets/s4_Dog data/answer.csv",
+          "sha256": "db11159198f59fa2af87450b008f860ca2e9e04e3f15c697ef254af40fb6763a",
+          "target": "external/crowd_truth_datasets/datasets/s4_Dog data/answer.csv"
+        },
+        {
+          "member": "datasets/s4_Dog data/truth.csv",
+          "sha256": "2a641fa31e80526164d956da4228f80d31b303c2691ab1855c76fef72d04b746",
+          "target": "external/crowd_truth_datasets/datasets/s4_Dog data/truth.csv"
+        },
+        {
+          "member": "datasets/s4_Face Sentiment Identification/answer.csv",
+          "sha256": "9e98c7c56ea1967ca9d3e2396b9abd469e96ee47a52a0103c917397adbb98f9b",
+          "target": "external/crowd_truth_datasets/datasets/s4_Face Sentiment Identification/answer.csv"
+        },
+        {
+          "member": "datasets/s4_Face Sentiment Identification/truth.csv",
+          "sha256": "c324c79fd7196d16cb638d956ec90209e405b0010741ffb5ecb1b6316f48cc4c",
+          "target": "external/crowd_truth_datasets/datasets/s4_Face Sentiment Identification/truth.csv"
+        },
+        {
+          "member": "datasets/s5_AdultContent/answer.csv",
+          "sha256": "7615fa2f2fccf2a6ed1c07896f1bf764dba550da8ca841d9847240e6096cd893",
+          "target": "external/crowd_truth_datasets/datasets/s5_AdultContent/answer.csv"
+        },
+        {
+          "member": "datasets/s5_AdultContent/truth.csv",
+          "sha256": "7823e02850fdab752b79e0c1e9b84e71ccc038c6b21f85b90208f9962d7831eb",
+          "target": "external/crowd_truth_datasets/datasets/s5_AdultContent/truth.csv"
+        }
+      ]
+    }
+  ]
+}
