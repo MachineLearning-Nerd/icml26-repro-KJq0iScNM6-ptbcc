@@ -39,7 +39,10 @@ import numpy as np
 from scipy.optimize import linear_sum_assignment
 from scipy.special import digamma, logsumexp
 
-from repro.src.data_bootstrap import ensure_public_data
+if __package__:
+    from repro.src.data_bootstrap import ensure_public_data
+else:
+    from data_bootstrap import ensure_public_data
 
 
 ROOT = Path(__file__).resolve().parents[2]
