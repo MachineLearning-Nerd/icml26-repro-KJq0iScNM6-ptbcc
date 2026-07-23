@@ -41,10 +41,10 @@ from scipy.special import digamma, logsumexp
 
 if __package__:
     from repro.src.data_bootstrap import ensure_public_data
-    from repro.src.reference_baselines import fit_bwa, fit_fgbcc
+    from repro.src.reference_baselines import fit_bwa, fit_fgbcc, fit_published_ds
 else:
     from data_bootstrap import ensure_public_data
-    from reference_baselines import fit_bwa, fit_fgbcc
+    from reference_baselines import fit_bwa, fit_fgbcc, fit_published_ds
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -544,18 +544,19 @@ def audit_claims() -> dict[str, object]:
 def make_figures(results: list[dict[str, object]], synthetic: list[dict[str, float]], output: Path) -> None:
     names = [str(row["dataset"]) for row in results]
     x = np.arange(len(names))
-    width = 0.2
+    width = 0.16
     fig, ax = plt.subplots(figsize=(12.5, 5.4))
-    ax.bar(x - 1.5 * width, [float(row["mv_accuracy"]) for row in results], width, label="MV")
-    ax.bar(x - 0.5 * width, [float(row["bwa_accuracy"]) for row in results], width, label="BWA")
-    ax.bar(x + 0.5 * width, [float(row["ds_accuracy"]) for row in results], width, label="Dawid-Skene")
-    ax.bar(x + 1.5 * width, [float(row["ptbcc_accuracy"]) for row in results], width, label="PTBCC reconstruction")
+    ax.bar(x - 2 * width, [float(row["mv_accuracy"]) for row in results], width, label="MV")
+    ax.bar(x - width, [float(row["bwa_accuracy"]) for row in results], width, label="BWA")
+    ax.bar(x, [float(row["ds_accuracy"]) for row in results], width, label="Dawid-Skene")
+    ax.bar(x + width, [float(row["fgbcc_accuracy"]) for row in results], width, label="FGBCC")
+    ax.bar(x + 2 * width, [float(row["ptbcc_accuracy"]) for row in results], width, label="PTBCC reconstruction")
     ax.set_xticks(x, names)
     ax.set_ylim(0, 1)
     ax.set_ylabel("Accuracy on released ground truth")
     ax.set_title("Full 11-dataset CPU reproduction")
     ax.grid(axis="y", alpha=0.25)
-    ax.legend(ncols=4, loc="lower center")
+    ax.legend(ncols=5, loc="lower center")
     fig.tight_layout()
     fig.savefig(output / "public_dataset_accuracy.png", dpi=180)
     plt.close(fig)
@@ -599,11 +600,14 @@ def main() -> None:
         bwa = fit_bwa(dataset)
         bwa_seconds = time.perf_counter() - start
         start = time.perf_counter()
-        ds = fit_dawid_skene(dataset)
+        ds = fit_published_ds(dataset)
         ds_seconds = time.perf_counter() - start
         start = time.perf_counter()
         ptbcc = fit_ptbcc(dataset)
         ptbcc_seconds = time.perf_counter() - start
+        start = time.perf_counter()
+        fgbcc = fit_fgbcc(dataset)
+        fgbcc_seconds = time.perf_counter() - start
         fits[dataset.name] = ptbcc
         row = {
             "dataset": dataset.name,
@@ -614,14 +618,18 @@ def main() -> None:
             "labels": dataset.n_labels,
             "mv_accuracy": accuracy(dataset, mv_phi),
             "bwa_accuracy": accuracy(dataset, bwa.scores),
-            "ds_accuracy": accuracy(dataset, ds.phi),
+            "ds_accuracy": accuracy(dataset, ds.scores),
+            "fgbcc_accuracy": accuracy(dataset, fgbcc.scores),
             "ptbcc_accuracy": accuracy(dataset, ptbcc.phi),
             "bwa_seconds": bwa_seconds,
             "ds_seconds": ds_seconds,
+            "fgbcc_seconds": fgbcc_seconds,
             "ptbcc_seconds": ptbcc_seconds,
             "bwa_iterations": bwa.iterations,
             "bwa_converged": bwa.converged,
             "ds_iterations": ds.iterations,
+            "fgbcc_iterations": fgbcc.iterations,
+            "fgbcc_converged": fgbcc.converged,
             "ptbcc_iterations": ptbcc.iterations,
             "ptbcc_max_delta": ptbcc.max_delta,
             "source": dataset.source,
@@ -636,7 +644,8 @@ def main() -> None:
                     "truth": dataset.label_names[dataset.truths[task_index]],
                     "mv_prediction": dataset.label_names[int(np.argmax(mv_phi[task_index]))],
                     "bwa_prediction": dataset.label_names[int(np.argmax(bwa.scores[task_index]))],
-                    "ds_prediction": dataset.label_names[int(np.argmax(ds.phi[task_index]))],
+                    "ds_prediction": dataset.label_names[int(np.argmax(ds.scores[task_index]))],
+                    "fgbcc_prediction": dataset.label_names[int(np.argmax(fgbcc.scores[task_index]))],
                     "ptbcc_prediction": dataset.label_names[int(np.argmax(ptbcc.phi[task_index]))],
                     "ptbcc_confidence": float(np.max(ptbcc.phi[task_index])),
                 }
@@ -670,23 +679,17 @@ def main() -> None:
     write_csv(output / "learned_prototypes.csv", list(prototype_rows[0]), prototype_rows)
     write_csv(output / "annotator_weights.csv", list(worker_rows[0]), worker_rows)
 
-    # The vectorized FGBCC equations are first checked on the authors' published
-    # Aircr golden output before the much more expensive 11-dataset timing run
-    # is admitted in a descendant experiment.
-    aircr = next(dataset for dataset in datasets if dataset.name == "Aircr")
-    start = time.perf_counter()
-    fgbcc_aircr = fit_fgbcc(aircr)
-    fgbcc_aircr_seconds = time.perf_counter() - start
+    aircr_row = next(row for row in result_rows if row["dataset"] == "Aircr")
     fgbcc_validation = {
         "dataset": "Aircr",
-        "observed_accuracy": accuracy(aircr, fgbcc_aircr.scores),
+        "observed_accuracy": aircr_row["fgbcc_accuracy"],
         "authors_repository_accuracy": 0.8448566610455311,
         "absolute_difference": abs(
-            accuracy(aircr, fgbcc_aircr.scores) - 0.8448566610455311
+            float(aircr_row["fgbcc_accuracy"]) - 0.8448566610455311
         ),
-        "seconds": fgbcc_aircr_seconds,
-        "iterations": fgbcc_aircr.iterations,
-        "converged": fgbcc_aircr.converged,
+        "seconds": aircr_row["fgbcc_seconds"],
+        "iterations": aircr_row["fgbcc_iterations"],
+        "converged": aircr_row["fgbcc_converged"],
         "source_commit": "e2ca2b8a876bf9cceb871e8cec9081870a30aab4",
         "source_sha256": "6e8e1545c950c4895165eb1aa3bc37e06097e6fa7887fe9d387e1a9e7b091979",
     }
@@ -739,17 +742,96 @@ def main() -> None:
                     }
                 )
     write_csv(output / "prototype_count_ablation.csv", list(ablation_rows[0]), ablation_rows)
+    print("ABLATION_RAW " + json.dumps(ablation_rows, sort_keys=True), flush=True)
 
     synthetic_rows = [synthetic_trial(73000 + seed) for seed in range(args.synthetic_seeds)]
     write_csv(output / "synthetic_recovery_trials.csv", list(synthetic_rows[0]), synthetic_rows)
+    print("SYNTHETIC_RAW " + json.dumps(synthetic_rows, sort_keys=True), flush=True)
     make_figures(result_rows, synthetic_rows, output)
 
     claim_audit = audit_claims()
     (output / "claim_audit.json").write_text(json.dumps(claim_audit, indent=2) + "\n")
     mean_public = {
         method: float(np.mean([row[f"{method}_accuracy"] for row in result_rows]))
-        for method in ("mv", "bwa", "ds", "ptbcc")
+        for method in ("mv", "bwa", "ds", "fgbcc", "ptbcc")
     }
+    ablation_macro: list[dict[str, object]] = []
+    ablation_keys = sorted(
+        {
+            (int(row["S"]), str(row["extra_init"]), int(row["seed"]))
+            for row in ablation_rows
+        }
+    )
+    for prototypes, extra_init, seed in ablation_keys:
+        selected = [
+            float(row["accuracy"])
+            for row in ablation_rows
+            if int(row["S"]) == prototypes
+            and str(row["extra_init"]) == extra_init
+            and int(row["seed"]) == seed
+        ]
+        ablation_macro.append(
+            {
+                "S": prototypes,
+                "extra_init": extra_init,
+                "seed": seed,
+                "datasets": len(selected),
+                "macro_accuracy": float(np.mean(selected)),
+            }
+        )
+    val5_row = next(row for row in result_rows if row["dataset"] == "Val5")
+    best_val5_baseline = max(
+        float(val5_row[f"{method}_accuracy"])
+        for method in ("mv", "bwa", "ds", "fgbcc")
+    )
+    runtime_totals = {
+        method: float(sum(float(row[f"{method}_seconds"]) for row in result_rows))
+        for method in ("bwa", "ds", "fgbcc", "ptbcc")
+    }
+    paper_table4 = {
+        "MV": 0.6986,
+        "BWA": 0.7132,
+        "FGBCC": 0.7175,
+        "PTBCC": 0.7472,
+    }
+    claim_results = {
+        "claim_2": {
+            "ptbcc_val5": float(val5_row["ptbcc_accuracy"]),
+            "best_baseline_val5": best_val5_baseline,
+            "gain_percentage_points": 100.0
+            * (float(val5_row["ptbcc_accuracy"]) - best_val5_baseline),
+            "rounded_contract_match": (
+                round(float(val5_row["ptbcc_accuracy"]), 2) == 0.56
+                and round(best_val5_baseline, 2) == 0.41
+            ),
+        },
+        "claim_3": {
+            "observed": {
+                method.upper(): mean_public[method]
+                for method in ("mv", "bwa", "fgbcc", "ptbcc")
+            },
+            "paper": paper_table4,
+            "all_four_decimal_matches": all(
+                round(mean_public[method.lower()], 4) == expected
+                for method, expected in paper_table4.items()
+            ),
+        },
+        "claim_4": {
+            "macro_by_configuration": ablation_macro,
+            "paper": {"S2": 0.7472, "S3": 0.7300, "S4": 0.7271},
+        },
+        "claim_5_preliminary_single_sample": {
+            "runtime_totals_seconds": runtime_totals,
+            "ptbcc_over_fgbcc": runtime_totals["ptbcc"]
+            / runtime_totals["fgbcc"],
+            "ptbcc_over_ds": runtime_totals["ptbcc"] / runtime_totals["ds"],
+            "ptbcc_minus_fgbcc_accuracy_pp": 100.0
+            * (mean_public["ptbcc"] - mean_public["fgbcc"]),
+            "controlled_repeats_still_required": True,
+        },
+    }
+    print("ABLATION_MACRO " + json.dumps(ablation_macro, sort_keys=True), flush=True)
+    print("CLAIM_RESULTS " + json.dumps(claim_results, sort_keys=True), flush=True)
     summary = {
         "paper": {
             "openreview_id": "KJq0iScNM6",
@@ -769,7 +851,7 @@ def main() -> None:
             "unavailable_in_this_reproduction": [],
             "corpus_source": "FGBCC authors' cleaned release at commit e2ca2b8a876bf9cceb871e8cec9081870a30aab4",
             "corpus_matches_table3": True,
-            "fgbcc_scope": "Aircr golden-output equivalence check; full 11-dataset run deferred to a descendant after this gate",
+            "fgbcc_scope": "all 11 datasets after exact Aircr golden-output equivalence",
         },
         "public_dataset_macro_accuracy": mean_public,
         "public_dataset_ptbcc_minus_mv_pp": 100 * (mean_public["ptbcc"] - mean_public["mv"]),
@@ -784,6 +866,7 @@ def main() -> None:
         },
         "claim_audit": claim_audit,
         "fgbcc_reference_validation": fgbcc_validation,
+        "claim_results": claim_results,
     }
     (output / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     print(json.dumps(summary, indent=2))

@@ -13,6 +13,7 @@ from repro.src.run_ptbcc import (
     synthetic_trial,
     vote_distribution,
 )
+from repro.src.reference_baselines import fit_bwa, fit_published_ds
 
 
 class PTBCCReproductionTests(unittest.TestCase):
@@ -65,6 +66,11 @@ class PTBCCReproductionTests(unittest.TestCase):
         )
         with self.assertRaisesRegex(ValueError, "expected"):
             corrupted.validate()
+
+    def test_released_baselines_reproduce_val5_table(self) -> None:
+        val5 = next(dataset for dataset in self.datasets if dataset.name == "Val5")
+        self.assertAlmostEqual(accuracy(val5, fit_published_ds(val5).scores), 0.41)
+        self.assertAlmostEqual(accuracy(val5, fit_bwa(val5).scores), 0.35)
 
     def test_variational_distributions_are_normalized_and_finite(self) -> None:
         fit = fit_ptbcc(self.datasets[0])

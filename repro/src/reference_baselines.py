@@ -14,7 +14,7 @@ from dataclasses import dataclass
 import numpy as np
 import scipy.sparse as ssp
 from scipy.optimize import minimize
-from scipy.special import digamma
+from scipy.special import digamma, logsumexp
 from scipy.stats import dirichlet, entropy
 
 
@@ -99,6 +99,63 @@ def fit_bwa(
         max_used = max(max_used, iteration)
         all_converged = all_converged and converged
     return BaselineFit(scores, max_used, all_converged)
+
+
+def fit_published_ds(
+    dataset: object,
+    *,
+    iterations: int = 20,
+    initial_quality: float = 0.7,
+) -> BaselineFit:
+    """Dawid-Skene as released by the survey code used in the PTBCC paper.
+
+    The original `methods/c_EM/method.py` uses a uniform class prior, a
+    diagonal initial confusion probability of 0.7, and exactly 20 EM updates.
+    Log-space normalization is algebraically equivalent to its products but
+    avoids underflow on Fact and Senti.
+    """
+
+    t, w, y = dataset.task, dataset.worker, dataset.label
+    k_count = dataset.n_classes
+    prior = np.full(k_count, 1.0 / k_count, dtype=np.float64)
+    off_diagonal = (1.0 - initial_quality) / (k_count - 1)
+    confusion = np.full(
+        (dataset.n_workers, k_count, k_count),
+        off_diagonal,
+        dtype=np.float64,
+    )
+    diagonal = np.arange(k_count)
+    confusion[:, diagonal, diagonal] = initial_quality
+
+    phi = np.empty((dataset.n_tasks, k_count), dtype=np.float64)
+    for _ in range(iterations):
+        scores = np.broadcast_to(
+            np.log(prior), (dataset.n_tasks, k_count)
+        ).copy()
+        with np.errstate(divide="ignore"):
+            log_confusion = np.log(confusion)
+        for truth in range(k_count):
+            np.add.at(scores[:, truth], t, log_confusion[w, truth, y])
+        normalizer = logsumexp(scores, axis=1, keepdims=True)
+        valid = np.isfinite(normalizer[:, 0])
+        phi[valid] = np.exp(scores[valid] - normalizer[valid])
+        phi[~valid] = 1.0 / k_count
+
+        prior = phi.mean(axis=0)
+        confusion.fill(0.0)
+        denominators = np.zeros((dataset.n_workers, k_count), dtype=np.float64)
+        for truth in range(k_count):
+            np.add.at(denominators[:, truth], w, phi[t, truth])
+            np.add.at(confusion[:, truth], (w, y), phi[t, truth])
+        populated = denominators > 0
+        for truth in range(k_count):
+            confusion[populated[:, truth], truth, :] /= denominators[
+                populated[:, truth], truth
+            ][:, None]
+            missing = ~populated[:, truth]
+            confusion[missing, truth, :] = off_diagonal
+            confusion[missing, truth, truth] = initial_quality
+    return BaselineFit(phi, iterations, True)
 
 
 class _VectorizedFGBCC:

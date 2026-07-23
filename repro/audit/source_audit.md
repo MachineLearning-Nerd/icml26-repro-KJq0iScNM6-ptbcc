@@ -64,3 +64,12 @@ not silently strengthened.
   On the exact corpus, this convention produces MV macro accuracy
   `0.6986047829`, which rounds to Table 4's `0.6986`; first-index tie breaking
   does not. All claim contracts therefore use fractional tie credit.
+- The paper's DS baseline comes from the public Truth Inference in
+  Crowdsourcing survey bundle
+  `https://zhydhkcws.github.io/crowd_truth_inference/truth_inference_crowd.zip`,
+  retrieved with an explicit User-Agent on `2026-07-23`, SHA-256
+  `fcb72da704bf06701ebec5f47e3d85b583354a098e4410a29750abdaaa59d9a2`.
+  Its `methods/c_EM/method.py` specifies uniform class priors, diagonal
+  initialization `0.7`, and exactly 20 EM iterations. The previous adaptive
+  convergence implementation is retained only as a diagnostic and is not used
+  for paper-number contracts.
