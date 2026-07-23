@@ -1,0 +1,15 @@
+{
+  "claim_id": 5,
+  "statement": "PTBCC obtains about three percentage points higher macro accuracy using less than 10% of the running time of confusion-matrix-based methods.",
+  "domain": "All 11 datasets, CPU implementations, identical process/environment and published stopping rules.",
+  "accuracy_reference": {"PTBCC": 0.7472, "FGBCC": 0.7175},
+  "runtime_contracts": [
+    "sum(PTBCC dataset runtimes) / sum(FGBCC dataset runtimes) < 0.10",
+    "sum(PTBCC dataset runtimes) / sum(DS dataset runtimes) < 0.10",
+    "per-dataset ratios are reported separately and never replaced by a ratio of averages"
+  ],
+  "verified_if": "The claim holds under every plausible confusion-matrix denominator supported by the source.",
+  "falsified_if": "It fails under every plausible denominator on a controlled faithful benchmark.",
+  "otherwise": "BLOCKED because the paper does not name the denominator or publish raw timings.",
+  "paper_anchor": "Efficiency section and Figure 5"
+}

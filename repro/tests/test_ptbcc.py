@@ -1,6 +1,7 @@
 """Deterministic unit and integration checks for the PTBCC reconstruction."""
 
 import unittest
+from dataclasses import replace
 
 import numpy as np
 
@@ -8,7 +9,7 @@ from repro.src.run_ptbcc import (
     accuracy,
     audit_claims,
     fit_ptbcc,
-    load_public_datasets,
+    load_paper_datasets,
     synthetic_trial,
     vote_distribution,
 )
@@ -17,12 +18,53 @@ from repro.src.run_ptbcc import (
 class PTBCCReproductionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.datasets = load_public_datasets()
+        cls.datasets = load_paper_datasets()
 
     def test_public_dataset_statistics_match_paper(self) -> None:
-        self.assertEqual([d.name for d in self.datasets], ["CF", "MS", "Dog", "Face", "Adult", "Web"])
+        self.assertEqual(
+            [d.name for d in self.datasets],
+            [
+                "Val7",
+                "Aircr",
+                "CF",
+                "Fact",
+                "MS",
+                "Dog",
+                "Face",
+                "Adult",
+                "Senti",
+                "Val5",
+                "Web",
+            ],
+        )
         for dataset in self.datasets:
             dataset.validate()
+
+    def test_tie_aware_majority_vote_reproduces_table4(self) -> None:
+        scores = [
+            accuracy(dataset, vote_distribution(dataset))
+            for dataset in self.datasets
+        ]
+        self.assertAlmostEqual(float(np.mean(scores)), 0.6986, places=4)
+        val5 = next(dataset for dataset in self.datasets if dataset.name == "Val5")
+        self.assertAlmostEqual(
+            accuracy(val5, vote_distribution(val5)), 0.352, places=3
+        )
+
+    def test_negative_control_rejects_corrupted_table3_dimension(self) -> None:
+        dataset = self.datasets[0]
+        corrupted = replace(
+            dataset,
+            expected=(
+                dataset.n_tasks + 1,
+                dataset.n_workers,
+                len(dataset.truths),
+                dataset.n_classes,
+                dataset.n_labels,
+            ),
+        )
+        with self.assertRaisesRegex(ValueError, "expected"):
+            corrupted.validate()
 
     def test_variational_distributions_are_normalized_and_finite(self) -> None:
         fit = fit_ptbcc(self.datasets[0])
@@ -48,9 +90,9 @@ class PTBCCReproductionTests(unittest.TestCase):
         self.assertFalse(probes["paper_contains_68_73"])
         self.assertFalse(probes["paper_contains_74_11"])
 
-    def test_public_subset_has_nontrivial_ground_truth(self) -> None:
+    def test_full_corpus_has_nontrivial_ground_truth(self) -> None:
         for dataset in self.datasets:
-            self.assertGreater(len(dataset.truths), 250)
+            self.assertGreaterEqual(len(dataset.truths), 100)
             score = accuracy(dataset, vote_distribution(dataset))
             self.assertGreaterEqual(score, 0.0)
             self.assertLessEqual(score, 1.0)
@@ -58,4 +100,3 @@ class PTBCCReproductionTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
-

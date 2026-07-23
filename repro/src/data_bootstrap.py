@@ -92,7 +92,10 @@ def ensure_public_data(root: Path = ROOT) -> None:
                     )
                     downloaded += 1
 
-    print(f"DATA_BOOTSTRAP verified=10 downloaded={downloaded}")
+    verified = len(manifest["files"]) + sum(
+        len(entry["members"]) for entry in manifest["archives"]
+    )
+    print(f"DATA_BOOTSTRAP verified={verified} downloaded={downloaded}")
 
 
 if __name__ == "__main__":

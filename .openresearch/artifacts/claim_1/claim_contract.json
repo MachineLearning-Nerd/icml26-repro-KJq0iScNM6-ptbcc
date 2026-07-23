@@ -1,0 +1,13 @@
+{
+  "claim_id": 1,
+  "statement": "PTBCC models annotators through a shared set of prototype confusion matrices and per-annotator distributions over those prototypes.",
+  "domain": "The PTBCC generative model and reconstructed equations (7)-(14).",
+  "pass_conditions": [
+    "learned prototypes have shape [S,K,K] and finite row-normalized probabilities",
+    "annotator weights have shape [W,S] and finite row-normalized probabilities",
+    "40 deterministic exact-model trials retain the accepted recovery evidence"
+  ],
+  "failure_exit": "The cumulative unit suite exits nonzero on any violated invariant.",
+  "seeds": "73000..73039",
+  "paper_anchor": "Method, equations (7)-(14)"
+}

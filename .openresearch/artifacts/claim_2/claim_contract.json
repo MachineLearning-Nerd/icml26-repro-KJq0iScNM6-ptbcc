@@ -1,0 +1,16 @@
+{
+  "claim_id": 2,
+  "statement": "On Val5, PTBCC improves accuracy by 15 percentage points over the best reported baseline.",
+  "domain": "The exact cleaned Val5 corpus: 100 tasks, 38 workers, 5 classes, 1000 labels, and 100 truths.",
+  "paper_values": {
+    "best_table2_baseline": {"method": "DS", "accuracy": 0.41},
+    "ptbcc_inferred_from_stated_gain": 0.56,
+    "gain_percentage_points": 15.0
+  },
+  "metric": "fractional credit across tied maximum scores, as in the BWA/FGBCC reference utility",
+  "verified_if": "The faithful full-data methods reproduce the reported baseline ordering and PTBCC-minus-best-baseline rounds to 0.15.",
+  "falsified_if": "Author-released code and exact data under the stated setup contradict the quantified gain.",
+  "otherwise": "BLOCKED; reconstruction disagreement alone is not elevated to falsification.",
+  "seeds": [20260715],
+  "paper_anchor": "Table 2 and Val5 case study"
+}

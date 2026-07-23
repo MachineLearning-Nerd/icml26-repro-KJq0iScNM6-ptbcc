@@ -1,0 +1,12 @@
+{
+  "claim_id": 3,
+  "statement": "Across the exact 11 datasets, macro accuracy is PTBCC 0.7472, FGBCC 0.7175, BWA 0.7132, and MV 0.6986.",
+  "domain": "The 11 Table 3 datasets with their released ground-truth subsets.",
+  "metric": "unweighted mean of per-dataset fractional-tie accuracies",
+  "paper_values": {"PTBCC": 0.7472, "FGBCC": 0.7175, "BWA": 0.7132, "MV": 0.6986},
+  "verified_if": "Every independently regenerated macro rounds to its four-decimal paper value.",
+  "falsified_if": "The exact released method/data combination contradicts a reported value.",
+  "otherwise": "BLOCKED with quantified deviations.",
+  "seeds": [20260715],
+  "paper_anchor": "Table 4"
+}

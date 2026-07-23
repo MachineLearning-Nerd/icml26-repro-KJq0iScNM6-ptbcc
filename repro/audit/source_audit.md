@@ -42,3 +42,25 @@
 Percentage language is treated as percentage points only where the table and
 case-study arithmetic establish that interpretation; ambiguous quantifiers are
 not silently strengthened.
+
+## Exact corpus and baseline provenance
+
+- The cleaned 11-dataset collection is from the FGBCC authors' repository,
+  `JuJuCHEN-HHU/CodeForFGBCC`, commit
+  `e2ca2b8a876bf9cceb871e8cec9081870a30aab4`. Every file is downloaded from a
+  commit-pinned raw URL and checked against `repro/audit/public_data_manifest.json`.
+  All 11 observed `(tasks, workers, truths, classes, labels)` tuples exactly
+  equal Table 3.
+- The FGBCC reference source is `code/FGBCC/method.py` at that commit, SHA-256
+  `6e8e1545c950c4895165eb1aa3bc37e06097e6fa7887fe9d387e1a9e7b091979`.
+  The repository publishes an Aircr accuracy of `0.8448566610455311`, used as
+  a golden equivalence test before full-scale execution.
+- BWA is specified by Appendix A of arXiv `1902.08918` and its MIT-licensed
+  reference repository `yuan-li/truth-inference-at-scale`, commit
+  `621789b2d57324d3559dc973b2613d2296d73f55`. The reference `code/bwa.py`
+  SHA-256 is
+  `96cd391294664de983e8c8af340f4dec9cfca322f35bb0562ab086cef5985151`.
+- The published evaluation utility assigns fractional credit to tied maxima.
+  On the exact corpus, this convention produces MV macro accuracy
+  `0.6986047829`, which rounds to Table 4's `0.6986`; first-index tie breaking
+  does not. All claim contracts therefore use fractional tie credit.

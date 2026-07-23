@@ -1,0 +1,12 @@
+{
+  "claim_id": 4,
+  "statement": "The 11-dataset PTBCC macro peaks at |S|=2 (0.7472), then is 0.7300 at |S|=3 and 0.7271 at |S|=4.",
+  "domain": "Exact Table 3 corpus, fixed f=5, m=1.35, e=1, xi=0.001; extra prototypes drawn row-wise from Dirichlet(1).",
+  "paper_values": {"2": 0.7472, "3": 0.73, "4": 0.7271},
+  "verified_if": "S=2 is the peak and the deterministic seed matching the paper setup reproduces all rounded values; additional seeds quantify initialization sensitivity.",
+  "falsified_if": "A seed-independent counterexample satisfying all stated assumptions contradicts the peak/order assertion.",
+  "otherwise": "BLOCKED when the unpublished paper seed prevents exact-number attribution.",
+  "seeds": [20260715, 20260716, 20260717],
+  "negative_control": "3-Ran uses an all-entries-uniform matrix and must not be conflated with a Dirichlet(1) draw.",
+  "paper_anchor": "Table 5 and Number of Prototypes"
+}

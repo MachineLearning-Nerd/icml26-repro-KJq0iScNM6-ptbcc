@@ -41,8 +41,10 @@ from scipy.special import digamma, logsumexp
 
 if __package__:
     from repro.src.data_bootstrap import ensure_public_data
+    from repro.src.reference_baselines import fit_bwa, fit_fgbcc
 else:
     from data_bootstrap import ensure_public_data
+    from reference_baselines import fit_bwa, fit_fgbcc
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -216,6 +218,61 @@ def load_public_datasets() -> list[CrowdDataset]:
     ]
 
 
+def load_official_csv(
+    name: str, folder: str, expected: tuple[int, int, int, int, int]
+) -> CrowdDataset:
+    """Load the cleaned files released by the FGBCC authors.
+
+    This exact 11-dataset collection matches every count in PTBCC Table 3.
+    The numeric identifiers are already contiguous, but `_build_dataset`
+    independently remaps and validates them rather than trusting that fact.
+    """
+
+    base = ROOT / "external" / "CodeForFGBCC" / "datasets" / folder
+    rows: list[tuple[str, str, str]] = []
+    with (base / "label.csv").open(newline="") as handle:
+        reader = csv.DictReader(handle)
+        for row in reader:
+            rows.append((row["item"], row["worker"], row["label"]))
+    truths: dict[str, str] = {}
+    with (base / "truth.csv").open(newline="") as handle:
+        reader = csv.DictReader(handle)
+        for row in reader:
+            truths[row["item"]] = row["truth"]
+    return _build_dataset(
+        name,
+        rows,
+        truths,
+        f"{base.relative_to(ROOT)}/{{label,truth}}.csv",
+        expected,
+    )
+
+
+def load_paper_datasets() -> list[CrowdDataset]:
+    ensure_public_data(ROOT)
+    specifications = [
+        ("Val7", "valence7", (100, 38, 100, 7, 1000)),
+        ("Aircr", "aircrowd6", (593, 50, 593, 6, 1588)),
+        ("CF", "CF", (300, 461, 300, 5, 1720)),
+        ("Fact", "fact_eval", (42624, 57, 576, 3, 214915)),
+        ("MS", "MS", (700, 44, 700, 10, 2945)),
+        ("Dog", "s4_Dog_data", (807, 109, 807, 4, 8070)),
+        (
+            "Face",
+            "s4_Face_Sentiment_Identification",
+            (584, 27, 584, 4, 5242),
+        ),
+        ("Adult", "s5_AdultContent", (11040, 825, 333, 4, 89799)),
+        ("Senti", "sentiment", (98980, 1960, 1000, 5, 569274)),
+        ("Val5", "valence5", (100, 38, 100, 5, 1000)),
+        ("Web", "web", (2665, 177, 2653, 5, 15567)),
+    ]
+    return [
+        load_official_csv(name, folder, expected)
+        for name, folder, expected in specifications
+    ]
+
+
 def normalize_log_scores(log_scores: np.ndarray, axis: int = -1) -> np.ndarray:
     return np.exp(log_scores - logsumexp(log_scores, axis=axis, keepdims=True))
 
@@ -377,9 +434,19 @@ def fit_dawid_skene(
 
 
 def accuracy(dataset: CrowdDataset, phi: np.ndarray) -> float:
+    """Paper-faithful tie-aware accuracy.
+
+    The BWA/FGBCC reference utility splits credit evenly across tied maxima.
+    This detail is essential: its 11-dataset MV macro is 0.6986048, which
+    rounds to the paper's 0.6986; first-index tie breaking does not.
+    """
+
     task_ids = np.asarray(sorted(dataset.truths), dtype=np.int64)
     truth = np.asarray([dataset.truths[int(task)] for task in task_ids], dtype=np.int64)
-    return float(np.mean(np.argmax(phi[task_ids], axis=1) == truth))
+    selected = phi[task_ids]
+    tied = selected == selected.max(axis=1, keepdims=True)
+    credit = tied[np.arange(len(task_ids)), truth] / tied.sum(axis=1)
+    return float(credit.mean())
 
 
 def best_permutation_distance(learned: np.ndarray, truth: np.ndarray) -> float:
@@ -477,17 +544,18 @@ def audit_claims() -> dict[str, object]:
 def make_figures(results: list[dict[str, object]], synthetic: list[dict[str, float]], output: Path) -> None:
     names = [str(row["dataset"]) for row in results]
     x = np.arange(len(names))
-    width = 0.26
-    fig, ax = plt.subplots(figsize=(10.5, 5.2))
-    ax.bar(x - width, [float(row["mv_accuracy"]) for row in results], width, label="MV")
-    ax.bar(x, [float(row["ds_accuracy"]) for row in results], width, label="Dawid-Skene")
-    ax.bar(x + width, [float(row["ptbcc_accuracy"]) for row in results], width, label="PTBCC reconstruction")
+    width = 0.2
+    fig, ax = plt.subplots(figsize=(12.5, 5.4))
+    ax.bar(x - 1.5 * width, [float(row["mv_accuracy"]) for row in results], width, label="MV")
+    ax.bar(x - 0.5 * width, [float(row["bwa_accuracy"]) for row in results], width, label="BWA")
+    ax.bar(x + 0.5 * width, [float(row["ds_accuracy"]) for row in results], width, label="Dawid-Skene")
+    ax.bar(x + 1.5 * width, [float(row["ptbcc_accuracy"]) for row in results], width, label="PTBCC reconstruction")
     ax.set_xticks(x, names)
     ax.set_ylim(0, 1)
     ax.set_ylabel("Accuracy on released ground truth")
-    ax.set_title("CPU reproduction on six paper-cited public datasets")
+    ax.set_title("Full 11-dataset CPU reproduction")
     ax.grid(axis="y", alpha=0.25)
-    ax.legend(ncols=3, loc="lower center")
+    ax.legend(ncols=4, loc="lower center")
     fig.tight_layout()
     fig.savefig(output / "public_dataset_accuracy.png", dpi=180)
     plt.close(fig)
@@ -519,7 +587,7 @@ def main() -> None:
     output = args.output_dir.resolve()
     output.mkdir(parents=True, exist_ok=True)
 
-    datasets = load_public_datasets()
+    datasets = load_paper_datasets()
     result_rows: list[dict[str, object]] = []
     prediction_rows: list[dict[str, object]] = []
     prototype_rows: list[dict[str, object]] = []
@@ -527,6 +595,9 @@ def main() -> None:
     fits: dict[str, Fit] = {}
     for dataset in datasets:
         mv_phi = vote_distribution(dataset)
+        start = time.perf_counter()
+        bwa = fit_bwa(dataset)
+        bwa_seconds = time.perf_counter() - start
         start = time.perf_counter()
         ds = fit_dawid_skene(dataset)
         ds_seconds = time.perf_counter() - start
@@ -542,16 +613,21 @@ def main() -> None:
             "classes": dataset.n_classes,
             "labels": dataset.n_labels,
             "mv_accuracy": accuracy(dataset, mv_phi),
+            "bwa_accuracy": accuracy(dataset, bwa.scores),
             "ds_accuracy": accuracy(dataset, ds.phi),
             "ptbcc_accuracy": accuracy(dataset, ptbcc.phi),
+            "bwa_seconds": bwa_seconds,
             "ds_seconds": ds_seconds,
             "ptbcc_seconds": ptbcc_seconds,
+            "bwa_iterations": bwa.iterations,
+            "bwa_converged": bwa.converged,
             "ds_iterations": ds.iterations,
             "ptbcc_iterations": ptbcc.iterations,
             "ptbcc_max_delta": ptbcc.max_delta,
             "source": dataset.source,
         }
         result_rows.append(row)
+        print("DATASET_RESULT " + json.dumps(row, sort_keys=True), flush=True)
         for task_index in sorted(dataset.truths):
             prediction_rows.append(
                 {
@@ -559,6 +635,7 @@ def main() -> None:
                     "task": dataset.task_names[task_index],
                     "truth": dataset.label_names[dataset.truths[task_index]],
                     "mv_prediction": dataset.label_names[int(np.argmax(mv_phi[task_index]))],
+                    "bwa_prediction": dataset.label_names[int(np.argmax(bwa.scores[task_index]))],
                     "ds_prediction": dataset.label_names[int(np.argmax(ds.phi[task_index]))],
                     "ptbcc_prediction": dataset.label_names[int(np.argmax(ptbcc.phi[task_index]))],
                     "ptbcc_confidence": float(np.max(ptbcc.phi[task_index])),
@@ -592,6 +669,36 @@ def main() -> None:
     write_csv(output / "ground_truth_predictions.csv", list(prediction_rows[0]), prediction_rows)
     write_csv(output / "learned_prototypes.csv", list(prototype_rows[0]), prototype_rows)
     write_csv(output / "annotator_weights.csv", list(worker_rows[0]), worker_rows)
+
+    # The vectorized FGBCC equations are first checked on the authors' published
+    # Aircr golden output before the much more expensive 11-dataset timing run
+    # is admitted in a descendant experiment.
+    aircr = next(dataset for dataset in datasets if dataset.name == "Aircr")
+    start = time.perf_counter()
+    fgbcc_aircr = fit_fgbcc(aircr)
+    fgbcc_aircr_seconds = time.perf_counter() - start
+    fgbcc_validation = {
+        "dataset": "Aircr",
+        "observed_accuracy": accuracy(aircr, fgbcc_aircr.scores),
+        "authors_repository_accuracy": 0.8448566610455311,
+        "absolute_difference": abs(
+            accuracy(aircr, fgbcc_aircr.scores) - 0.8448566610455311
+        ),
+        "seconds": fgbcc_aircr_seconds,
+        "iterations": fgbcc_aircr.iterations,
+        "converged": fgbcc_aircr.converged,
+        "source_commit": "e2ca2b8a876bf9cceb871e8cec9081870a30aab4",
+        "source_sha256": "6e8e1545c950c4895165eb1aa3bc37e06097e6fa7887fe9d387e1a9e7b091979",
+    }
+    if fgbcc_validation["absolute_difference"] > 1e-10:
+        raise AssertionError(
+            "Vectorized FGBCC does not reproduce the authors' Aircr golden output: "
+            + json.dumps(fgbcc_validation, sort_keys=True)
+        )
+    (output / "fgbcc_reference_validation.json").write_text(
+        json.dumps(fgbcc_validation, indent=2) + "\n"
+    )
+    print("FGBCC_REFERENCE_VALIDATION " + json.dumps(fgbcc_validation, sort_keys=True), flush=True)
 
     ablation_rows: list[dict[str, object]] = []
     for dataset in datasets:
@@ -641,7 +748,7 @@ def main() -> None:
     (output / "claim_audit.json").write_text(json.dumps(claim_audit, indent=2) + "\n")
     mean_public = {
         method: float(np.mean([row[f"{method}_accuracy"] for row in result_rows]))
-        for method in ("mv", "ds", "ptbcc")
+        for method in ("mv", "bwa", "ds", "ptbcc")
     }
     summary = {
         "paper": {
@@ -654,13 +761,15 @@ def main() -> None:
             "python": platform.python_version(),
             "platform": platform.platform(),
             "processor": platform.processor() or platform.machine(),
-            "compute": "local CPU only; no GPU and no cloud job",
+            "compute": "launched through OpenResearch on local CPU; no GPU",
         },
         "scope": {
             "public_datasets_reproduced": [dataset.name for dataset in datasets],
             "paper_dataset_count": 11,
-            "unavailable_in_this_reproduction": ["Val7", "Aircr", "Fact", "Senti", "Val5"],
-            "reason": "authors provide no code/data link; six exact public releases cited by the paper were recoverable",
+            "unavailable_in_this_reproduction": [],
+            "corpus_source": "FGBCC authors' cleaned release at commit e2ca2b8a876bf9cceb871e8cec9081870a30aab4",
+            "corpus_matches_table3": True,
+            "fgbcc_scope": "Aircr golden-output equivalence check; full 11-dataset run deferred to a descendant after this gate",
         },
         "public_dataset_macro_accuracy": mean_public,
         "public_dataset_ptbcc_minus_mv_pp": 100 * (mean_public["ptbcc"] - mean_public["mv"]),
@@ -674,6 +783,7 @@ def main() -> None:
             ),
         },
         "claim_audit": claim_audit,
+        "fgbcc_reference_validation": fgbcc_validation,
     }
     (output / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     print(json.dumps(summary, indent=2))
