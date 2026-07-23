@@ -1,0 +1,33 @@
+{
+  "claim_result": {
+    "best_baseline_val5": 0.41,
+    "gain_percentage_points": 15.000000000000007,
+    "ptbcc_val5": 0.56,
+    "rounded_contract_match": true
+  },
+  "dataset_result": {
+    "bwa_accuracy": 0.35,
+    "bwa_converged": true,
+    "bwa_iterations": 7,
+    "bwa_seconds": 0.01664833299582824,
+    "classes": 5,
+    "dataset": "Val5",
+    "ds_accuracy": 0.41,
+    "ds_iterations": 20,
+    "ds_seconds": 0.014266041980590671,
+    "fgbcc_accuracy": 0.38,
+    "fgbcc_converged": false,
+    "fgbcc_iterations": 1000,
+    "fgbcc_seconds": 1.6749337500077672,
+    "labels": 1000,
+    "mv_accuracy": 0.3516666666666666,
+    "ptbcc_accuracy": 0.56,
+    "ptbcc_iterations": 57,
+    "ptbcc_max_delta": 0.0009774459881509712,
+    "ptbcc_seconds": 0.09377941704588011,
+    "source": "external/CodeForFGBCC/datasets/valence5/{label,truth}.csv",
+    "tasks": 100,
+    "truths": 100,
+    "workers": 38
+  }
+}

@@ -1,0 +1,2548 @@
+{
+  "benchmark": {
+    "method_order_rotated": true,
+    "negative_control": {
+      "injected_zero_time_rejected": true
+    },
+    "process_isolated": true,
+    "ratios": [
+      {
+        "all_below_0_10": false,
+        "bootstrap_95_percent": [
+          0.13775727579000688,
+          0.2607284238507911
+        ],
+        "clock": "wall_seconds",
+        "comparator": "fgbcc",
+        "median": 0.2039138232227852,
+        "samples": [
+          0.14200407206285318,
+          0.2607284238507911,
+          0.2039138232227852,
+          0.20430723262177947,
+          0.13775727579000688
+        ]
+      },
+      {
+        "all_below_0_10": false,
+        "bootstrap_95_percent": [
+          3.0732549941865277,
+          5.450039007276635
+        ],
+        "clock": "wall_seconds",
+        "comparator": "ds",
+        "median": 3.6244969150490665,
+        "samples": [
+          3.338108049170066,
+          5.450039007276635,
+          3.6244969150490665,
+          4.829251061644083,
+          3.0732549941865277
+        ]
+      },
+      {
+        "all_below_0_10": false,
+        "bootstrap_95_percent": [
+          6.347892232833311,
+          9.6110354825458
+        ],
+        "clock": "wall_seconds",
+        "comparator": "bwa",
+        "median": 6.566211448399157,
+        "samples": [
+          6.347892232833311,
+          9.6110354825458,
+          6.566211448399157,
+          7.769069400949233,
+          6.383628372408573
+        ]
+      },
+      {
+        "all_below_0_10": false,
+        "bootstrap_95_percent": [
+          0.2100787080432869,
+          0.23131973652904783
+        ],
+        "clock": "cpu_seconds",
+        "comparator": "fgbcc",
+        "median": 0.22121977456023417,
+        "samples": [
+          0.21504934225504452,
+          0.22353267822973333,
+          0.22121977456023417,
+          0.23131973652904783,
+          0.2100787080432869
+        ]
+      },
+      {
+        "all_below_0_10": false,
+        "bootstrap_95_percent": [
+          4.076938193390659,
+          4.517312057656774
+        ],
+        "clock": "cpu_seconds",
+        "comparator": "ds",
+        "median": 4.380573178472267,
+        "samples": [
+          4.380573178472267,
+          4.517312057656774,
+          4.180906012381453,
+          4.474756035428749,
+          4.076938193390659
+        ]
+      },
+      {
+        "all_below_0_10": false,
+        "bootstrap_95_percent": [
+          7.083195374303277,
+          7.7478345263225235
+        ],
+        "clock": "cpu_seconds",
+        "comparator": "bwa",
+        "median": 7.4317015027377975,
+        "samples": [
+          7.605477620514961,
+          7.7478345263225235,
+          7.213116580716052,
+          7.4317015027377975,
+          7.083195374303277
+        ]
+      }
+    ],
+    "raw": [
+      {
+        "accuracy": 0.31,
+        "cpu_seconds": 0.08377500000000015,
+        "dataset": "Val7",
+        "iterations": 69,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 0,
+        "wall_seconds": 0.08434983302140608
+      },
+      {
+        "accuracy": 0.8229342327150084,
+        "cpu_seconds": 0.11720500000000023,
+        "dataset": "Aircr",
+        "iterations": 83,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 0,
+        "wall_seconds": 0.1177626249846071
+      },
+      {
+        "accuracy": 0.8933333333333333,
+        "cpu_seconds": 0.10421000000000058,
+        "dataset": "CF",
+        "iterations": 74,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 0,
+        "wall_seconds": 0.10510020900983363
+      },
+      {
+        "accuracy": 0.9010416666666666,
+        "cpu_seconds": 3.7282529999999996,
+        "dataset": "Fact",
+        "iterations": 31,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 0,
+        "wall_seconds": 4.004481499956455
+      },
+      {
+        "accuracy": 0.7942857142857143,
+        "cpu_seconds": 0.09694700000000012,
+        "dataset": "MS",
+        "iterations": 33,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 0,
+        "wall_seconds": 0.10461799998302013
+      },
+      {
+        "accuracy": 0.8240396530359355,
+        "cpu_seconds": 0.28330900000000003,
+        "dataset": "Dog",
+        "iterations": 59,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 0,
+        "wall_seconds": 0.29673558298964053
+      },
+      {
+        "accuracy": 0.6558219178082192,
+        "cpu_seconds": 0.13806899999999978,
+        "dataset": "Face",
+        "iterations": 38,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 0,
+        "wall_seconds": 0.14962020894745365
+      },
+      {
+        "accuracy": 0.7717717717717718,
+        "cpu_seconds": 1.8201839999999994,
+        "dataset": "Adult",
+        "iterations": 38,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 0,
+        "wall_seconds": 1.8548182909726165
+      },
+      {
+        "accuracy": 0.866,
+        "cpu_seconds": 14.826688,
+        "dataset": "Senti",
+        "iterations": 43,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 0,
+        "wall_seconds": 15.301248874980956
+      },
+      {
+        "accuracy": 0.56,
+        "cpu_seconds": 0.06525999999999854,
+        "dataset": "Val5",
+        "iterations": 57,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 0,
+        "wall_seconds": 0.07267691602464765
+      },
+      {
+        "accuracy": 0.819449679607991,
+        "cpu_seconds": 0.5794119999999978,
+        "dataset": "Web",
+        "iterations": 53,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 0,
+        "wall_seconds": 0.6396386250271462
+      },
+      {
+        "accuracy": 0.18,
+        "cpu_seconds": 2.116942,
+        "dataset": "Val7",
+        "iterations": 1000,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 0,
+        "wall_seconds": 2.20352974999696
+      },
+      {
+        "accuracy": 0.8448566610455311,
+        "cpu_seconds": 1.4018920000000001,
+        "dataset": "Aircr",
+        "iterations": 538,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 0,
+        "wall_seconds": 1.5290117090335116
+      },
+      {
+        "accuracy": 0.8866666666666667,
+        "cpu_seconds": 4.696383000000001,
+        "dataset": "CF",
+        "iterations": 689,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 0,
+        "wall_seconds": 5.7393748330068775
+      },
+      {
+        "accuracy": 0.8819444444444444,
+        "cpu_seconds": 5.1188590000000005,
+        "dataset": "Fact",
+        "iterations": 359,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 0,
+        "wall_seconds": 10.239851291989908
+      },
+      {
+        "accuracy": 0.7842857142857143,
+        "cpu_seconds": 3.024571999999999,
+        "dataset": "MS",
+        "iterations": 513,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 0,
+        "wall_seconds": 4.710449542035349
+      },
+      {
+        "accuracy": 0.8401486988847584,
+        "cpu_seconds": 1.1804670000000002,
+        "dataset": "Dog",
+        "iterations": 465,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 0,
+        "wall_seconds": 1.9265395830152556
+      },
+      {
+        "accuracy": 0.6455479452054794,
+        "cpu_seconds": 0.5492200000000018,
+        "dataset": "Face",
+        "iterations": 308,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 0,
+        "wall_seconds": 0.9332767919986509
+      },
+      {
+        "accuracy": 0.7447447447447447,
+        "cpu_seconds": 11.079443999999999,
+        "dataset": "Adult",
+        "iterations": 880,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 0,
+        "wall_seconds": 15.54660345800221
+      },
+      {
+        "accuracy": 0.885,
+        "cpu_seconds": 68.68094500000001,
+        "dataset": "Senti",
+        "iterations": 783,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 0,
+        "wall_seconds": 112.5702278749668
+      },
+      {
+        "accuracy": 0.38,
+        "cpu_seconds": 1.8098779999999977,
+        "dataset": "Val5",
+        "iterations": 1000,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 0,
+        "wall_seconds": 2.345948582980782
+      },
+      {
+        "accuracy": 0.8202035431586883,
+        "cpu_seconds": 1.9148869999999931,
+        "dataset": "Web",
+        "iterations": 353,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 0,
+        "wall_seconds": 2.328417833952699
+      },
+      {
+        "accuracy": 0.22,
+        "cpu_seconds": 0.018469999999999764,
+        "dataset": "Val7",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 0,
+        "wall_seconds": 0.01885812502587214
+      },
+      {
+        "accuracy": 0.8414839797639123,
+        "cpu_seconds": 0.0227409999999999,
+        "dataset": "Aircr",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 0,
+        "wall_seconds": 0.023001666995696723
+      },
+      {
+        "accuracy": 0.7966666666666666,
+        "cpu_seconds": 0.025324000000000346,
+        "dataset": "CF",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 0,
+        "wall_seconds": 0.0953691250178963
+      },
+      {
+        "accuracy": 0.8506944444444444,
+        "cpu_seconds": 0.8313239999999995,
+        "dataset": "Fact",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 0,
+        "wall_seconds": 1.024333709036
+      },
+      {
+        "accuracy": 0.7642857142857142,
+        "cpu_seconds": 0.04861199999999943,
+        "dataset": "MS",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 0,
+        "wall_seconds": 0.05902004201197997
+      },
+      {
+        "accuracy": 0.8426270136307311,
+        "cpu_seconds": 0.04174999999999951,
+        "dataset": "Dog",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 0,
+        "wall_seconds": 0.051567459013313055
+      },
+      {
+        "accuracy": 0.6404109589041096,
+        "cpu_seconds": 0.029816000000000287,
+        "dataset": "Face",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 0,
+        "wall_seconds": 0.03105116600636393
+      },
+      {
+        "accuracy": 0.7387387387387387,
+        "cpu_seconds": 0.4221820000000003,
+        "dataset": "Adult",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 0,
+        "wall_seconds": 0.6189560829661787
+      },
+      {
+        "accuracy": 0.824,
+        "cpu_seconds": 3.423976999999999,
+        "dataset": "Senti",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 0,
+        "wall_seconds": 4.733698499971069
+      },
+      {
+        "accuracy": 0.41,
+        "cpu_seconds": 0.01360099999999953,
+        "dataset": "Val5",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 0,
+        "wall_seconds": 0.018490082991775125
+      },
+      {
+        "accuracy": 0.8254805880135695,
+        "cpu_seconds": 0.10860800000000026,
+        "dataset": "Web",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 0,
+        "wall_seconds": 0.13521512498846278
+      },
+      {
+        "accuracy": 0.2,
+        "cpu_seconds": 0.020811000000000135,
+        "dataset": "Val7",
+        "iterations": 7,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 0,
+        "wall_seconds": 0.02984024997567758
+      },
+      {
+        "accuracy": 0.8246205733558178,
+        "cpu_seconds": 0.04330300000000076,
+        "dataset": "Aircr",
+        "iterations": 21,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 0,
+        "wall_seconds": 0.07235399994533509
+      },
+      {
+        "accuracy": 0.8933333333333333,
+        "cpu_seconds": 0.012747000000000064,
+        "dataset": "CF",
+        "iterations": 6,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 0,
+        "wall_seconds": 0.01398979197256267
+      },
+      {
+        "accuracy": 0.8871527777777778,
+        "cpu_seconds": 0.470847,
+        "dataset": "Fact",
+        "iterations": 22,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 0,
+        "wall_seconds": 0.6942666670074686
+      },
+      {
+        "accuracy": 0.7857142857142857,
+        "cpu_seconds": 0.05513800000000035,
+        "dataset": "MS",
+        "iterations": 22,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 0,
+        "wall_seconds": 0.061169166991021484
+      },
+      {
+        "accuracy": 0.8314745972738538,
+        "cpu_seconds": 0.027804999999999858,
+        "dataset": "Dog",
+        "iterations": 9,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 0,
+        "wall_seconds": 0.040010791970416903
+      },
+      {
+        "accuracy": 0.6181506849315068,
+        "cpu_seconds": 0.01839099999999938,
+        "dataset": "Face",
+        "iterations": 10,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 0,
+        "wall_seconds": 0.02203041600296274
+      },
+      {
+        "accuracy": 0.7417417417417418,
+        "cpu_seconds": 0.3007609999999996,
+        "dataset": "Adult",
+        "iterations": 41,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 0,
+        "wall_seconds": 0.3802683749818243
+      },
+      {
+        "accuracy": 0.89,
+        "cpu_seconds": 1.8436960000000004,
+        "dataset": "Senti",
+        "iterations": 29,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 0,
+        "wall_seconds": 2.185073334025219
+      },
+      {
+        "accuracy": 0.35,
+        "cpu_seconds": 0.011819000000000024,
+        "dataset": "Val5",
+        "iterations": 7,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 0,
+        "wall_seconds": 0.011869959009345621
+      },
+      {
+        "accuracy": 0.8224651338107802,
+        "cpu_seconds": 0.06673200000000001,
+        "dataset": "Web",
+        "iterations": 20,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 0,
+        "wall_seconds": 0.07000887498725206
+      },
+      {
+        "accuracy": 0.18,
+        "cpu_seconds": 2.641343,
+        "dataset": "Val7",
+        "iterations": 1000,
+        "method": "fgbcc",
+        "order_index": 0,
+        "repetition": 1,
+        "wall_seconds": 2.966122917016037
+      },
+      {
+        "accuracy": 0.8448566610455311,
+        "cpu_seconds": 1.434582999999999,
+        "dataset": "Aircr",
+        "iterations": 538,
+        "method": "fgbcc",
+        "order_index": 0,
+        "repetition": 1,
+        "wall_seconds": 1.8299539999570698
+      },
+      {
+        "accuracy": 0.8866666666666667,
+        "cpu_seconds": 5.042612,
+        "dataset": "CF",
+        "iterations": 689,
+        "method": "fgbcc",
+        "order_index": 0,
+        "repetition": 1,
+        "wall_seconds": 11.922540041967295
+      },
+      {
+        "accuracy": 0.8819444444444444,
+        "cpu_seconds": 5.143344000000001,
+        "dataset": "Fact",
+        "iterations": 359,
+        "method": "fgbcc",
+        "order_index": 0,
+        "repetition": 1,
+        "wall_seconds": 14.582163874991238
+      },
+      {
+        "accuracy": 0.7842857142857143,
+        "cpu_seconds": 2.944585,
+        "dataset": "MS",
+        "iterations": 513,
+        "method": "fgbcc",
+        "order_index": 0,
+        "repetition": 1,
+        "wall_seconds": 4.262097582977731
+      },
+      {
+        "accuracy": 0.8401486988847584,
+        "cpu_seconds": 1.1218649999999997,
+        "dataset": "Dog",
+        "iterations": 465,
+        "method": "fgbcc",
+        "order_index": 0,
+        "repetition": 1,
+        "wall_seconds": 1.2293455000035465
+      },
+      {
+        "accuracy": 0.6455479452054794,
+        "cpu_seconds": 0.4915200000000013,
+        "dataset": "Face",
+        "iterations": 308,
+        "method": "fgbcc",
+        "order_index": 0,
+        "repetition": 1,
+        "wall_seconds": 0.522361708979588
+      },
+      {
+        "accuracy": 0.7447447447447447,
+        "cpu_seconds": 11.015850999999998,
+        "dataset": "Adult",
+        "iterations": 880,
+        "method": "fgbcc",
+        "order_index": 0,
+        "repetition": 1,
+        "wall_seconds": 14.526928208011668
+      },
+      {
+        "accuracy": 0.885,
+        "cpu_seconds": 67.92116999999999,
+        "dataset": "Senti",
+        "iterations": 783,
+        "method": "fgbcc",
+        "order_index": 0,
+        "repetition": 1,
+        "wall_seconds": 108.09672329196474
+      },
+      {
+        "accuracy": 0.38,
+        "cpu_seconds": 1.9268519999999967,
+        "dataset": "Val5",
+        "iterations": 1000,
+        "method": "fgbcc",
+        "order_index": 0,
+        "repetition": 1,
+        "wall_seconds": 3.0610837080166675
+      },
+      {
+        "accuracy": 0.8202035431586883,
+        "cpu_seconds": 2.135284999999996,
+        "dataset": "Web",
+        "iterations": 353,
+        "method": "fgbcc",
+        "order_index": 0,
+        "repetition": 1,
+        "wall_seconds": 4.134965790959541
+      },
+      {
+        "accuracy": 0.22,
+        "cpu_seconds": 0.017299000000000397,
+        "dataset": "Val7",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 1,
+        "repetition": 1,
+        "wall_seconds": 0.02112920902436599
+      },
+      {
+        "accuracy": 0.8414839797639123,
+        "cpu_seconds": 0.023902000000000534,
+        "dataset": "Aircr",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 1,
+        "repetition": 1,
+        "wall_seconds": 0.02989087498281151
+      },
+      {
+        "accuracy": 0.7966666666666666,
+        "cpu_seconds": 0.025165999999999578,
+        "dataset": "CF",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 1,
+        "repetition": 1,
+        "wall_seconds": 0.02826541702961549
+      },
+      {
+        "accuracy": 0.8506944444444444,
+        "cpu_seconds": 0.8711820000000001,
+        "dataset": "Fact",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 1,
+        "repetition": 1,
+        "wall_seconds": 1.4650357909849845
+      },
+      {
+        "accuracy": 0.7642857142857142,
+        "cpu_seconds": 0.049272999999999456,
+        "dataset": "MS",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 1,
+        "repetition": 1,
+        "wall_seconds": 0.053867625014390796
+      },
+      {
+        "accuracy": 0.8426270136307311,
+        "cpu_seconds": 0.046794000000000224,
+        "dataset": "Dog",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 1,
+        "repetition": 1,
+        "wall_seconds": 0.05405354202957824
+      },
+      {
+        "accuracy": 0.6404109589041096,
+        "cpu_seconds": 0.03402800000000017,
+        "dataset": "Face",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 1,
+        "repetition": 1,
+        "wall_seconds": 0.06602820800617337
+      },
+      {
+        "accuracy": 0.7387387387387387,
+        "cpu_seconds": 0.4418930000000003,
+        "dataset": "Adult",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 1,
+        "repetition": 1,
+        "wall_seconds": 1.0421539999661036
+      },
+      {
+        "accuracy": 0.824,
+        "cpu_seconds": 3.4106889999999996,
+        "dataset": "Senti",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 1,
+        "repetition": 1,
+        "wall_seconds": 5.0971744589623995
+      },
+      {
+        "accuracy": 0.41,
+        "cpu_seconds": 0.01331500000000041,
+        "dataset": "Val5",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 1,
+        "repetition": 1,
+        "wall_seconds": 0.015164082986302674
+      },
+      {
+        "accuracy": 0.8254805880135695,
+        "cpu_seconds": 0.10482600000000097,
+        "dataset": "Web",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 1,
+        "repetition": 1,
+        "wall_seconds": 0.12289683398557827
+      },
+      {
+        "accuracy": 0.2,
+        "cpu_seconds": 0.02074599999999993,
+        "dataset": "Val7",
+        "iterations": 7,
+        "method": "bwa",
+        "order_index": 2,
+        "repetition": 1,
+        "wall_seconds": 0.025025416049174964
+      },
+      {
+        "accuracy": 0.8246205733558178,
+        "cpu_seconds": 0.04827799999999982,
+        "dataset": "Aircr",
+        "iterations": 21,
+        "method": "bwa",
+        "order_index": 2,
+        "repetition": 1,
+        "wall_seconds": 0.09532354201655835
+      },
+      {
+        "accuracy": 0.8933333333333333,
+        "cpu_seconds": 0.01254000000000044,
+        "dataset": "CF",
+        "iterations": 6,
+        "method": "bwa",
+        "order_index": 2,
+        "repetition": 1,
+        "wall_seconds": 0.013959834002889693
+      },
+      {
+        "accuracy": 0.8871527777777778,
+        "cpu_seconds": 0.44828000000000046,
+        "dataset": "Fact",
+        "iterations": 22,
+        "method": "bwa",
+        "order_index": 2,
+        "repetition": 1,
+        "wall_seconds": 0.699718416959513
+      },
+      {
+        "accuracy": 0.7857142857142857,
+        "cpu_seconds": 0.05636300000000016,
+        "dataset": "MS",
+        "iterations": 22,
+        "method": "bwa",
+        "order_index": 2,
+        "repetition": 1,
+        "wall_seconds": 0.09410362504422665
+      },
+      {
+        "accuracy": 0.8314745972738538,
+        "cpu_seconds": 0.02432700000000043,
+        "dataset": "Dog",
+        "iterations": 9,
+        "method": "bwa",
+        "order_index": 2,
+        "repetition": 1,
+        "wall_seconds": 0.034243375004734844
+      },
+      {
+        "accuracy": 0.6181506849315068,
+        "cpu_seconds": 0.02061000000000046,
+        "dataset": "Face",
+        "iterations": 10,
+        "method": "bwa",
+        "order_index": 2,
+        "repetition": 1,
+        "wall_seconds": 0.028855708020273596
+      },
+      {
+        "accuracy": 0.7417417417417418,
+        "cpu_seconds": 0.30597799999999964,
+        "dataset": "Adult",
+        "iterations": 41,
+        "method": "bwa",
+        "order_index": 2,
+        "repetition": 1,
+        "wall_seconds": 0.38981566595612094
+      },
+      {
+        "accuracy": 0.89,
+        "cpu_seconds": 1.9158429999999997,
+        "dataset": "Senti",
+        "iterations": 29,
+        "method": "bwa",
+        "order_index": 2,
+        "repetition": 1,
+        "wall_seconds": 3.0592330410145223
+      },
+      {
+        "accuracy": 0.35,
+        "cpu_seconds": 0.01299500000000009,
+        "dataset": "Val5",
+        "iterations": 7,
+        "method": "bwa",
+        "order_index": 2,
+        "repetition": 1,
+        "wall_seconds": 0.014034833002369851
+      },
+      {
+        "accuracy": 0.8224651338107802,
+        "cpu_seconds": 0.07161899999999921,
+        "dataset": "Web",
+        "iterations": 20,
+        "method": "bwa",
+        "order_index": 2,
+        "repetition": 1,
+        "wall_seconds": 0.07970987498993054
+      },
+      {
+        "accuracy": 0.31,
+        "cpu_seconds": 0.09279100000000007,
+        "dataset": "Val7",
+        "iterations": 69,
+        "method": "ptbcc",
+        "order_index": 3,
+        "repetition": 1,
+        "wall_seconds": 0.11814495798898861
+      },
+      {
+        "accuracy": 0.8229342327150084,
+        "cpu_seconds": 0.1461730000000001,
+        "dataset": "Aircr",
+        "iterations": 83,
+        "method": "ptbcc",
+        "order_index": 3,
+        "repetition": 1,
+        "wall_seconds": 0.2862423750339076
+      },
+      {
+        "accuracy": 0.8933333333333333,
+        "cpu_seconds": 0.12885799999999925,
+        "dataset": "CF",
+        "iterations": 74,
+        "method": "ptbcc",
+        "order_index": 3,
+        "repetition": 1,
+        "wall_seconds": 0.3073878749855794
+      },
+      {
+        "accuracy": 0.9010416666666666,
+        "cpu_seconds": 3.567824,
+        "dataset": "Fact",
+        "iterations": 31,
+        "method": "ptbcc",
+        "order_index": 3,
+        "repetition": 1,
+        "wall_seconds": 6.091666333028115
+      },
+      {
+        "accuracy": 0.7942857142857143,
+        "cpu_seconds": 0.10664400000000107,
+        "dataset": "MS",
+        "iterations": 33,
+        "method": "ptbcc",
+        "order_index": 3,
+        "repetition": 1,
+        "wall_seconds": 0.16695729200728238
+      },
+      {
+        "accuracy": 0.8240396530359355,
+        "cpu_seconds": 0.3145489999999995,
+        "dataset": "Dog",
+        "iterations": 59,
+        "method": "ptbcc",
+        "order_index": 3,
+        "repetition": 1,
+        "wall_seconds": 0.42322958400473
+      },
+      {
+        "accuracy": 0.6558219178082192,
+        "cpu_seconds": 0.14406799999999897,
+        "dataset": "Face",
+        "iterations": 38,
+        "method": "ptbcc",
+        "order_index": 3,
+        "repetition": 1,
+        "wall_seconds": 0.3485055409837514
+      },
+      {
+        "accuracy": 0.7717717717717718,
+        "cpu_seconds": 2.062457,
+        "dataset": "Adult",
+        "iterations": 38,
+        "method": "ptbcc",
+        "order_index": 3,
+        "repetition": 1,
+        "wall_seconds": 5.189899999997579
+      },
+      {
+        "accuracy": 0.866,
+        "cpu_seconds": 15.579016,
+        "dataset": "Senti",
+        "iterations": 43,
+        "method": "ptbcc",
+        "order_index": 3,
+        "repetition": 1,
+        "wall_seconds": 29.591961583006196
+      },
+      {
+        "accuracy": 0.56,
+        "cpu_seconds": 0.06349599999999711,
+        "dataset": "Val5",
+        "iterations": 57,
+        "method": "ptbcc",
+        "order_index": 3,
+        "repetition": 1,
+        "wall_seconds": 0.08718354103621095
+      },
+      {
+        "accuracy": 0.819449679607991,
+        "cpu_seconds": 0.5539999999999985,
+        "dataset": "Web",
+        "iterations": 53,
+        "method": "ptbcc",
+        "order_index": 3,
+        "repetition": 1,
+        "wall_seconds": 0.9654800410498865
+      },
+      {
+        "accuracy": 0.22,
+        "cpu_seconds": 0.01765099999999986,
+        "dataset": "Val7",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 0,
+        "repetition": 2,
+        "wall_seconds": 0.020194499986246228
+      },
+      {
+        "accuracy": 0.8414839797639123,
+        "cpu_seconds": 0.021387999999999963,
+        "dataset": "Aircr",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 0,
+        "repetition": 2,
+        "wall_seconds": 0.0223583749611862
+      },
+      {
+        "accuracy": 0.7966666666666666,
+        "cpu_seconds": 0.02324000000000037,
+        "dataset": "CF",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 0,
+        "repetition": 2,
+        "wall_seconds": 0.028573041956406087
+      },
+      {
+        "accuracy": 0.8506944444444444,
+        "cpu_seconds": 0.866708,
+        "dataset": "Fact",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 0,
+        "repetition": 2,
+        "wall_seconds": 1.0613847079803236
+      },
+      {
+        "accuracy": 0.7642857142857142,
+        "cpu_seconds": 0.04963599999999957,
+        "dataset": "MS",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 0,
+        "repetition": 2,
+        "wall_seconds": 0.05189741600770503
+      },
+      {
+        "accuracy": 0.8426270136307311,
+        "cpu_seconds": 0.04309599999999936,
+        "dataset": "Dog",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 0,
+        "repetition": 2,
+        "wall_seconds": 0.045601457997690886
+      },
+      {
+        "accuracy": 0.6404109589041096,
+        "cpu_seconds": 0.03064300000000042,
+        "dataset": "Face",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 0,
+        "repetition": 2,
+        "wall_seconds": 0.03267358394805342
+      },
+      {
+        "accuracy": 0.7387387387387387,
+        "cpu_seconds": 0.4328119999999993,
+        "dataset": "Adult",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 0,
+        "repetition": 2,
+        "wall_seconds": 0.5167475829948671
+      },
+      {
+        "accuracy": 0.824,
+        "cpu_seconds": 3.5363560000000005,
+        "dataset": "Senti",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 0,
+        "repetition": 2,
+        "wall_seconds": 4.765843791014049
+      },
+      {
+        "accuracy": 0.41,
+        "cpu_seconds": 0.012850999999999502,
+        "dataset": "Val5",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 0,
+        "repetition": 2,
+        "wall_seconds": 0.013020584010519087
+      },
+      {
+        "accuracy": 0.8254805880135695,
+        "cpu_seconds": 0.10621100000000006,
+        "dataset": "Web",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 0,
+        "repetition": 2,
+        "wall_seconds": 0.12049229198601097
+      },
+      {
+        "accuracy": 0.2,
+        "cpu_seconds": 0.027936999999999657,
+        "dataset": "Val7",
+        "iterations": 7,
+        "method": "bwa",
+        "order_index": 1,
+        "repetition": 2,
+        "wall_seconds": 0.033645750023424625
+      },
+      {
+        "accuracy": 0.8246205733558178,
+        "cpu_seconds": 0.04935799999999979,
+        "dataset": "Aircr",
+        "iterations": 21,
+        "method": "bwa",
+        "order_index": 1,
+        "repetition": 2,
+        "wall_seconds": 0.06701262498972937
+      },
+      {
+        "accuracy": 0.8933333333333333,
+        "cpu_seconds": 0.013232999999999606,
+        "dataset": "CF",
+        "iterations": 6,
+        "method": "bwa",
+        "order_index": 1,
+        "repetition": 2,
+        "wall_seconds": 0.06430595804704353
+      },
+      {
+        "accuracy": 0.8871527777777778,
+        "cpu_seconds": 0.4417920000000004,
+        "dataset": "Fact",
+        "iterations": 22,
+        "method": "bwa",
+        "order_index": 1,
+        "repetition": 2,
+        "wall_seconds": 0.7661330419941805
+      },
+      {
+        "accuracy": 0.7857142857142857,
+        "cpu_seconds": 0.052351999999999954,
+        "dataset": "MS",
+        "iterations": 22,
+        "method": "bwa",
+        "order_index": 1,
+        "repetition": 2,
+        "wall_seconds": 0.054389583005104214
+      },
+      {
+        "accuracy": 0.8314745972738538,
+        "cpu_seconds": 0.02474099999999968,
+        "dataset": "Dog",
+        "iterations": 9,
+        "method": "bwa",
+        "order_index": 1,
+        "repetition": 2,
+        "wall_seconds": 0.029858666006475687
+      },
+      {
+        "accuracy": 0.6181506849315068,
+        "cpu_seconds": 0.016666999999999987,
+        "dataset": "Face",
+        "iterations": 10,
+        "method": "bwa",
+        "order_index": 1,
+        "repetition": 2,
+        "wall_seconds": 0.022415250015910715
+      },
+      {
+        "accuracy": 0.7417417417417418,
+        "cpu_seconds": 0.28079700000000063,
+        "dataset": "Adult",
+        "iterations": 41,
+        "method": "bwa",
+        "order_index": 1,
+        "repetition": 2,
+        "wall_seconds": 0.37478150002425537
+      },
+      {
+        "accuracy": 0.89,
+        "cpu_seconds": 2.0024869999999995,
+        "dataset": "Senti",
+        "iterations": 29,
+        "method": "bwa",
+        "order_index": 1,
+        "repetition": 2,
+        "wall_seconds": 2.194832957990002
+      },
+      {
+        "accuracy": 0.35,
+        "cpu_seconds": 0.009160000000000501,
+        "dataset": "Val5",
+        "iterations": 7,
+        "method": "bwa",
+        "order_index": 1,
+        "repetition": 2,
+        "wall_seconds": 0.009180375025607646
+      },
+      {
+        "accuracy": 0.8224651338107802,
+        "cpu_seconds": 0.06109399999999976,
+        "dataset": "Web",
+        "iterations": 20,
+        "method": "bwa",
+        "order_index": 1,
+        "repetition": 2,
+        "wall_seconds": 0.07008220796706155
+      },
+      {
+        "accuracy": 0.31,
+        "cpu_seconds": 0.0851569999999997,
+        "dataset": "Val7",
+        "iterations": 69,
+        "method": "ptbcc",
+        "order_index": 2,
+        "repetition": 2,
+        "wall_seconds": 0.10170558403478935
+      },
+      {
+        "accuracy": 0.8229342327150084,
+        "cpu_seconds": 0.13564000000000043,
+        "dataset": "Aircr",
+        "iterations": 83,
+        "method": "ptbcc",
+        "order_index": 2,
+        "repetition": 2,
+        "wall_seconds": 0.13818624999839813
+      },
+      {
+        "accuracy": 0.8933333333333333,
+        "cpu_seconds": 0.12341399999999947,
+        "dataset": "CF",
+        "iterations": 74,
+        "method": "ptbcc",
+        "order_index": 2,
+        "repetition": 2,
+        "wall_seconds": 0.13135287503246218
+      },
+      {
+        "accuracy": 0.9010416666666666,
+        "cpu_seconds": 3.529567,
+        "dataset": "Fact",
+        "iterations": 31,
+        "method": "ptbcc",
+        "order_index": 2,
+        "repetition": 2,
+        "wall_seconds": 3.5792038749787025
+      },
+      {
+        "accuracy": 0.7942857142857143,
+        "cpu_seconds": 0.07805399999999985,
+        "dataset": "MS",
+        "iterations": 33,
+        "method": "ptbcc",
+        "order_index": 2,
+        "repetition": 2,
+        "wall_seconds": 0.07836200000019744
+      },
+      {
+        "accuracy": 0.8240396530359355,
+        "cpu_seconds": 0.26337099999999936,
+        "dataset": "Dog",
+        "iterations": 59,
+        "method": "ptbcc",
+        "order_index": 2,
+        "repetition": 2,
+        "wall_seconds": 0.2649447080329992
+      },
+      {
+        "accuracy": 0.6558219178082192,
+        "cpu_seconds": 0.11795199999999895,
+        "dataset": "Face",
+        "iterations": 38,
+        "method": "ptbcc",
+        "order_index": 2,
+        "repetition": 2,
+        "wall_seconds": 0.11955079203471541
+      },
+      {
+        "accuracy": 0.7717717717717718,
+        "cpu_seconds": 1.7074869999999986,
+        "dataset": "Adult",
+        "iterations": 38,
+        "method": "ptbcc",
+        "order_index": 2,
+        "repetition": 2,
+        "wall_seconds": 1.7184127080254257
+      },
+      {
+        "accuracy": 0.866,
+        "cpu_seconds": 14.868987999999998,
+        "dataset": "Senti",
+        "iterations": 43,
+        "method": "ptbcc",
+        "order_index": 2,
+        "repetition": 2,
+        "wall_seconds": 17.485906375048216
+      },
+      {
+        "accuracy": 0.56,
+        "cpu_seconds": 0.052572000000001395,
+        "dataset": "Val5",
+        "iterations": 57,
+        "method": "ptbcc",
+        "order_index": 2,
+        "repetition": 2,
+        "wall_seconds": 0.05277379200560972
+      },
+      {
+        "accuracy": 0.819449679607991,
+        "cpu_seconds": 0.5301299999999998,
+        "dataset": "Web",
+        "iterations": 53,
+        "method": "ptbcc",
+        "order_index": 2,
+        "repetition": 2,
+        "wall_seconds": 0.5368451249669306
+      },
+      {
+        "accuracy": 0.18,
+        "cpu_seconds": 2.8134479999999997,
+        "dataset": "Val7",
+        "iterations": 1000,
+        "method": "fgbcc",
+        "order_index": 3,
+        "repetition": 2,
+        "wall_seconds": 5.84525566699449
+      },
+      {
+        "accuracy": 0.8448566610455311,
+        "cpu_seconds": 1.4183959999999995,
+        "dataset": "Aircr",
+        "iterations": 538,
+        "method": "fgbcc",
+        "order_index": 3,
+        "repetition": 2,
+        "wall_seconds": 1.605370709032286
+      },
+      {
+        "accuracy": 0.8866666666666667,
+        "cpu_seconds": 4.546514,
+        "dataset": "CF",
+        "iterations": 689,
+        "method": "fgbcc",
+        "order_index": 3,
+        "repetition": 2,
+        "wall_seconds": 7.926421249983832
+      },
+      {
+        "accuracy": 0.8819444444444444,
+        "cpu_seconds": 4.828799,
+        "dataset": "Fact",
+        "iterations": 359,
+        "method": "fgbcc",
+        "order_index": 3,
+        "repetition": 2,
+        "wall_seconds": 6.319458417012356
+      },
+      {
+        "accuracy": 0.7842857142857143,
+        "cpu_seconds": 2.419898,
+        "dataset": "MS",
+        "iterations": 513,
+        "method": "fgbcc",
+        "order_index": 3,
+        "repetition": 2,
+        "wall_seconds": 2.5435740830143914
+      },
+      {
+        "accuracy": 0.8401486988847584,
+        "cpu_seconds": 0.9681849999999983,
+        "dataset": "Dog",
+        "iterations": 465,
+        "method": "fgbcc",
+        "order_index": 3,
+        "repetition": 2,
+        "wall_seconds": 1.0368167919805273
+      },
+      {
+        "accuracy": 0.6455479452054794,
+        "cpu_seconds": 0.47369700000000137,
+        "dataset": "Face",
+        "iterations": 308,
+        "method": "fgbcc",
+        "order_index": 3,
+        "repetition": 2,
+        "wall_seconds": 0.523081874998752
+      },
+      {
+        "accuracy": 0.7447447447447447,
+        "cpu_seconds": 10.652467999999999,
+        "dataset": "Adult",
+        "iterations": 880,
+        "method": "fgbcc",
+        "order_index": 3,
+        "repetition": 2,
+        "wall_seconds": 11.8107140409993
+      },
+      {
+        "accuracy": 0.885,
+        "cpu_seconds": 65.531791,
+        "dataset": "Senti",
+        "iterations": 783,
+        "method": "fgbcc",
+        "order_index": 3,
+        "repetition": 2,
+        "wall_seconds": 77.27242041600402
+      },
+      {
+        "accuracy": 0.38,
+        "cpu_seconds": 1.53155000000001,
+        "dataset": "Val5",
+        "iterations": 1000,
+        "method": "fgbcc",
+        "order_index": 3,
+        "repetition": 2,
+        "wall_seconds": 1.5561341250431724
+      },
+      {
+        "accuracy": 0.8202035431586883,
+        "cpu_seconds": 1.9690099999999973,
+        "dataset": "Web",
+        "iterations": 353,
+        "method": "fgbcc",
+        "order_index": 3,
+        "repetition": 2,
+        "wall_seconds": 2.273862415982876
+      },
+      {
+        "accuracy": 0.2,
+        "cpu_seconds": 0.02221599999999979,
+        "dataset": "Val7",
+        "iterations": 7,
+        "method": "bwa",
+        "order_index": 0,
+        "repetition": 3,
+        "wall_seconds": 0.022932790976483375
+      },
+      {
+        "accuracy": 0.8246205733558178,
+        "cpu_seconds": 0.04257599999999995,
+        "dataset": "Aircr",
+        "iterations": 21,
+        "method": "bwa",
+        "order_index": 0,
+        "repetition": 3,
+        "wall_seconds": 0.04500774998450652
+      },
+      {
+        "accuracy": 0.8933333333333333,
+        "cpu_seconds": 0.010760000000000325,
+        "dataset": "CF",
+        "iterations": 6,
+        "method": "bwa",
+        "order_index": 0,
+        "repetition": 3,
+        "wall_seconds": 0.010832875035703182
+      },
+      {
+        "accuracy": 0.8871527777777778,
+        "cpu_seconds": 0.44603199999999976,
+        "dataset": "Fact",
+        "iterations": 22,
+        "method": "bwa",
+        "order_index": 0,
+        "repetition": 3,
+        "wall_seconds": 0.5176175000378862
+      },
+      {
+        "accuracy": 0.7857142857142857,
+        "cpu_seconds": 0.0486089999999999,
+        "dataset": "MS",
+        "iterations": 22,
+        "method": "bwa",
+        "order_index": 0,
+        "repetition": 3,
+        "wall_seconds": 0.04903125000419095
+      },
+      {
+        "accuracy": 0.8314745972738538,
+        "cpu_seconds": 0.021444999999999936,
+        "dataset": "Dog",
+        "iterations": 9,
+        "method": "bwa",
+        "order_index": 0,
+        "repetition": 3,
+        "wall_seconds": 0.021641124971210957
+      },
+      {
+        "accuracy": 0.6181506849315068,
+        "cpu_seconds": 0.01657200000000003,
+        "dataset": "Face",
+        "iterations": 10,
+        "method": "bwa",
+        "order_index": 0,
+        "repetition": 3,
+        "wall_seconds": 0.016758291982114315
+      },
+      {
+        "accuracy": 0.7417417417417418,
+        "cpu_seconds": 0.2966609999999994,
+        "dataset": "Adult",
+        "iterations": 41,
+        "method": "bwa",
+        "order_index": 0,
+        "repetition": 3,
+        "wall_seconds": 0.3116062500048429
+      },
+      {
+        "accuracy": 0.89,
+        "cpu_seconds": 1.9702169999999999,
+        "dataset": "Senti",
+        "iterations": 29,
+        "method": "bwa",
+        "order_index": 0,
+        "repetition": 3,
+        "wall_seconds": 2.0084662919980474
+      },
+      {
+        "accuracy": 0.35,
+        "cpu_seconds": 0.009714999999999918,
+        "dataset": "Val5",
+        "iterations": 7,
+        "method": "bwa",
+        "order_index": 0,
+        "repetition": 3,
+        "wall_seconds": 0.009744792012497783
+      },
+      {
+        "accuracy": 0.8224651338107802,
+        "cpu_seconds": 0.06501300000000043,
+        "dataset": "Web",
+        "iterations": 20,
+        "method": "bwa",
+        "order_index": 0,
+        "repetition": 3,
+        "wall_seconds": 0.07135504198959097
+      },
+      {
+        "accuracy": 0.31,
+        "cpu_seconds": 0.08342500000000008,
+        "dataset": "Val7",
+        "iterations": 69,
+        "method": "ptbcc",
+        "order_index": 1,
+        "repetition": 3,
+        "wall_seconds": 0.0837518330081366
+      },
+      {
+        "accuracy": 0.8229342327150084,
+        "cpu_seconds": 0.11416399999999971,
+        "dataset": "Aircr",
+        "iterations": 83,
+        "method": "ptbcc",
+        "order_index": 1,
+        "repetition": 3,
+        "wall_seconds": 0.11445650004316121
+      },
+      {
+        "accuracy": 0.8933333333333333,
+        "cpu_seconds": 0.09990699999999997,
+        "dataset": "CF",
+        "iterations": 74,
+        "method": "ptbcc",
+        "order_index": 1,
+        "repetition": 3,
+        "wall_seconds": 0.10031987499678507
+      },
+      {
+        "accuracy": 0.9010416666666666,
+        "cpu_seconds": 3.4883870000000003,
+        "dataset": "Fact",
+        "iterations": 31,
+        "method": "ptbcc",
+        "order_index": 1,
+        "repetition": 3,
+        "wall_seconds": 3.549457791959867
+      },
+      {
+        "accuracy": 0.7942857142857143,
+        "cpu_seconds": 0.0829620000000002,
+        "dataset": "MS",
+        "iterations": 33,
+        "method": "ptbcc",
+        "order_index": 1,
+        "repetition": 3,
+        "wall_seconds": 0.08318399998825043
+      },
+      {
+        "accuracy": 0.8240396530359355,
+        "cpu_seconds": 0.27742999999999896,
+        "dataset": "Dog",
+        "iterations": 59,
+        "method": "ptbcc",
+        "order_index": 1,
+        "repetition": 3,
+        "wall_seconds": 0.3005763340042904
+      },
+      {
+        "accuracy": 0.6558219178082192,
+        "cpu_seconds": 0.1317749999999993,
+        "dataset": "Face",
+        "iterations": 38,
+        "method": "ptbcc",
+        "order_index": 1,
+        "repetition": 3,
+        "wall_seconds": 0.1328815839951858
+      },
+      {
+        "accuracy": 0.7717717717717718,
+        "cpu_seconds": 1.997159,
+        "dataset": "Adult",
+        "iterations": 38,
+        "method": "ptbcc",
+        "order_index": 1,
+        "repetition": 3,
+        "wall_seconds": 2.0743129170150496
+      },
+      {
+        "accuracy": 0.866,
+        "cpu_seconds": 15.074336999999998,
+        "dataset": "Senti",
+        "iterations": 43,
+        "method": "ptbcc",
+        "order_index": 1,
+        "repetition": 3,
+        "wall_seconds": 16.95292441698257
+      },
+      {
+        "accuracy": 0.56,
+        "cpu_seconds": 0.0605659999999979,
+        "dataset": "Val5",
+        "iterations": 57,
+        "method": "ptbcc",
+        "order_index": 1,
+        "repetition": 3,
+        "wall_seconds": 0.06112454197136685
+      },
+      {
+        "accuracy": 0.819449679607991,
+        "cpu_seconds": 0.5120399999999989,
+        "dataset": "Web",
+        "iterations": 53,
+        "method": "ptbcc",
+        "order_index": 1,
+        "repetition": 3,
+        "wall_seconds": 0.5145423749927431
+      },
+      {
+        "accuracy": 0.18,
+        "cpu_seconds": 2.5068200000000003,
+        "dataset": "Val7",
+        "iterations": 1000,
+        "method": "fgbcc",
+        "order_index": 2,
+        "repetition": 3,
+        "wall_seconds": 3.6269367910572328
+      },
+      {
+        "accuracy": 0.8448566610455311,
+        "cpu_seconds": 1.3086129999999994,
+        "dataset": "Aircr",
+        "iterations": 538,
+        "method": "fgbcc",
+        "order_index": 2,
+        "repetition": 3,
+        "wall_seconds": 1.4254402079968713
+      },
+      {
+        "accuracy": 0.8866666666666667,
+        "cpu_seconds": 4.176461,
+        "dataset": "CF",
+        "iterations": 689,
+        "method": "fgbcc",
+        "order_index": 2,
+        "repetition": 3,
+        "wall_seconds": 4.329579291050322
+      },
+      {
+        "accuracy": 0.8819444444444444,
+        "cpu_seconds": 4.744484999999999,
+        "dataset": "Fact",
+        "iterations": 359,
+        "method": "fgbcc",
+        "order_index": 2,
+        "repetition": 3,
+        "wall_seconds": 5.21903429197846
+      },
+      {
+        "accuracy": 0.7842857142857143,
+        "cpu_seconds": 2.5340039999999995,
+        "dataset": "MS",
+        "iterations": 513,
+        "method": "fgbcc",
+        "order_index": 2,
+        "repetition": 3,
+        "wall_seconds": 2.6542795409914106
+      },
+      {
+        "accuracy": 0.8401486988847584,
+        "cpu_seconds": 0.8703780000000023,
+        "dataset": "Dog",
+        "iterations": 465,
+        "method": "fgbcc",
+        "order_index": 2,
+        "repetition": 3,
+        "wall_seconds": 0.8787795410025865
+      },
+      {
+        "accuracy": 0.6455479452054794,
+        "cpu_seconds": 0.3862710000000007,
+        "dataset": "Face",
+        "iterations": 308,
+        "method": "fgbcc",
+        "order_index": 2,
+        "repetition": 3,
+        "wall_seconds": 0.38786487496690825
+      },
+      {
+        "accuracy": 0.7447447447447447,
+        "cpu_seconds": 9.55697,
+        "dataset": "Adult",
+        "iterations": 880,
+        "method": "fgbcc",
+        "order_index": 2,
+        "repetition": 3,
+        "wall_seconds": 9.673926666961052
+      },
+      {
+        "accuracy": 0.885,
+        "cpu_seconds": 65.082044,
+        "dataset": "Senti",
+        "iterations": 783,
+        "method": "fgbcc",
+        "order_index": 2,
+        "repetition": 3,
+        "wall_seconds": 84.76916158298263
+      },
+      {
+        "accuracy": 0.38,
+        "cpu_seconds": 1.7036339999999939,
+        "dataset": "Val5",
+        "iterations": 1000,
+        "method": "fgbcc",
+        "order_index": 2,
+        "repetition": 3,
+        "wall_seconds": 2.2399202919914387
+      },
+      {
+        "accuracy": 0.8202035431586883,
+        "cpu_seconds": 1.9002360000000067,
+        "dataset": "Web",
+        "iterations": 353,
+        "method": "fgbcc",
+        "order_index": 2,
+        "repetition": 3,
+        "wall_seconds": 2.106304041983094
+      },
+      {
+        "accuracy": 0.22,
+        "cpu_seconds": 0.0165639999999998,
+        "dataset": "Val7",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 3,
+        "repetition": 3,
+        "wall_seconds": 0.016668291005771607
+      },
+      {
+        "accuracy": 0.8414839797639123,
+        "cpu_seconds": 0.02181699999999953,
+        "dataset": "Aircr",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 3,
+        "repetition": 3,
+        "wall_seconds": 0.022110250021796674
+      },
+      {
+        "accuracy": 0.7966666666666666,
+        "cpu_seconds": 0.02399300000000082,
+        "dataset": "CF",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 3,
+        "repetition": 3,
+        "wall_seconds": 0.024091417028103024
+      },
+      {
+        "accuracy": 0.8506944444444444,
+        "cpu_seconds": 0.8737729999999999,
+        "dataset": "Fact",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 3,
+        "repetition": 3,
+        "wall_seconds": 0.9022981249727309
+      },
+      {
+        "accuracy": 0.7642857142857142,
+        "cpu_seconds": 0.044298999999999644,
+        "dataset": "MS",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 3,
+        "repetition": 3,
+        "wall_seconds": 0.044380958017427474
+      },
+      {
+        "accuracy": 0.8426270136307311,
+        "cpu_seconds": 0.04081500000000027,
+        "dataset": "Dog",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 3,
+        "repetition": 3,
+        "wall_seconds": 0.04093025001930073
+      },
+      {
+        "accuracy": 0.6404109589041096,
+        "cpu_seconds": 0.028979999999999784,
+        "dataset": "Face",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 3,
+        "repetition": 3,
+        "wall_seconds": 0.0291068340302445
+      },
+      {
+        "accuracy": 0.7387387387387387,
+        "cpu_seconds": 0.4111009999999995,
+        "dataset": "Adult",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 3,
+        "repetition": 3,
+        "wall_seconds": 0.417141540965531
+      },
+      {
+        "accuracy": 0.824,
+        "cpu_seconds": 3.3206750000000005,
+        "dataset": "Senti",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 3,
+        "repetition": 3,
+        "wall_seconds": 3.3488517500227317
+      },
+      {
+        "accuracy": 0.41,
+        "cpu_seconds": 0.012095000000000411,
+        "dataset": "Val5",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 3,
+        "repetition": 3,
+        "wall_seconds": 0.012177083001006395
+      },
+      {
+        "accuracy": 0.8254805880135695,
+        "cpu_seconds": 0.10496000000000016,
+        "dataset": "Web",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 3,
+        "repetition": 3,
+        "wall_seconds": 0.10523504205048084
+      },
+      {
+        "accuracy": 0.31,
+        "cpu_seconds": 0.07484400000000013,
+        "dataset": "Val7",
+        "iterations": 69,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 4,
+        "wall_seconds": 0.07985504099633545
+      },
+      {
+        "accuracy": 0.8229342327150084,
+        "cpu_seconds": 0.13719100000000006,
+        "dataset": "Aircr",
+        "iterations": 83,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 4,
+        "wall_seconds": 0.17003450001357123
+      },
+      {
+        "accuracy": 0.8933333333333333,
+        "cpu_seconds": 0.10754299999999972,
+        "dataset": "CF",
+        "iterations": 74,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 4,
+        "wall_seconds": 0.10812295804498717
+      },
+      {
+        "accuracy": 0.9010416666666666,
+        "cpu_seconds": 3.3440689999999997,
+        "dataset": "Fact",
+        "iterations": 31,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 4,
+        "wall_seconds": 3.4406083750072867
+      },
+      {
+        "accuracy": 0.7942857142857143,
+        "cpu_seconds": 0.0949819999999999,
+        "dataset": "MS",
+        "iterations": 33,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 4,
+        "wall_seconds": 0.1013727500103414
+      },
+      {
+        "accuracy": 0.8240396530359355,
+        "cpu_seconds": 0.2707239999999995,
+        "dataset": "Dog",
+        "iterations": 59,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 4,
+        "wall_seconds": 0.27168491698103026
+      },
+      {
+        "accuracy": 0.6558219178082192,
+        "cpu_seconds": 0.11919600000000052,
+        "dataset": "Face",
+        "iterations": 38,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 4,
+        "wall_seconds": 0.11957729194546118
+      },
+      {
+        "accuracy": 0.7717717717717718,
+        "cpu_seconds": 1.8501570000000003,
+        "dataset": "Adult",
+        "iterations": 38,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 4,
+        "wall_seconds": 1.9006767080281861
+      },
+      {
+        "accuracy": 0.866,
+        "cpu_seconds": 14.981760999999999,
+        "dataset": "Senti",
+        "iterations": 43,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 4,
+        "wall_seconds": 16.007124583993573
+      },
+      {
+        "accuracy": 0.56,
+        "cpu_seconds": 0.0582969999999996,
+        "dataset": "Val5",
+        "iterations": 57,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 4,
+        "wall_seconds": 0.0590043329866603
+      },
+      {
+        "accuracy": 0.819449679607991,
+        "cpu_seconds": 0.5166320000000013,
+        "dataset": "Web",
+        "iterations": 53,
+        "method": "ptbcc",
+        "order_index": 0,
+        "repetition": 4,
+        "wall_seconds": 0.5188009159755893
+      },
+      {
+        "accuracy": 0.18,
+        "cpu_seconds": 2.5609870000000003,
+        "dataset": "Val7",
+        "iterations": 1000,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 4,
+        "wall_seconds": 3.9729640840087086
+      },
+      {
+        "accuracy": 0.8448566610455311,
+        "cpu_seconds": 1.4016090000000005,
+        "dataset": "Aircr",
+        "iterations": 538,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 4,
+        "wall_seconds": 2.271605250018183
+      },
+      {
+        "accuracy": 0.8866666666666667,
+        "cpu_seconds": 4.175302000000001,
+        "dataset": "CF",
+        "iterations": 689,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 4,
+        "wall_seconds": 4.98195237503387
+      },
+      {
+        "accuracy": 0.8819444444444444,
+        "cpu_seconds": 4.550133000000001,
+        "dataset": "Fact",
+        "iterations": 359,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 4,
+        "wall_seconds": 5.088300083996728
+      },
+      {
+        "accuracy": 0.7842857142857143,
+        "cpu_seconds": 2.894195,
+        "dataset": "MS",
+        "iterations": 513,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 4,
+        "wall_seconds": 4.486620625015348
+      },
+      {
+        "accuracy": 0.8401486988847584,
+        "cpu_seconds": 1.0901250000000005,
+        "dataset": "Dog",
+        "iterations": 465,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 4,
+        "wall_seconds": 1.4423154160031117
+      },
+      {
+        "accuracy": 0.6455479452054794,
+        "cpu_seconds": 0.5251340000000013,
+        "dataset": "Face",
+        "iterations": 308,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 4,
+        "wall_seconds": 0.8128332089981996
+      },
+      {
+        "accuracy": 0.7447447447447447,
+        "cpu_seconds": 10.939215,
+        "dataset": "Adult",
+        "iterations": 880,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 4,
+        "wall_seconds": 15.593416082963813
+      },
+      {
+        "accuracy": 0.885,
+        "cpu_seconds": 70.292672,
+        "dataset": "Senti",
+        "iterations": 783,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 4,
+        "wall_seconds": 120.38135458400939
+      },
+      {
+        "accuracy": 0.38,
+        "cpu_seconds": 1.994757000000007,
+        "dataset": "Val5",
+        "iterations": 1000,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 4,
+        "wall_seconds": 2.97161283303285
+      },
+      {
+        "accuracy": 0.8202035431586883,
+        "cpu_seconds": 2.1821570000000037,
+        "dataset": "Web",
+        "iterations": 353,
+        "method": "fgbcc",
+        "order_index": 1,
+        "repetition": 4,
+        "wall_seconds": 3.3375654999981634
+      },
+      {
+        "accuracy": 0.22,
+        "cpu_seconds": 0.017197999999999602,
+        "dataset": "Val7",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 4,
+        "wall_seconds": 0.01866558298934251
+      },
+      {
+        "accuracy": 0.8414839797639123,
+        "cpu_seconds": 0.02290900000000029,
+        "dataset": "Aircr",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 4,
+        "wall_seconds": 0.023629500006791204
+      },
+      {
+        "accuracy": 0.7966666666666666,
+        "cpu_seconds": 0.024642000000000053,
+        "dataset": "CF",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 4,
+        "wall_seconds": 0.025129583023954183
+      },
+      {
+        "accuracy": 0.8506944444444444,
+        "cpu_seconds": 0.8875349999999997,
+        "dataset": "Fact",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 4,
+        "wall_seconds": 1.2497273749904707
+      },
+      {
+        "accuracy": 0.7642857142857142,
+        "cpu_seconds": 0.048208999999999946,
+        "dataset": "MS",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 4,
+        "wall_seconds": 0.05223312496673316
+      },
+      {
+        "accuracy": 0.8426270136307311,
+        "cpu_seconds": 0.04515399999999925,
+        "dataset": "Dog",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 4,
+        "wall_seconds": 0.047158958041109145
+      },
+      {
+        "accuracy": 0.6404109589041096,
+        "cpu_seconds": 0.033030999999999366,
+        "dataset": "Face",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 4,
+        "wall_seconds": 0.03479191701626405
+      },
+      {
+        "accuracy": 0.7387387387387387,
+        "cpu_seconds": 0.4644149999999998,
+        "dataset": "Adult",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 4,
+        "wall_seconds": 0.6922323750331998
+      },
+      {
+        "accuracy": 0.824,
+        "cpu_seconds": 3.617534,
+        "dataset": "Senti",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 4,
+        "wall_seconds": 5.124616624962073
+      },
+      {
+        "accuracy": 0.41,
+        "cpu_seconds": 0.013270000000000337,
+        "dataset": "Val5",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 4,
+        "wall_seconds": 0.01563795900437981
+      },
+      {
+        "accuracy": 0.8254805880135695,
+        "cpu_seconds": 0.1132559999999998,
+        "dataset": "Web",
+        "iterations": 20,
+        "method": "ds",
+        "order_index": 2,
+        "repetition": 4,
+        "wall_seconds": 0.12749250000342727
+      },
+      {
+        "accuracy": 0.2,
+        "cpu_seconds": 0.01884899999999945,
+        "dataset": "Val7",
+        "iterations": 7,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 4,
+        "wall_seconds": 0.019044416956603527
+      },
+      {
+        "accuracy": 0.8246205733558178,
+        "cpu_seconds": 0.049291000000000196,
+        "dataset": "Aircr",
+        "iterations": 21,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 4,
+        "wall_seconds": 0.06273554201470688
+      },
+      {
+        "accuracy": 0.8933333333333333,
+        "cpu_seconds": 0.012484999999999857,
+        "dataset": "CF",
+        "iterations": 6,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 4,
+        "wall_seconds": 0.0131813749903813
+      },
+      {
+        "accuracy": 0.8871527777777778,
+        "cpu_seconds": 0.4923660000000005,
+        "dataset": "Fact",
+        "iterations": 22,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 4,
+        "wall_seconds": 0.5511439169640653
+      },
+      {
+        "accuracy": 0.7857142857142857,
+        "cpu_seconds": 0.05337000000000014,
+        "dataset": "MS",
+        "iterations": 22,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 4,
+        "wall_seconds": 0.057027000002563
+      },
+      {
+        "accuracy": 0.8314745972738538,
+        "cpu_seconds": 0.02473900000000029,
+        "dataset": "Dog",
+        "iterations": 9,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 4,
+        "wall_seconds": 0.02596545801497996
+      },
+      {
+        "accuracy": 0.6181506849315068,
+        "cpu_seconds": 0.016176999999999886,
+        "dataset": "Face",
+        "iterations": 10,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 4,
+        "wall_seconds": 0.016367916949093342
+      },
+      {
+        "accuracy": 0.7417417417417418,
+        "cpu_seconds": 0.31391100000000005,
+        "dataset": "Adult",
+        "iterations": 41,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 4,
+        "wall_seconds": 0.37030475004576147
+      },
+      {
+        "accuracy": 0.89,
+        "cpu_seconds": 1.9789169999999991,
+        "dataset": "Senti",
+        "iterations": 29,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 4,
+        "wall_seconds": 2.3605286249658093
+      },
+      {
+        "accuracy": 0.35,
+        "cpu_seconds": 0.013027999999999373,
+        "dataset": "Val5",
+        "iterations": 7,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 4,
+        "wall_seconds": 0.014750125003047287
+      },
+      {
+        "accuracy": 0.8224651338107802,
+        "cpu_seconds": 0.07004100000000069,
+        "dataset": "Web",
+        "iterations": 20,
+        "method": "bwa",
+        "order_index": 3,
+        "repetition": 4,
+        "wall_seconds": 0.076962833001744
+      }
+    ],
+    "repetitions": 5,
+    "totals": [
+      {
+        "cpu_seconds": 21.843311999999997,
+        "method": "ptbcc",
+        "repetition": 0,
+        "wall_seconds": 22.731050665897783
+      },
+      {
+        "cpu_seconds": 101.573489,
+        "method": "fgbcc",
+        "repetition": 0,
+        "wall_seconds": 160.073231250979
+      },
+      {
+        "cpu_seconds": 4.986404999999998,
+        "method": "ds",
+        "repetition": 0,
+        "wall_seconds": 6.809561084024608
+      },
+      {
+        "cpu_seconds": 2.8720500000000007,
+        "method": "bwa",
+        "repetition": 0,
+        "wall_seconds": 3.580881626869086
+      },
+      {
+        "cpu_seconds": 22.759875999999995,
+        "method": "ptbcc",
+        "repetition": 1,
+        "wall_seconds": 43.576659123122226
+      },
+      {
+        "cpu_seconds": 101.81900999999998,
+        "method": "fgbcc",
+        "repetition": 1,
+        "wall_seconds": 167.13428662484512
+      },
+      {
+        "cpu_seconds": 5.038367000000002,
+        "method": "ds",
+        "repetition": 1,
+        "wall_seconds": 7.995660042972304
+      },
+      {
+        "cpu_seconds": 2.9375790000000004,
+        "method": "bwa",
+        "repetition": 1,
+        "wall_seconds": 4.534023332060315
+      },
+      {
+        "cpu_seconds": 21.492331999999998,
+        "method": "ptbcc",
+        "repetition": 2,
+        "wall_seconds": 24.207244084158447
+      },
+      {
+        "cpu_seconds": 97.153756,
+        "method": "fgbcc",
+        "repetition": 2,
+        "wall_seconds": 118.71310979104601
+      },
+      {
+        "cpu_seconds": 5.140591999999999,
+        "method": "ds",
+        "repetition": 2,
+        "wall_seconds": 6.678787332843058
+      },
+      {
+        "cpu_seconds": 2.9796179999999994,
+        "method": "bwa",
+        "repetition": 2,
+        "wall_seconds": 3.686637915088795
+      },
+      {
+        "cpu_seconds": 21.922151999999993,
+        "method": "ptbcc",
+        "repetition": 3,
+        "wall_seconds": 23.967532168957405
+      },
+      {
+        "cpu_seconds": 94.769916,
+        "method": "fgbcc",
+        "repetition": 3,
+        "wall_seconds": 117.31122712296201
+      },
+      {
+        "cpu_seconds": 4.899072,
+        "method": "ds",
+        "repetition": 3,
+        "wall_seconds": 4.962991541135125
+      },
+      {
+        "cpu_seconds": 2.9498159999999993,
+        "method": "bwa",
+        "repetition": 3,
+        "wall_seconds": 3.0849939589970745
+      },
+      {
+        "cpu_seconds": 21.555396,
+        "method": "ptbcc",
+        "repetition": 4,
+        "wall_seconds": 22.776862373983022
+      },
+      {
+        "cpu_seconds": 102.60628600000001,
+        "method": "fgbcc",
+        "repetition": 4,
+        "wall_seconds": 165.34054004307836
+      },
+      {
+        "cpu_seconds": 5.287152999999998,
+        "method": "ds",
+        "repetition": 4,
+        "wall_seconds": 7.411315500037745
+      },
+      {
+        "cpu_seconds": 3.0431739999999996,
+        "method": "bwa",
+        "repetition": 4,
+        "wall_seconds": 3.5680119589087553
+      }
+    ]
+  },
+  "claim_result": {
+    "accuracy_gain_over_fgbcc_pp": 2.9570868253510407,
+    "negative_control": {
+      "injected_zero_time_rejected": true
+    },
+    "ratios": [
+      {
+        "all_below_0_10": false,
+        "bootstrap_95_percent": [
+          0.13775727579000688,
+          0.2607284238507911
+        ],
+        "clock": "wall_seconds",
+        "comparator": "fgbcc",
+        "median": 0.2039138232227852,
+        "samples": [
+          0.14200407206285318,
+          0.2607284238507911,
+          0.2039138232227852,
+          0.20430723262177947,
+          0.13775727579000688
+        ]
+      },
+      {
+        "all_below_0_10": false,
+        "bootstrap_95_percent": [
+          3.0732549941865277,
+          5.450039007276635
+        ],
+        "clock": "wall_seconds",
+        "comparator": "ds",
+        "median": 3.6244969150490665,
+        "samples": [
+          3.338108049170066,
+          5.450039007276635,
+          3.6244969150490665,
+          4.829251061644083,
+          3.0732549941865277
+        ]
+      },
+      {
+        "all_below_0_10": false,
+        "bootstrap_95_percent": [
+          6.347892232833311,
+          9.6110354825458
+        ],
+        "clock": "wall_seconds",
+        "comparator": "bwa",
+        "median": 6.566211448399157,
+        "samples": [
+          6.347892232833311,
+          9.6110354825458,
+          6.566211448399157,
+          7.769069400949233,
+          6.383628372408573
+        ]
+      },
+      {
+        "all_below_0_10": false,
+        "bootstrap_95_percent": [
+          0.2100787080432869,
+          0.23131973652904783
+        ],
+        "clock": "cpu_seconds",
+        "comparator": "fgbcc",
+        "median": 0.22121977456023417,
+        "samples": [
+          0.21504934225504452,
+          0.22353267822973333,
+          0.22121977456023417,
+          0.23131973652904783,
+          0.2100787080432869
+        ]
+      },
+      {
+        "all_below_0_10": false,
+        "bootstrap_95_percent": [
+          4.076938193390659,
+          4.517312057656774
+        ],
+        "clock": "cpu_seconds",
+        "comparator": "ds",
+        "median": 4.380573178472267,
+        "samples": [
+          4.380573178472267,
+          4.517312057656774,
+          4.180906012381453,
+          4.474756035428749,
+          4.076938193390659
+        ]
+      },
+      {
+        "all_below_0_10": false,
+        "bootstrap_95_percent": [
+          7.083195374303277,
+          7.7478345263225235
+        ],
+        "clock": "cpu_seconds",
+        "comparator": "bwa",
+        "median": 7.4317015027377975,
+        "samples": [
+          7.605477620514961,
+          7.7478345263225235,
+          7.213116580716052,
+          7.4317015027377975,
+          7.083195374303277
+        ]
+      }
+    ]
+  }
+}

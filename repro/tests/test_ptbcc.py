@@ -1,7 +1,9 @@
 """Deterministic unit and integration checks for the PTBCC reconstruction."""
 
+import json
 import unittest
 from dataclasses import replace
+from pathlib import Path
 
 import numpy as np
 
@@ -102,6 +104,27 @@ class PTBCCReproductionTests(unittest.TestCase):
             score = accuracy(dataset, vote_distribution(dataset))
             self.assertGreaterEqual(score, 0.0)
             self.assertLessEqual(score, 1.0)
+
+    def test_independent_claim_verifier_and_controls_passed(self) -> None:
+        root = Path(__file__).resolve().parents[2]
+        result_path = root / "outputs" / "full" / "claim_verdicts.json"
+        self.assertTrue(
+            result_path.is_file(),
+            "the fixed command must run the independent checker before tests",
+        )
+        result = json.loads(result_path.read_text())
+        self.assertEqual(
+            result["verdicts"],
+            {
+                "claim_1": "VERIFIED",
+                "claim_2": "VERIFIED",
+                "claim_3": "BLOCKED",
+                "claim_4": "BLOCKED",
+                "claim_5": "BLOCKED",
+            },
+        )
+        self.assertTrue(all(result["valid_evidence"].values()))
+        self.assertTrue(all(result["negative_controls_rejected"].values()))
 
 
 if __name__ == "__main__":

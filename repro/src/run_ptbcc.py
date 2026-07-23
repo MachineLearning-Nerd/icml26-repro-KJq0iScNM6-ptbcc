@@ -1056,6 +1056,27 @@ def main() -> None:
     }
     (output / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     print(json.dumps(summary, indent=2))
+    checker = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "repro.src.claim_verifier",
+            "--output-dir",
+            str(output),
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if checker.stdout:
+        print(checker.stdout, end="", flush=True)
+    if checker.stderr:
+        print(checker.stderr, file=sys.stderr, end="", flush=True)
+    if checker.returncode != 0:
+        raise RuntimeError(
+            f"independent claim verifier exited {checker.returncode}"
+        )
 
 
 if __name__ == "__main__":
