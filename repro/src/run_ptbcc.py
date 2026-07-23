@@ -25,6 +25,8 @@ import csv
 import json
 import math
 import platform
+import subprocess
+import sys
 import time
 from collections import Counter
 from dataclasses import dataclass
@@ -579,6 +581,179 @@ def make_figures(results: list[dict[str, object]], synthetic: list[dict[str, flo
     plt.close(fig)
 
 
+def _positive_timing_samples(rows: list[dict[str, object]]) -> None:
+    for row in rows:
+        if float(row["wall_seconds"]) <= 0 or float(row["cpu_seconds"]) <= 0:
+            raise ValueError("timing samples must be strictly positive")
+
+
+def _bootstrap_median_interval(
+    samples: list[float], *, seed: int = 20260723, draws: int = 10000
+) -> tuple[float, float]:
+    values = np.asarray(samples, dtype=np.float64)
+    rng = np.random.default_rng(seed)
+    indices = rng.integers(0, len(values), size=(draws, len(values)))
+    medians = np.median(values[indices], axis=1)
+    lower, upper = np.quantile(medians, [0.025, 0.975])
+    return float(lower), float(upper)
+
+
+def process_isolated_benchmark(
+    expected_rows: list[dict[str, object]],
+    *,
+    repetitions: int = 5,
+) -> dict[str, object]:
+    """Benchmark four methods in clean processes with balanced launch order."""
+
+    methods = ["ptbcc", "fgbcc", "ds", "bwa"]
+    expected = {
+        (str(row["dataset"]), method): float(row[f"{method}_accuracy"])
+        for row in expected_rows
+        for method in methods
+    }
+    raw: list[dict[str, object]] = []
+    for repetition in range(repetitions):
+        offset = repetition % len(methods)
+        order = methods[offset:] + methods[:offset]
+        for order_index, method in enumerate(order):
+            completed = subprocess.run(
+                [
+                    sys.executable,
+                    "-m",
+                    "repro.src.benchmark_worker",
+                    "--method",
+                    method,
+                ],
+                cwd=ROOT,
+                text=True,
+                capture_output=True,
+                check=False,
+            )
+            if completed.returncode != 0:
+                raise RuntimeError(
+                    f"benchmark worker failed for {method}: {completed.stderr[-2000:]}"
+                )
+            marker = next(
+                (
+                    line.removeprefix("BENCHMARK_WORKER ")
+                    for line in reversed(completed.stdout.splitlines())
+                    if line.startswith("BENCHMARK_WORKER ")
+                ),
+                None,
+            )
+            if marker is None:
+                raise RuntimeError(f"benchmark worker emitted no result for {method}")
+            payload = json.loads(marker)
+            for row in payload["rows"]:
+                observed = float(row["accuracy"])
+                target = expected[(str(row["dataset"]), method)]
+                if not math.isclose(observed, target, rel_tol=0.0, abs_tol=1e-12):
+                    raise AssertionError(
+                        f"benchmark accuracy drift for {method}/{row['dataset']}: "
+                        f"{observed} != {target}"
+                    )
+                row.update(
+                    {
+                        "method": method,
+                        "repetition": repetition,
+                        "order_index": order_index,
+                    }
+                )
+                raw.append(row)
+            print(
+                "BENCHMARK_PROGRESS "
+                + json.dumps(
+                    {
+                        "method": method,
+                        "repetition": repetition,
+                        "order_index": order_index,
+                        "wall_total": sum(
+                            float(row["wall_seconds"]) for row in payload["rows"]
+                        ),
+                        "cpu_total": sum(
+                            float(row["cpu_seconds"]) for row in payload["rows"]
+                        ),
+                    },
+                    sort_keys=True,
+                ),
+                flush=True,
+            )
+    _positive_timing_samples(raw)
+
+    negative = [dict(raw[0])]
+    negative[0]["wall_seconds"] = 0.0
+    negative_control_rejected = False
+    try:
+        _positive_timing_samples(negative)
+    except ValueError:
+        negative_control_rejected = True
+    if not negative_control_rejected:
+        raise AssertionError("zero-time benchmark negative control was not rejected")
+
+    totals: list[dict[str, object]] = []
+    for repetition in range(repetitions):
+        for method in methods:
+            selected = [
+                row
+                for row in raw
+                if int(row["repetition"]) == repetition
+                and str(row["method"]) == method
+            ]
+            totals.append(
+                {
+                    "repetition": repetition,
+                    "method": method,
+                    "wall_seconds": sum(
+                        float(row["wall_seconds"]) for row in selected
+                    ),
+                    "cpu_seconds": sum(
+                        float(row["cpu_seconds"]) for row in selected
+                    ),
+                }
+            )
+
+    ratios: list[dict[str, object]] = []
+    for clock in ("wall_seconds", "cpu_seconds"):
+        for comparator in ("fgbcc", "ds", "bwa"):
+            samples = []
+            for repetition in range(repetitions):
+                numerator = next(
+                    float(row[clock])
+                    for row in totals
+                    if row["method"] == "ptbcc"
+                    and int(row["repetition"]) == repetition
+                )
+                denominator = next(
+                    float(row[clock])
+                    for row in totals
+                    if row["method"] == comparator
+                    and int(row["repetition"]) == repetition
+                )
+                samples.append(numerator / denominator)
+            lower, upper = _bootstrap_median_interval(samples)
+            ratios.append(
+                {
+                    "clock": clock,
+                    "comparator": comparator,
+                    "samples": samples,
+                    "median": float(np.median(samples)),
+                    "bootstrap_95_percent": [lower, upper],
+                    "all_below_0_10": all(sample < 0.10 for sample in samples),
+                }
+            )
+    return {
+        "repetitions": repetitions,
+        "process_isolated": True,
+        "method_order_rotated": True,
+        "raw": raw,
+        "totals": totals,
+        "ratios": ratios,
+        "negative_control": {
+            "injected_zero_time_rejected": negative_control_rejected
+        },
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output-dir", type=Path, default=ROOT / "outputs" / "full")
@@ -830,7 +1005,18 @@ def main() -> None:
             "controlled_repeats_still_required": True,
         },
     }
+    benchmark = process_isolated_benchmark(result_rows, repetitions=5)
+    (output / "runtime_benchmark.json").write_text(
+        json.dumps(benchmark, indent=2) + "\n"
+    )
+    claim_results["claim_5_controlled"] = {
+        "accuracy_gain_over_fgbcc_pp": 100.0
+        * (mean_public["ptbcc"] - mean_public["fgbcc"]),
+        "ratios": benchmark["ratios"],
+        "negative_control": benchmark["negative_control"],
+    }
     print("ABLATION_MACRO " + json.dumps(ablation_macro, sort_keys=True), flush=True)
+    print("RUNTIME_BENCHMARK " + json.dumps(benchmark, sort_keys=True), flush=True)
     print("CLAIM_RESULTS " + json.dumps(claim_results, sort_keys=True), flush=True)
     summary = {
         "paper": {
