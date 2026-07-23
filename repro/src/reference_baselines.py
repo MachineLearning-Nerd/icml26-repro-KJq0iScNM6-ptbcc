@@ -338,7 +338,10 @@ class _VectorizedFGBCC:
                     scores[:, truth] += self.is_one_ij[observed].dot(
                         elog_v[:, truth, observed]
                     )
-            scores -= scores.max(axis=1, keepdims=True)
+            # Preserve the authors' exact legacy numerical semantics here.
+            # A stable max shift is mathematically equivalent in real
+            # arithmetic, but can change underflow and one final prediction on
+            # these large sparse datasets.
             self.phi_ik = np.exp(scores)
             self.phi_ik /= self.phi_ik.sum(axis=1, keepdims=True)
 
